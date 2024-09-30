@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true, // use strict 사용
+    "target": "ES2015", // 컴파일 문법
+    "lib": ["es2015"],
+    "module": "commonjs", // 모듈 포맷
+    "outDir": "./dist" // 저장 폴더
+  }
+}
