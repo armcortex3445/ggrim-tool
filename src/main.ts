@@ -2,6 +2,7 @@ import {
   getPaintingDetails,
   getMostViewedPaintings,
   getPaintingsByArtist,
+  getSessionId,
 } from "./api/wikiArt/api";
 import {
   Observable,
@@ -22,9 +23,11 @@ import {
 } from "./api/wikiArt/interfaces";
 import { appendFile, promises, readFile, writeFile } from "fs";
 import path = require("path");
+import { checkEncoding } from "./utils/validation";
+import { Logger } from "./utils/logger";
 
-const sessionKey = `61f713343e66`;
-const dataFomat = "utf-8";
+const sessionKey = `b428076ae175`;
+const dataFormat = "utf-8";
 
 const PaintingShortJsonKeys = [
   "id",
@@ -37,24 +40,21 @@ const PaintingShortJsonKeys = [
 ];
 
 async function main() {
-  const outputFile = "paintingList.csv";
-  const readFile = "mostViewedPaintings.csv";
+  Logger.info("app start");
+}
 
-  readData(readFile).then((objList) => {
+function readPaintingShortInfoCSV(srcFile: string) {
+  return readData(srcFile).then((objList) => {
     const set = new Set<string>();
     objList.forEach((obj) => {
       set.add(obj.artistId);
     });
 
-    const arr = [...set];
-
-    console.log("artist num : ", arr.length);
-
-    loadArtistPaintintg(outputFile, 1, arr);
+    return set;
   });
 }
 
-function loadArtistPaintintg(
+function loadArtistPaintintgByFile(
   fileName: string,
   reapeatCnt: number,
   artistIds: string[]
@@ -91,7 +91,7 @@ function loadArtistPaintintg(
   list$.subscribe((list) => writeData(fileName, list));
 }
 
-function loadMostViewsPainting(fileName: string, repeat: number) {
+function loadMostViewsPaintingByFile(fileName: string, repeat: number) {
   init(fileName, PaintingShortJsonKeys);
 
   const list$ = createTaskObservable(sessionKey, repeat);
@@ -185,6 +185,8 @@ function transformCSV(obj: any, keys: string[]) {
     }
 
     const str = transformComma(JSON.stringify(obj[key]));
+
+    checkEncoding(str);
 
     arr.push(str);
   });

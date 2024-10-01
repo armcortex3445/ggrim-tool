@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import {
   Artist,
   DictionaryJson,
@@ -7,10 +7,46 @@ import {
   PaintingShortJson,
   Painting,
 } from "./interfaces"; // 인터페이스 경로에 맞게 수정
+import { Logger } from "../../utils/logger";
+import { error } from "console";
+import { checkResponseHeader } from "../../utils/validation";
 
 const API_BASE_URL = "https://www.wikiart.org/en/api/2";
 
-export async function getSeesionId() {}
+interface IAuthInfo {
+  SessionKey: string;
+  MaxRequestsPerHour: number;
+  MaxSessionsPerHour: number;
+}
+
+export async function getSessionId() {
+  Logger.debug("start Auth");
+  try {
+    /*TODO
+    - 실행시 실패.
+    - 빌드시 .evn 파일 로드하여 환경변수 접근 하도록 로직 수정 필요
+    */
+    const keys = {
+      access: process.env[`WIKIART_ACCESS_KEY`],
+      secret: process.env[`WIKIART_SECRET_KEY`],
+    };
+    Logger.info("getSessionId");
+    Logger.info(`keys : ` + JSON.stringify(keys));
+
+    const url = `${API_BASE_URL}/en/Api/2/login?accessCode=${
+      process.env[`WIKIART_ACCESS_KEY`]
+    }&secretCode=${process.env[`WIKIART_SECRET_KEY`]}`;
+
+    const response = await axios.get<IAuthInfo>(url);
+    Logger.info("session : " + JSON.stringify(response));
+    return response.data.SessionKey;
+  } catch (e: any) {
+    if (e.response && e.response.status === 404) {
+      return { message: "No Authorization key found", status: 404 };
+    }
+    throw new Error(`Failed to Authorization ${e.message}`);
+  }
+}
 
 // 1. Updated Artists
 export async function getUpdatedArtists(
@@ -22,6 +58,7 @@ export async function getUpdatedArtists(
       fromDate || ""
     }&paginationToken=${paginationToken || ""}`;
     const response = await axios.get<ListWithPagination<Artist>>(url);
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -41,6 +78,7 @@ export async function getDeletedArtists(
       fromDate || ""
     }&paginationToken=${paginationToken || ""}`;
     const response = await axios.get<ListWithPagination<string>>(url);
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -62,6 +100,7 @@ export async function getArtistsByDictionary(
       fromDate || ""
     }&paginationToken=${paginationToken || ""}`;
     const response = await axios.get<ListWithPagination<Artist>>(url);
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -82,6 +121,7 @@ export async function getUpdatedDictionaries(
       fromDate || ""
     }&paginationToken=${paginationToken || ""}`;
     const response = await axios.get<ListWithPagination<DictionaryJson>>(url);
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -101,6 +141,7 @@ export async function getDeletedDictionaries(
       fromDate || ""
     }&paginationToken=${paginationToken || ""}`;
     const response = await axios.get<ListWithPagination<string>>(url);
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -120,6 +161,7 @@ export async function getDictionariesByGroup(
       paginationToken || ""
     }`;
     const response = await axios.get<ListWithPagination<DictionaryJson>>(url);
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -142,6 +184,7 @@ export async function paintingSearch(
     const response = await axios.get<ListWithPagination<PaintingShortJson>>(
       url
     );
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -164,6 +207,7 @@ export async function getPaintingsByArtist(
     const response = await axios.get<ListWithPagination<PaintingShortJson>>(
       url
     );
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -186,6 +230,7 @@ export async function getMostViewedPaintings(
     const response = await axios.get<ListWithPagination<PaintingShortJson>>(
       url
     );
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
@@ -204,6 +249,7 @@ export async function getPaintingDetails(
   try {
     const url = `${API_BASE_URL}/Painting?id=${paintingId}&imageFormat=${imageFormat}&authSessionKey=${sessionKey}`;
     const response = await axios.get<Painting>(url);
+    checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
     if (error.response && error.response.status === 404) {
