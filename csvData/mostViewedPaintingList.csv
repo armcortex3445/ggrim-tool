@@ -1,0 +1,781 @@
+id,title,url,artistUrl,artistName,artistId,completitionYear
+57727444edc2cb3880cb7bf6,Mona Lisa,mona-lisa,leonardo-da-vinci,Leonardo da Vinci,57726d85edc2cb3880b48ccd,1519
+5772716cedc2cb3880c1907f,The Starry Night,the-starry-night-1889,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1889
+57727593edc2cb3880ceb255,In Bed+ The Kiss,in-bed-the-kiss-1892,henri-de-toulouse-lautrec,Henri de Toulouse-Lautrec,57726d86edc2cb3880b48f5d,1892
+57726e7bedc2cb3880b7466a,The Birth of Venus,the-birth-of-venus-1485,sandro-botticelli,Sandro Botticelli,57726d7dedc2cb3880b47c88,1485
+577271f9edc2cb3880c37dcd,The School of Athens,school-of-athens-detail-from-right-hand-side-showing-diogenes-on-the-steps-and-euclid-1511,raphael,Raphael,57726d83edc2cb3880b487fe,1511
+5772722cedc2cb3880c42b1a,Camille Monet and a Child in the Artist’s Garden in Argenteuil,madame-monet-and-child,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1875
+57726e2fedc2cb3880b61c00,Composition A,composition-a-1923,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1923
+57726ee7edc2cb3880b8b06b,The Kiss,the-kiss-1908,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1908
+5772722aedc2cb3880c427ca,Impression+ sunrise,impression-sunrise,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1872
+577272dcedc2cb3880c6a79b,Basket of Apples,still-life-with-bottle-and-apple-basket-1894,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1895
+577274deedc2cb3880ccdd2b,Job,job-1896,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1896
+57726f04edc2cb3880b939ba,The Luncheon on the Grass,the-luncheon-on-the-grass-1863,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1863
+577274e7edc2cb3880cce547,Zodiac,zodiac-1896,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1896
+57726f77edc2cb3880baa4c5,The Garden of Earthly Delights,the-garden-of-earthly-delights-1515-7,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1515
+57727103edc2cb3880c02a9f,Drawing Hands,drawing-hands,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1948
+57726ee6edc2cb3880b8adbb,Portrait of Adele Bloch-Bauer I,portrait-of-adele-bloch-bauer-i-1907-1,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1907
+57726e2fedc2cb3880b61b5c,Avond (Evening): The Red Tree,avond-evening-the-red-tree-1910,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1910
+57726e8cedc2cb3880b76280,Jeanne Hebuterne,jeanne-hebuterne-1919,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1919
+57726e82edc2cb3880b750a4,Composition IV,composition-iv-1911,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1911
+57726e88edc2cb3880b75c2c,Yellow-Red-Blue,yellow-red-blue-1925,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1925
+5772727dedc2cb3880c55a0b,Three Dancers in an Exercise Hall,three-dancers-in-an-exercise-hall,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1880
+577275d8edc2cb3880cf7406,Girl with a White Dog,girl-with-a-white-dog,lucian-freud,Lucian Freud,57726d86edc2cb3880b490ab,1952
+57726efcedc2cb3880b92bc4,The Desperate Man (Self-Portrait),the-desperate-man-self-portrait-1845,gustave-courbet,Gustave Courbet,57726d7eedc2cb3880b47e3f,1845
+577275feedc2cb3880d008b8,Seated Woman with Bent Knee,seated-woman-with-bent-knee-1917,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1917
+57727671edc2cb3880d162f0,Chop Suey,chop-suey-1929,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1929
+57726e25edc2cb3880b60a48,The Scream,the-scream-1893,edvard-munch,Edvard Munch,57726d7bedc2cb3880b47a89,1893
+577275e6edc2cb3880cf8b29,Dante and Virgil,dante-and-virgil-1850,william-adolphe-bouguereau,William-Adolphe Bouguereau,57726d86edc2cb3880b49101,1850
+577270a9edc2cb3880bee499,Ad Parnassum,to-the-parnassus-1932,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1932
+577273f6edc2cb3880ca526f,The Great Wave off Kanagawa,the-great-wave-of-kanagawa-1831,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,1831
+57726e41edc2cb3880b6935f,Netherlandish Proverbs,netherlandish-proverbs-1559,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1559
+577270a8edc2cb3880bee249,Senecio,senecio-1922,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1922
+57726e5cedc2cb3880b6baf8,Liberty Leading the People,the-liberty-leading-the-people-1830,eugene-delacroix,Eugene Delacroix,57726d7cedc2cb3880b47baa,1830
+577274e5edc2cb3880cce204,Poster for Victorien Sardou`s Gismonda starring Sarah Bernhardt at the Théâtre de la Renaissance in Paris,poster-for-victorien-sardou-s-gismonda-starring-sarah-bernhardt-at-the-théâtre-de-la-1894,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1894
+57726ee4edc2cb3880b8aa9d,University of Vienna Ceiling Paintings (Medicine)+ detail showing Hygieia,university-of-vienna-ceiling-paintings-medicine-detail-showing-hygieia-1907-1,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1907
+57726e2fedc2cb3880b61b1c,The Gray Tree,the-gray-tree-1911,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1911
+5772700cedc2cb3880bc7ec7,The Eiffel Tower,the-eiffel-tower-1889,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1889
+577274e6edc2cb3880cce324,Spring,spring-1896,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1896
+57726f78edc2cb3880baa755,The Seven Deadly Sins and the Four Last Things (tabletop),the-seven-deadly-sins-and-the-four-last-things-1485,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1485
+57726efdedc2cb3880b92d9c,A Bar at the Folies-Bergere,a-bar-at-the-folies-bergere-1882-1,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1882
+57726e40edc2cb3880b6921f,The Fight between Carnival and Lent,the-fight-between-carnival-and-lent-1559-1,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1559
+5772759fedc2cb3880cec3ac,The Girl with a Pearl Earring,the-girl-with-a-pearl-earring,johannes-vermeer,Johannes Vermeer,57726d86edc2cb3880b48f87,1665
+57727259edc2cb3880c4cb0a,Women in the garden,women-in-the-garden,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1866
+57727638edc2cb3880d0b702,Rhythm,rhythm-1,robert-delaunay,Robert Delaunay,57726d87edc2cb3880b491d5,1912
+57726e41edc2cb3880b6926f,Hunters in the Snow,hunters-in-the-snow-1565,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1565
+57726f4fedc2cb3880ba0b6d,Saturn Devouring One of His Sons,saturn-devouring-his-son-1823-1,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1823
+57727373edc2cb3880c8a36c,The Return of the Prodigal Son,the-return-of-the-prodigal-son-1669,rembrandt,Rembrandt,57726d84edc2cb3880b48b73,1669
+577272d6edc2cb3880c69b39,Mont Sainte-Victoire,mont-sainte-victoire-3,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1895
+57727893edc2cb3880d82d12,The problem we all live with,the-problem-we-all-live-with-1935,norman-rockwell,Norman Rockwell,57726d8aedc2cb3880b498e3,1964
+57726f00edc2cb3880b9322d,Olympia,olympia-1863,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1863
+577274e5edc2cb3880cce2b4,Sarah Bernhardt,sarah-bernhardt-1896,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1896
+57726f4cedc2cb3880ba07ed,Nude Maja,nude-maja-1800,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1800
+57726f1fedc2cb3880b962c5,The Red Dragon and the Woman Clothed with the Sun,the-red-dragon-and-the-woman-clothed-with-the-sun-1805,william-blake,William Blake,57726d7eedc2cb3880b47f24,1805
+57726ea6edc2cb3880b7e812,The Angelus,the-angelus-1859,jean-francois-millet,Jean-Francois Millet,57726d7dedc2cb3880b47d2a,1859
+5772788bedc2cb3880d82158,Boy and Girl gazing at the Moon,boy-and-girl-gazing-at-the-moon-1926,norman-rockwell,Norman Rockwell,57726d8aedc2cb3880b498e3,1926
+57727673edc2cb3880d1662e,Nighthawks,nighthawks,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1942
+57727102edc2cb3880c0288d,Circle Limit I,circle-limit-i,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1958
+57727448edc2cb3880cb8302,The Last Supper,the-last-supper-1495,leonardo-da-vinci,Leonardo da Vinci,57726d85edc2cb3880b48ccd,1495
+5772791eedc2cb3880da0eee,Woman and Horses,woman-and-horses,octavio-ocampo,Octavio Ocampo,57726d8bedc2cb3880b49b4c,null
+5772758fedc2cb3880cead4e,At the Moulin Rouge+ The Dance,at-the-moulin-rouge-the-dance-1890,henri-de-toulouse-lautrec,Henri de Toulouse-Lautrec,57726d86edc2cb3880b48f5d,1890
+57727089edc2cb3880be55d5,Don Quixote and Sancho Setting Out,don-quixote-and-sancho-setting-out-1863,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,1863
+57726e45edc2cb3880b69781,The Triumph of Death,the-triumph-of-death-1562-1,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1563
+57726f76edc2cb3880baa405,The Concert in the Egg,the-concert-in-the-egg-1480,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1480
+57726f00edc2cb3880b931ff,Music in the Tuileries Garden,music-in-the-tuileries-garden-1862-1,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1862
+57726ee3edc2cb3880b8a8dd,Danae,danae-1908,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1908
+57727139edc2cb3880c0ddfc,Irises,irises-1889,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1889
+577275ccedc2cb3880cf614e,Blue Morning Glories,blue-morning-glories,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1935
+577273c5edc2cb3880c9c28d,In the Style of Kairouan,in-the-style-of-kairouan-1914,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1914
+57726ee7edc2cb3880b8afab,The Beethoven Frieze: The Hostile Powers. Far Wall,the-beethoven-frieze-the-hostile-powers-far-wall-1902-1,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1902
+5772727dedc2cb3880c55aeb,Two Ballet Dancers,two-ballet-dancers,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1879
+57726e31edc2cb3880b61e40,Broadway Boogie Woogie,broadway-boogie-woogie-1943,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1943
+57726e81edc2cb3880b74fcc,Blue rider,blue-rider-1903,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1903
+57727741edc2cb3880d4421f,The Pine Tree at St. Tropez,the-pine-tree-at-st-tropez-1909,paul-signac,Paul Signac,57726d88edc2cb3880b495bf,1909
+57726ee3edc2cb3880b8aa4d,Goldfish,goldfish-1902,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1902
+57727637edc2cb3880d0b662,Eiffel Tower,eiffel-tower-1914,robert-delaunay,Robert Delaunay,57726d87edc2cb3880b491d5,1914
+5772791dedc2cb3880da0dbe,Kiss of the Sea,kiss-of-the-sea,octavio-ocampo,Octavio Ocampo,57726d8bedc2cb3880b49b4c,null
+57727eecedc2cb3880ec57ec,Color Study: Squares with Concentric Circles,color-study-squares-with-concentric-circles-1913,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1913
+57726e82edc2cb3880b750e0,Composition VI,composition-vi-1913,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1913
+577274e5edc2cb3880cce284,Salome,salome-1897,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1897
+577275dcedc2cb3880cf7b12,Queen Elizabeth II,queen-elizabeth-ii-2001,lucian-freud,Lucian Freud,57726d86edc2cb3880b490ab,2001
+57726ee7edc2cb3880b8afdb,The Beethoven Frieze: The Longing for Happiness Finds Repose in Poetry. Right wall,the-beethoven-frieze-the-longing-for-happiness-finds-repose-in-poetry-right-wall-1902-1,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1902
+577275e4edc2cb3880cf8747,The Archangel Michael defeating Satan,the-archangel-michael-defeating-satan-1635,guido-reni,Guido Reni,57726d86edc2cb3880b490e9,1635
+57726e12edc2cb3880b5e955,Vertumnus (Emperor Rudolph II),vertumnus-emperor-rudolph-ii,giuseppe-arcimboldo,Giuseppe Arcimboldo,57726d7bedc2cb3880b47a39,1591
+577275a4edc2cb3880cecc68,Portrait of Thomas Cromwell,portrait-of-thomas-cromwell,hans-holbein-the-younger,Hans Holbein the Younger,57726d86edc2cb3880b48f9f,1533
+57727448edc2cb3880cb8319,The Madonna of the Carnation,the-madonna-of-the-carnation,leonardo-da-vinci,Leonardo da Vinci,57726d85edc2cb3880b48ccd,1480
+57727265edc2cb3880c4dc43,Dance Class at the Opera+ rue Le Peletier,dance-class-at-the-opera-1872,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1872
+57726e40edc2cb3880b6919f,The Procession to Calvary,christ-carrying-the-cross-1564,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1564
+57727229edc2cb3880c425aa,Haystacks at Giverny,haystacks-at-giverny,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1884
+57726f04edc2cb3880b93a08,The Monet family in their garden at Argenteuil,the-monet-family-in-their-garden-at-argenteuil-1874,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1874
+577275cfedc2cb3880cf667e,Light of Iris,light-of-iris,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1924
+5772713bedc2cb3880c0e144,Landscape with House and Ploughman,landscape-with-house-and-ploughman-1889,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1889
+57726f85edc2cb3880bb12ed,Gargantua,gargantua-1831,honore-daumier,Honore Daumier,57726d7fedc2cb3880b481f6,1831
+577275f3edc2cb3880cff835,The Little Knitter,the-little-knitter-1882,william-adolphe-bouguereau,William-Adolphe Bouguereau,57726d86edc2cb3880b49101,1882
+57727018edc2cb3880bceeda,The Arnolfini Wedding. Portrait of Giovanni Arnolfini and his Wife Giovanna Cenami (The Arnolfini Marriage),the-arnolfini-wedding-the-portrait-of-giovanni-arnolfini-and-his-wife-giovanna-cenami-the-1434,jan-van-eyck,Jan van Eyck,57726d80edc2cb3880b48323,1434
+5772769cedc2cb3880d1fc0d,Ophelia,ophelia,john-everett-millais,John Everett Millais,57726d87edc2cb3880b49447,1852
+57726e85edc2cb3880b75732,On White II,on-white-ii-1923,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1923
+577274e5edc2cb3880cce161,Painting,painting,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1898
+57726e31edc2cb3880b61f36,New York City I,new-york-city-i-1942,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1942
+57727448edc2cb3880cb8341,The proportions of the human figure (The Vitruvian Man),the-proportions-of-the-human-figure-the-vitruvian-man-1492,leonardo-da-vinci,Leonardo da Vinci,57726d85edc2cb3880b48ccd,1492
+57727342edc2cb3880c800bc,Black Square,black-square-1915,kazimir-malevich,Kazimir Malevich,57726d84edc2cb3880b48b4f,1915
+577279c8edc2cb3880dc7784,Beat the Whites with the Red Wedge,beat-the-whites-with-the-red-wedge-1920,el-lissitzky,El Lissitzky,57726d8dedc2cb3880b49f14,1920
+5772791eedc2cb3880da0e9e,Skull,skull,octavio-ocampo,Octavio Ocampo,57726d8bedc2cb3880b49b4c,null
+577275d9edc2cb3880cf75c6,Hotel Bedroom,hotel-bedroom,lucian-freud,Lucian Freud,57726d86edc2cb3880b490ab,1954
+577270a2edc2cb3880bedb2d,Cat and Bird,cat-and-bird,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1928
+57727830edc2cb3880d6ead9,The Climax,the-climax-1893,aubrey-beardsley,Aubrey Beardsley,57726d89edc2cb3880b49827,1893
+57726e32edc2cb3880b62076,Tableau I,tableau-i-1921,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1921
+577275e5edc2cb3880cf8969,At the Edge of the Brook,at-the-edge-of-the-brook-1875,william-adolphe-bouguereau,William-Adolphe Bouguereau,57726d86edc2cb3880b49101,1875
+5772722bedc2cb3880c4288a,Irises in Monet's Garden,irises-in-monet-s-garden-03,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1900
+577273c8edc2cb3880c9c67f,Fuji+ Mountains in clear Weather  (Red Fuji),fuji-mountains-in-clear-weather-1831,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,1831
+57726e80edc2cb3880b74d5a,The Birth and Triumph of Venus,the-birth-and-triumph-of-venus-1740-1,francois-boucher,Francois Boucher,57726d7dedc2cb3880b47c98,1740
+57727101edc2cb3880c026ed,Ascending & Descending,ascending-descending,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1960
+57726e21edc2cb3880b60386,Kiss,kiss-1897,edvard-munch,Edvard Munch,57726d7bedc2cb3880b47a89,1897
+57726e25edc2cb3880b60a8b,The Sick Child (later),the-sick-child-1886,edvard-munch,Edvard Munch,57726d7bedc2cb3880b47a89,1907
+57726eceedc2cb3880b8864b,The Vision after the Sermon (Jacob wrestling with the Angel),the-vision-after-the-sermon-jacob-wrestling-with-the-angel-1888,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1888
+57727448edc2cb3880cb82ee,The Lady with an Ermine (Cecilia Gallerani),the-lady-with-the-ermine-cecilia-gallerani-1496,leonardo-da-vinci,Leonardo da Vinci,57726d85edc2cb3880b48ccd,1490
+5772791dedc2cb3880da0cee,Buddha,buddha,octavio-ocampo,Octavio Ocampo,57726d8bedc2cb3880b49b4c,null
+57726f49edc2cb3880ba034f,The Third of May 1808 (Execution of the Defenders of Madrid),the-third-of-may-1808-execution-of-the-defenders-of-madrid-1814-1,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1814
+57726e38edc2cb3880b62a41,Medusa,medusa-1597-1,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1597
+57727255edc2cb3880c4c51a,Water Lilies+ Evening Effect,water-lilies-evening-effect-1899,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1899
+57726f5dedc2cb3880ba7c65,Castle (Castle Fairy Tale),castle-castle-fairy-tale-1909,mikalojus-ciurlionis,Mikalojus Konstantinas Ciurlionis,57726d7eedc2cb3880b47f72,1909
+5772708bedc2cb3880be5a65,Idylls of the King,idylls-of-the-king-12,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,null
+57726e40edc2cb3880b6918f,Children's Games,children-s-games-1560,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1560
+57727b7cedc2cb3880e19405,The Kiss,the-kiss-1904,auguste-rodin,Auguste Rodin,57726d90edc2cb3880b4a580,1904
+57726ee7edc2cb3880b8b0cb,The Three Ages of Woman,the-three-ages-of-woman-1905,gustav-klimt,Gustav Klimt,57726d7eedc2cb3880b47e13,1905
+5772708dedc2cb3880be5dc5,Paradise Lost,paradise-lost-3,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,null
+57727449edc2cb3880cb840d,Madonna Litta (Madonna and the Child),madonna-litta-madonna-and-the-child,leonardo-da-vinci,Leonardo da Vinci,57726d85edc2cb3880b48ccd,1490
+57727279edc2cb3880c55548,The Absinthe Drinker,the-absinthe-drinker-1876,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1876
+57726f17edc2cb3880b95695,Lamentation (The Mourning of Christ),lamentation-the-mourning-of-christ-1306-1,giotto,Giotto,57726d7eedc2cb3880b47ed8,1306
+57726e2fedc2cb3880b61b2c,Composition No.10,composition-no-10-1942,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1942
+57726fcbedc2cb3880bbc5a5,The Ninth Wave,the-ninth-wave-1850-1,ivan-aivazovsky,Ivan Aivazovsky,57726d80edc2cb3880b48261,1850
+57726ee2edc2cb3880b8a78b,The Dream,the-dream-1910,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1910
+57727271edc2cb3880c54949,Interior (The Rape),interior-the-rape-1869,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1869
+57726e84edc2cb3880b755c0,Moscow I,moscow-i-1916,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1916
+577272d1edc2cb3880c69193,Forest,forest,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1890
+5772727bedc2cb3880c556b8,The Ballet Class,the-dancing-class-1874,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1874
+57726f1eedc2cb3880b96185,The Ancient of Days,the-ancient-of-days-1794,william-blake,William Blake,57726d7eedc2cb3880b47f24,1794
+57727ab7edc2cb3880df988a,The Potato Eaters,the-potato-eaters-1885-1,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1885
+57727257edc2cb3880c4c76a,Waterloo Bridge+ London,waterloo-bridge-london-1,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1903
+577273c7edc2cb3880c9c4ff,Cranes from Quick Lessons in Simplified Drawing,cranes-from-quick-lessons-in-simplified-drawing,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,1823
+5772735bedc2cb3880c88307,Danae,danae-1643,rembrandt,Rembrandt,57726d84edc2cb3880b48b73,1643
+57726fc7edc2cb3880bbbf35,Shipwreck,shipwreck-1854,ivan-aivazovsky,Ivan Aivazovsky,57726d80edc2cb3880b48261,1854
+577272a4edc2cb3880c5f24f,The Roses of Heliogabalus,the-roses-of-heliogabalus-1888,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1888
+5772759fedc2cb3880cec3ec,The Milkmaid,the-milkmaid,johannes-vermeer,Johannes Vermeer,57726d86edc2cb3880b48f87,1660
+57727674edc2cb3880d1672a,Office at Night,office-at-night,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1940
+57727831edc2cb3880d6ec89,The Peacock Skirt,the-peacock-skirt-1893,aubrey-beardsley,Aubrey Beardsley,57726d89edc2cb3880b49827,1893
+57726e7aedc2cb3880b744fa,The Spring,primavera-1478,sandro-botticelli,Sandro Botticelli,57726d7dedc2cb3880b47c88,1482
+57726e1fedc2cb3880b5ffb7,Anxiety,anxiety-1894,edvard-munch,Edvard Munch,57726d7bedc2cb3880b47a89,1894
+577275d5edc2cb3880cf6f66,Annabel Sleeping,annabel-sleeping-1988,lucian-freud,Lucian Freud,57726d86edc2cb3880b490ab,1988
+57726e1fedc2cb3880b5ffce,Ashes,ashes-1894,edvard-munch,Edvard Munch,57726d7bedc2cb3880b47a89,1894
+57726ee1edc2cb3880b8a5b5,The Sleeping Gypsy,the-sleeping-gypsy-1897,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1897
+577274dfedc2cb3880ccddd1,Maude Adams as Joan of Arc,maude-adams-as-joan-of-arc-1909,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1909
+577275dcedc2cb3880cf7b22,Red Haired Man on a Chair,red-haired-man-on-a-chair-1963,lucian-freud,Lucian Freud,57726d86edc2cb3880b490ab,1963
+57727315edc2cb3880c75ce0,Jeanne Samary in a Low Necked Dress,jeanne-samary-in-a-low-necked-dress-1877,pierre-auguste-renoir,Pierre-Auguste Renoir,57726d84edc2cb3880b48b25,1877
+57726ea6edc2cb3880b7e8bb,The Gleaners,the-gleaners-1857,jean-francois-millet,Jean-Francois Millet,57726d7dedc2cb3880b47d2a,1857
+57727600edc2cb3880d00d9a,The Embrace,the-embrace-1917,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1917
+5772788cedc2cb3880d82278,Christmas Santa Reading Mail,christmas-santa-reading-mail-1935,norman-rockwell,Norman Rockwell,57726d8aedc2cb3880b498e3,1935
+5772721fedc2cb3880c416da,Autumn on the Seine at Argenteuil,autumn-on-the-seine-at-argenteuil,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1873
+57727162edc2cb3880c17d8a,Still Life - Vase with Fifteen Sunflowers,still-life-vase-with-fifteen-sunflowers-1888-1,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1888
+57727705edc2cb3880d34407,The Shipwreck,the-shipwreck,william-turner,J.M.W. Turner,57726d88edc2cb3880b49573,1805
+57726f48edc2cb3880ba012f,Charles IV of Spain and his family,charles-iv-of-spain-and-his-family-1800,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1800
+57727671edc2cb3880d1620d,Automat,automat-1927,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1927
+57726ecfedc2cb3880b8880f,Van Gogh Painting Sunflowers,van-gogh-painting-sunflowers-1888,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1888
+577275ffedc2cb3880d00a82,Self-Portrait with Black Vase and Spread Fingers,self-portrait-with-black-vase-and-spread-fingers-1911,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1911
+5772700bedc2cb3880bc7d83,Sunday Afternoon on the Island of La Grande Jatte,sunday-afternoon-on-the-island-of-la-grande-jatte-1886,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1886
+57726f74edc2cb3880baa093,Haywain,haywain-1500-7,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1500
+57726e0cedc2cb3880b58456,Water,water-1566,giuseppe-arcimboldo,Giuseppe Arcimboldo,57726d7bedc2cb3880b47a39,1566
+57726e78edc2cb3880b74146,The Adoration of the Magi,adoration-of-the-magi-1476-1,sandro-botticelli,Sandro Botticelli,57726d7dedc2cb3880b47c88,1476
+57726e31edc2cb3880b61f46,Composition with Oval in Color Planes II,composition-with-oval-in-color-planes-ii-1914,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1914
+57726e60edc2cb3880b6c13a,Ophelia,ophelia-1894,john-william-waterhouse,John William Waterhouse,57726d7cedc2cb3880b47bc2,1894
+577275e6edc2cb3880cf8aa9,Compassion,compassion-1897,william-adolphe-bouguereau,William-Adolphe Bouguereau,57726d86edc2cb3880b49101,1897
+5772791dedc2cb3880da0cdc,Absents of the mermaid,absents-of-the-mermaid,octavio-ocampo,Octavio Ocampo,57726d8bedc2cb3880b49b4c,null
+57726e93edc2cb3880b76f0a,Sleeping Nude with Arms Open (Red Nude),sleeping-nude-with-arms-open-red-nude-1917-1,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1917
+57726e92edc2cb3880b76d02,Portrait of Maude Abrantes,portrait-of-maude-abrantes-1907,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1907
+577270a3edc2cb3880bedccd,Flower myth,flower-myth-1918,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1918
+57727e08edc2cb3880e9a791,Dance Around the Golden Calf,dance-around-the-golden-calf-1910,emil-nolde,Emil Nolde,57726d99edc2cb3880b4b636,1910
+57727449edc2cb3880cb837b,The Virgin of the Rocks,the-virgin-of-the-rocks,leonardo-da-vinci,Leonardo da Vinci,57726d85edc2cb3880b48ccd,1505
+577275f3edc2cb3880cff765,The Bohemian,the-bohemian-1890,william-adolphe-bouguereau,William-Adolphe Bouguereau,57726d86edc2cb3880b49101,1890
+57726e20edc2cb3880b60185,Death in the sickroom,death-in-the-sickroom-1893,edvard-munch,Edvard Munch,57726d7bedc2cb3880b47a89,1893
+57727892edc2cb3880d82b52,Southern Justice (Murder in Mississippi),southern-justice-murder-in-mississippi-1965,norman-rockwell,Norman Rockwell,57726d8aedc2cb3880b498e3,1965
+57726e9eedc2cb3880b7dcfe,Saint Francis of Assisi (detail),saint-francis-of-assisi-detail,cimabue,Cimabue,57726d7dedc2cb3880b47cf2,null
+57726e0cedc2cb3880b58400,Summer,summer-1563,giuseppe-arcimboldo,Giuseppe Arcimboldo,57726d7bedc2cb3880b47a39,1563
+57726e82edc2cb3880b7511a,Composition X,composition-x-1939,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1939
+57727b7bedc2cb3880e19279,Danaid,danaid,auguste-rodin,Auguste Rodin,57726d90edc2cb3880b4a580,1889
+577270e5edc2cb3880bf9e35,Administering Justice in Kyivan Rus,judgment-during-the-russian-pravda-1890,ivan-bilibin,Ivan Bilibin,57726d81edc2cb3880b48539,1907
+5772730bedc2cb3880c74d4a,Camille Monet and Her Son Jean in the Garden at Argenteuil,camille-monet-and-her-son-jean-in-the-garden-at-argenteuil-1874,pierre-auguste-renoir,Pierre-Auguste Renoir,57726d84edc2cb3880b48b25,1874
+57727115edc2cb3880c043ec,Waterfall,waterfall,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1961
+57727078edc2cb3880be3cc3,The Four Horsemen of the Apocalypse+ Death+ Famine+ Pestilence and War,the-four-horsemen-of-the-apocalypse-death-famine-pestilence-and-war-1498,albrecht-durer,Albrecht Durer,57726d81edc2cb3880b48431,1498
+57727033edc2cb3880bd1a0a,Morning: Dance of the Nymphs,dance-of-the-nymphs-1850,camille-corot,Camille Corot,57726d81edc2cb3880b483d2,1850
+57726e92edc2cb3880b76d16,Portrait of Moise Kisling,portrait-of-moise-kisling-1915,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1915
+57726e7dedc2cb3880b748da,Venus and Mars,venus-and-mars-1483-1,sandro-botticelli,Sandro Botticelli,57726d7dedc2cb3880b47c88,1483
+57727517edc2cb3880cd85a4,Morning in a Pine Forest,morning-in-a-pine-forest-1889,ivan-shishkin,Ivan Shishkin,57726d85edc2cb3880b48e91,1889
+5772780dedc2cb3880d6b94d,The street,the-street-1933,balthus,Balthus,57726d89edc2cb3880b497dd,1933
+577270a3edc2cb3880bedcbd,Flora on sand,flora-on-sand-1927,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1927
+577272a0edc2cb3880c5ed36,In the Tepidarium,in-the-tepidarium-1881,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1881
+57726e37edc2cb3880b6284e,Boy with a Basket of Fruit,boy-with-a-basket-of-fruit-1593-1,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1593
+577270a0edc2cb3880bed72b,The wrestle of Jacob,the-wrestle-of-jacob-1855,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,1855
+57726e9eedc2cb3880b7dc3e,Madonna and Child Enthroned (Maesta),madonna-and-child-enthroned-maesta-1285-1,cimabue,Cimabue,57726d7dedc2cb3880b47cf2,1285
+57726f2cedc2cb3880b9d434,Sistine Chapel Ceiling: The Delphic Sibyl,sistine-chapel-ceiling-the-delphic-sibyl-1509,michelangelo,Michelangelo,57726d7fedc2cb3880b4805e,1509
+57726f0dedc2cb3880b94705,The Swing,the-swing-1767,jean-honore-fragonard,Jean-Honore Fragonard,57726d7eedc2cb3880b47e9c,1767
+57727672edc2cb3880d1645c,Girl at a Sewing Machine,girl-at-a-sewing-machine,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1921
+57726e32edc2cb3880b62046,Place de la Concorde,place-de-la-concorde-1943,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1943
+57726f19edc2cb3880b959cb,The Arrest of Christ (Kiss of Judas),the-arrest-of-christ-kiss-of-judas-1306-1,giotto,Giotto,57726d7eedc2cb3880b47ed8,1306
+57726e32edc2cb3880b62096,Trafalgar Square,trafalgar-square-1943,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1943
+5772721eedc2cb3880c414ea,Antibes in the Morning,antibes-in-the-morning,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1888
+57726f1eedc2cb3880b96105,Oberon+ Titania and Puck with Fairies Dancing,oberon-titania-and-puck-with-fairies-dancing,william-blake,William Blake,57726d7eedc2cb3880b47f24,1786
+577272a3edc2cb3880c5f15f,The Education of the Children of Clovis,the-education-of-the-children-of-clovis-1861,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1861
+57726e32edc2cb3880b620f6,View from the Dunes with Beach and Piers,view-from-the-dunes-with-beach-and-piers-1909,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1909
+577272dfedc2cb3880c6ac81,The Card Players,the-card-players-1892,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1892
+57726e2fedc2cb3880b61bac,Mill in Sunlight: The Winkel Mill,mill-in-sunlight-the-winkel-mill-1908,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1908
+577271fdedc2cb3880c3836a,The Sistine Madonna,the-sistine-madonna-1513,raphael,Raphael,57726d83edc2cb3880b487fe,1513
+577274deedc2cb3880ccdd9e,Madonna of the Lilies,madonna-of-the-lilies-1905,alphonse-mucha,Alphonse Mucha,57726d85edc2cb3880b48df8,1905
+577275a5edc2cb3880cecde2,The Ambassadors,the-ambassadors-1533,hans-holbein-the-younger,Hans Holbein the Younger,57726d86edc2cb3880b48f9f,1533
+577276a0edc2cb3880d201cb,Zapatista's Marching,zapatista-s-marching-1931,jose-clemente-orozco,Jose Clemente Orozco,57726d88edc2cb3880b4947f,1931
+577279daedc2cb3880dc92a2,Night,night-1890,ferdinand-hodler,Ferdinand Hodler,57726d8dedc2cb3880b49f94,1890
+57726f1dedc2cb3880b95fdd,Isaac Newton,isaac-newton-1795,william-blake,William Blake,57726d7eedc2cb3880b47f24,1795
+57726e38edc2cb3880b62a67,Narcissus,narcissus,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1599
+57726e5dedc2cb3880b6bb3a,A Mermaid,a-mermaid-1900,john-william-waterhouse,John William Waterhouse,57726d7cedc2cb3880b47bc2,1900
+57726efaedc2cb3880b92a04,The Wheat Sifters,the-wheat-sifters-1855-1,gustave-courbet,Gustave Courbet,57726d7eedc2cb3880b47e3f,1855
+57727944edc2cb3880daa438,Sugaring Off,sugaring-off-1943,grandma-moses,Grandma Moses,57726d8bedc2cb3880b49ba8,1943
+5772735bedc2cb3880c88247,The Storm on the Sea of Galilee,christ-in-the-storm-1633,rembrandt,Rembrandt,57726d84edc2cb3880b48b73,1633
+5772791dedc2cb3880da0d9e,Jimmy Carter,jimmy-carter,octavio-ocampo,Octavio Ocampo,57726d8bedc2cb3880b49b4c,null
+57727802edc2cb3880d64fcf,Children,children-1937,balthus,Balthus,57726d89edc2cb3880b497dd,1937
+57726e7fedc2cb3880b74b5a,Madame de Pompadour,madame-de-pompadour-1756-1,francois-boucher,Francois Boucher,57726d7dedc2cb3880b47c98,1756
+57726f0eedc2cb3880b947d5,A Young Girl Reading,a-young-girl-reading-1776-1,jean-honore-fragonard,Jean-Honore Fragonard,57726d7eedc2cb3880b47e9c,1776
+57726eddedc2cb3880b89ff4,Carnival Evening,carnival-evening-1886,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1886
+57727150edc2cb3880c106e2,Red Vineyards at Arles,red-vineyards-at-arles-1888,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1888
+5772780dedc2cb3880d6b8ed,The Mediterranean Cat,the-mediterranean-cat-1949,balthus,Balthus,57726d89edc2cb3880b497dd,1949
+57727279edc2cb3880c55638,A Cotton Office in New Orleans,the-cotton-exchange-new-orleans-1873,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1873
+577275dbedc2cb3880cf7826,Man with Leg Up,man-with-leg-up,lucian-freud,Lucian Freud,57726d86edc2cb3880b490ab,1992
+57726f30edc2cb3880b9da84,The Torment of Saint Anthony,the-torment-of-saint-anthony,michelangelo,Michelangelo,57726d7fedc2cb3880b4805e,1487
+57727d70edc2cb3880e7c4a3,The Wanderer Above the Sea of Fog,the-wanderer-above-the-sea-of-fog,caspar-david-friedrich,Caspar David Friedrich,57726d97edc2cb3880b4b0fc,1818
+57726e81edc2cb3880b74f34,Black and Violet,black-and-violet-1923,wassily-kandinsky,Wassily Kandinsky,57726d7dedc2cb3880b47cb0,1923
+5772734eedc2cb3880c812fc,Suprematist Composition: White on White,white-square-1917,kazimir-malevich,Kazimir Malevich,57726d84edc2cb3880b48b4f,1918
+577272a4edc2cb3880c5f2cf,The Women of Amphissa,the-women-of-amphissa-1887,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1887
+57727279edc2cb3880c555c8,The Bellelli Family,the-belleli-family-1862,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1862
+57727609edc2cb3880d01b38,The Wedding Feast at Cana,the-marriage-at-cana-1563,paolo-veronese,Paolo Veronese,57726d86edc2cb3880b49131,1563
+57727228edc2cb3880c4257a,Haystack at Giverny,haystack-at-giverny-1886,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1886
+57727307edc2cb3880c746c7,Dance at Moulin de la Galette,ball-at-the-moulin-de-la-galette-1876,pierre-auguste-renoir,Pierre-Auguste Renoir,57726d84edc2cb3880b48b25,1876
+577272c4edc2cb3880c622b3,Unexpected Visitors,unexpected-visitors-1888,ilya-repin,Ilya Repin,57726d84edc2cb3880b48a43,1888
+5772791eedc2cb3880da0f0e,Woman of substance,woman-of-substance,octavio-ocampo,Octavio Ocampo,57726d8bedc2cb3880b49b4c,null
+57726ecfedc2cb3880b88945,Where Do We Come From? What Are We? Where Are We Going?,where-do-we-come-from-what-are-we-where-are-we-going-1897,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1898
+57727031edc2cb3880bd1598,The Tribute Money (Brancacci Chapel),the-tribute-money-1425,masaccio,Masaccio,57726d81edc2cb3880b483bc,1425
+57726e55edc2cb3880b6afc2,The Barque of Dante (Dante and Virgil in the Underworld),the-barque-of-dante-dante-and-virgil-in-the-underworld-1822-1,eugene-delacroix,Eugene Delacroix,57726d7cedc2cb3880b47baa,1822
+57726e89edc2cb3880b75d96,Anna Akhmatova,anna-akhmatova-1911-1,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1911
+57726f2fedc2cb3880b9d97c,The Last Judgement,the-last-judgement-1541,michelangelo,Michelangelo,57726d7fedc2cb3880b4805e,1541
+5772780cedc2cb3880d6b81d,The cardgame,the-cardgame-1950,balthus,Balthus,57726d89edc2cb3880b497dd,1950
+577273c5edc2cb3880c9c27d,Death for the Idea,death-for-the-idea-1915,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1915
+577271ededc2cb3880c36a14,Lake. Rus.,lake-rus,isaac-levitan,Isaac Levitan,57726d83edc2cb3880b487e0,1900
+57726eb2edc2cb3880b7fd52,Summertime,summertime-1894,mary-cassatt,Mary Cassatt,57726d7dedc2cb3880b47d5e,1894
+57726eebedc2cb3880b8b723,A Burial at Ornans,a-burial-at-ornans-1850-1,gustave-courbet,Gustave Courbet,57726d7eedc2cb3880b47e3f,1850
+57727274edc2cb3880c54ea5,Place de la Concorde,place-de-la-concorde-1875,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1875
+57726e44edc2cb3880b696c1,The Gloomy Day (January),the-gloomy-day-1559,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1565
+5772759fedc2cb3880cec3bc,The glass of wine,the-glass-of-wine,johannes-vermeer,Johannes Vermeer,57726d86edc2cb3880b48f87,1660
+57727ea1edc2cb3880eb925d,Dancers at the Bar,dancers-at-the-bar,fernando-botero,Fernando Botero,57726d9bedc2cb3880b4b8b8,2001
+57727516edc2cb3880cd8301,In the Wild North,in-the-wild-north-1891,ivan-shishkin,Ivan Shishkin,57726d85edc2cb3880b48e91,1891
+5772777cedc2cb3880d4d8df,The Last Supper,the-last-supper-1594,tintoretto,Tintoretto,57726d88edc2cb3880b4962f,1594
+57726e5dedc2cb3880b6bbea,Cleopatra,cleopatra-1887-1,john-william-waterhouse,John William Waterhouse,57726d7cedc2cb3880b47bc2,1887
+57726ed8edc2cb3880b89737,View of Toledo,view-of-toledo,el-greco,El Greco,57726d7dedc2cb3880b47da2,1599
+57726e31edc2cb3880b61f66,Composition with Grid IX,composition-with-grid-ix-1919,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1919
+577270ddedc2cb3880bf93b5,Baba Yaga. Illustration for the fairy tale "Vasilisa the Beautiful",baba-yaga-illustration-for-the-fairy-tale-vasilisa-the-beautiful-1900,ivan-bilibin,Ivan Bilibin,57726d81edc2cb3880b48539,1900
+57726e5aedc2cb3880b6b708,Death of Sardanapalus,death-of-sardanapalus-1827-1,eugene-delacroix,Eugene Delacroix,57726d7cedc2cb3880b47baa,1827
+57727593edc2cb3880ceb235,In bed,in-bed-1893,henri-de-toulouse-lautrec,Henri de Toulouse-Lautrec,57726d86edc2cb3880b48f5d,1893
+57727112edc2cb3880c0414c,Symmetry Drawing,symmetry-drawing,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1948
+57727183edc2cb3880c1b682,Portrait of Pablo Picasso,portrait-of-pablo-picasso-1912,juan-gris,Juan Gris,57726d82edc2cb3880b48710,1912
+577275ceedc2cb3880cf65ae,Jimson Weed,jimson-weed,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1932
+57727231edc2cb3880c43234,Poplars at Giverny,poplars-at-giverny,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1887
+57726f13edc2cb3880b9505f,691A  Irinaland Over the Balkans,irinaland-over-the-balkans,friedensreich-hundertwasser,Friedensreich Hundertwasser,57726d7bedc2cb3880b479f1,1971
+57726ff3edc2cb3880bc579a,The Tennis Court Oath+ 20th June 1789,the-tennis-court-oath-20th-june-1789-1791,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1791
+577278ccedc2cb3880d9365c,The Mérode Altarpiece,the-mérode-altarpiece-1428,robert-campin,Robert Campin,57726d8aedc2cb3880b499e5,1428
+577279e0edc2cb3880dc9c8a,Ballon Dog,ballon-dog,jeff-koons,Jeff Koons,57726d8dedc2cb3880b49fac,null
+57726f33edc2cb3880b9dfb3,Jupiter and Thetis,jupiter-and-thetis-1811,jean-auguste-dominique-ingres,Jean Auguste Dominique Ingres,57726d7fedc2cb3880b48098,1811
+57726e5eedc2cb3880b6bcda,Hylas and the Nymphs,hylas-and-the-nymphs-1896-1,john-william-waterhouse,John William Waterhouse,57726d7cedc2cb3880b47bc2,1896
+57726ee0edc2cb3880b8a4f5,The Hungry Lion Throws Itself on the Antelope,the-hungry-lion-throws-itself-on-the-antelope-1905,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1905
+577275c9edc2cb3880cf5c9c,Tiznit,tiznit,cy-twombly,Cy Twombly,57726d86edc2cb3880b48ffd,1953
+57727524edc2cb3880cd9908,Don Sebastian de Morra,don-sebastian-de-morra,diego-velazquez,Diego Velazquez,57726d85edc2cb3880b48ec1,1645
+57726e12edc2cb3880b5e998,The Librarian,the-librarian,giuseppe-arcimboldo,Giuseppe Arcimboldo,57726d7bedc2cb3880b47a39,1566
+57726e40edc2cb3880b6911d,Young Sick Bacchus,young-sick-bacchus,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1593
+57727161edc2cb3880c17bbe,Sower with Setting Sun,sower-with-setting-sun-1888-3,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1888
+577270a4edc2cb3880beddbd,After annealing,hammamet-with-mosque-1914,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1940
+57726eb6edc2cb3880b802cc,Day of the Gods,a-day-of-no-gods-1894,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1894
+577275d3edc2cb3880cf6d44,Sky above clouds III,sky-above-clouds-iii,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1963
+57727229edc2cb3880c4268a,Houses of Parliament,houses-of-parliament,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1904
+57726e17edc2cb3880b5f228,The Tempest,the-tempest-1505-1,giorgione,Giorgione,57726d7aedc2cb3880b479c7,1508
+57727520edc2cb3880cd9374,Carcass of Beef,carcass-of-beef,chaim-soutine,Chaim Soutine,57726d85edc2cb3880b48ea9,1924
+57727102edc2cb3880c0289d,Circle Limit III,circle-limit-iii,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1959
+57727439edc2cb3880cb0ff8,Venus of Urbino,venus-of-urbino-1538,titian,Titian,57726d84edc2cb3880b48c9b,1538
+57727372edc2cb3880c8a21c,The Nightwatch,the-nightwatch-1642,rembrandt,Rembrandt,57726d84edc2cb3880b48b73,1642
+57726f56edc2cb3880ba7263,The Adoration of the Name of The Lord,the-adoration-of-the-name-of-the-lord-1772,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1772
+5772819eedc2cb3880f504e9,Lady Godiva,lady-godiva-1897,john-collier,John Collier,57726dacedc2cb3880b4d556,1897
+57727152edc2cb3880c10ba4,Self Portrait with Bandaged Ear,self-portrait-with-bandaged-ear-1889,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1889
+57726effedc2cb3880b930d2,Lola de Valence,lola-de-valence-1862,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1862
+57726f1eedc2cb3880b96265,The Lovers Whirlwind,the-lovers-whirlwind-1827,william-blake,William Blake,57726d7eedc2cb3880b47f24,1827
+57726e32edc2cb3880b61f76,At Work / On the Land,at-work-on-the-land-1898,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1898
+577276b1edc2cb3880d27198,Balance,balance,francis-picabia,Francis Picabia,57726d88edc2cb3880b49497,1919
+57726f79edc2cb3880baa8c5,Triptych: The Temptation of St. Anthony,triptych-the-temptation-of-st-anthony-1516,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1516
+57726e30edc2cb3880b61c80,Composition in Color A,composition-in-color-a-1917,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1917
+57727334edc2cb3880c7ea9a,The Luncheon of the Boating Party,the-luncheon-of-the-boating-party-1881-1,pierre-auguste-renoir,Pierre-Auguste Renoir,57726d84edc2cb3880b48b25,1881
+57726e7aedc2cb3880b7448a,Portrait of Dante,portrait-of-dante,sandro-botticelli,Sandro Botticelli,57726d7dedc2cb3880b47c88,1495
+57726e31edc2cb3880b61e60,Composition with Gray and Light Brown,composition-with-gray-and-light-brown-1918,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1918
+57727178edc2cb3880c1a3f0,Wheatfield with Crows,wheatfield-with-crows-1890,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1890
+57727094edc2cb3880be68b5,The Enigma,the-enigma-1871,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,1871
+57726e8cedc2cb3880b762bc,Jeanne Hebuterne in Red Shawl,jeanne-hebuterne-in-red-shawl-1917-1,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1917
+57727271edc2cb3880c54939,In the Dance Studio,in-the-dance-studio,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1897
+57726f14edc2cb3880b9526f,626 The Way to You,the-endless-way-to-you,friedensreich-hundertwasser,Friedensreich Hundertwasser,57726d7bedc2cb3880b479f1,1966
+577272a0edc2cb3880c5ebd3,Egyptian Chess Players,egyptian-chess-players-1865,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1865
+57727944edc2cb3880daa412,Catching the Thanksgiving Turkey,catching-the-thanksgiving-turkey-1943,grandma-moses,Grandma Moses,57726d8bedc2cb3880b49ba8,1943
+5772701dedc2cb3880bcf55e,The Hunt in the Forest,the-hunt-in-the-forest,paolo-uccello,Paolo Uccello,57726d80edc2cb3880b48351,1460
+57726e8dedc2cb3880b76528,Madame Pompadour,madame-pompadour-1914-1,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1914
+5772717eedc2cb3880c1af2e,Self-portrait in a Convex Mirror,self-portrait-at-the-mirror,parmigianino,Parmigianino,57726d82edc2cb3880b486f0,1524
+57726e7cedc2cb3880b7470a,The Mystical Nativity,the-mystical-nativity-1500-1,sandro-botticelli,Sandro Botticelli,57726d7dedc2cb3880b47c88,1501
+577270e2edc2cb3880bf99d5,Illustration for the front cover of the book in the series "Tales",illustration-for-the-front-cover-of-the-book-in-the-series-tales-1899,ivan-bilibin,Ivan Bilibin,57726d81edc2cb3880b48539,1899
+5772769dedc2cb3880d1fda0,The Bridesmaid,the-bridesmaid,john-everett-millais,John Everett Millais,57726d87edc2cb3880b49447,1851
+577276a2edc2cb3880d204ef,Jupiter and Semele,jupiter-and-semele-1895-1,gustave-moreau,Gustave Moreau,57726d88edc2cb3880b49467,1895
+57727524edc2cb3880cd9a08,Las Meninas,las-meninas-detail-of-the-lower-half-depicting-the-family-of-philip-iv-of-spain-1656,diego-velazquez,Diego Velazquez,57726d85edc2cb3880b48ec1,1656
+577270a4edc2cb3880bede1d,Highway and byways,highway-and-byways-1929,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1929
+57727600edc2cb3880d00dae,The Family,the-family-1918,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1918
+57726ef2edc2cb3880b8c169,The Man Made Mad by Fear,the-man-made-mad-by-fear-1844-1,gustave-courbet,Gustave Courbet,57726d7eedc2cb3880b47e3f,1844
+57726eb3edc2cb3880b7ff02,The Letter,the-letter-1891,mary-cassatt,Mary Cassatt,57726d7dedc2cb3880b47d5e,1891
+57726e2fedc2cb3880b61b7c,Wood with Beech Trees,wood-with-beech-trees,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1899
+57726e37edc2cb3880b628ee,David and Goliath,david-and-goliath,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1599
+57726f57edc2cb3880ba7453,The Fight at the Venta Nueva,the-fight-at-the-venta-nueva-1777,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1777
+57727071edc2cb3880be3253,Self-Portrait at the Age of Twenty Eight,self-portrait-at-the-age-of-twenty-eight-1500,albrecht-durer,Albrecht Durer,57726d81edc2cb3880b48431,1500
+577275caedc2cb3880cf5f4e,Abstraction White Rose,abstraction-white-rose,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1927
+5772767dedc2cb3880d1ce23,Table for Ladies,tables-for-ladies-1930,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1930
+57727145edc2cb3880c0f349,Paul Gauguin's Armchair,paul-gauguin-s-armchair-1888,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1888
+57727674edc2cb3880d166f4,Office in a Small City,office-in-a-small-city-1953,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1953
+57726f38edc2cb3880b9e76f,Portrait of Napoléon Bonaparte+ The First Council,portrait-of-napoléon-bonaparte-the-first-council-1804,jean-auguste-dominique-ingres,Jean Auguste Dominique Ingres,57726d7fedc2cb3880b48098,1804
+57727102edc2cb3880c0290f,Concentric Rinds,concentric-rinds,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1953
+57727110edc2cb3880c03d59,Relativity lattice,relativity-lattice,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1953
+57727ad2edc2cb3880dfbe97,The Charge of the Lancers,the-charge-of-the-lancers-1915,umberto-boccioni,Umberto Boccioni,57726d8fedc2cb3880b4a3f3,1915
+577276b2edc2cb3880d273d8,Machine Turn Quickly,machine-turn-quickly,francis-picabia,Francis Picabia,57726d88edc2cb3880b49497,1917
+577275caedc2cb3880cf5f0e,Above the Clouds I,above-the-clouds-i,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1963
+57727071edc2cb3880be31f3,Self-Portrait,self-portrait-1493,albrecht-durer,Albrecht Durer,57726d81edc2cb3880b48431,1493
+57727673edc2cb3880d16578,Lighthouse at Two Lights,lighthouse-at-two-lights-1929,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1929
+57726fc3edc2cb3880bbb935,Russian-Turkish Sea Battle of Sinop on 18th November 1853,russian-turkish-sea-battle-of-sinop-on-18th-november-1853-1853,ivan-aivazovsky,Ivan Aivazovsky,57726d80edc2cb3880b48261,1853
+57726f1aedc2cb3880b95bab,The Trial by Fire+ St. Francis offers to walk through fire+ to convert the Sultan of Egypt,the-trial-by-fire-st-francis-offers-to-walk-through-fire-to-convert-the-sultan-of-egypt-1297,giotto,Giotto,57726d7eedc2cb3880b47ed8,1297
+577270a8edc2cb3880bee2b9,Southern (Tunisian) gardens,southern-tunisian-gardens-1919,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1919
+57726f2aedc2cb3880b9d034,Holy Family with St. John the Baptist,holy-family-with-st-john-the-baptist-1506-1,michelangelo,Michelangelo,57726d7fedc2cb3880b4805e,1506
+57726e56edc2cb3880b6b122,Horse Frightened by a Storm,horse-frightened-by-a-storm-1824,eugene-delacroix,Eugene Delacroix,57726d7cedc2cb3880b47baa,1824
+57726ef0edc2cb3880b8be66,Self-Portrait with a Black Dog,self-portrait-with-a-black-dog-1841,gustave-courbet,Gustave Courbet,57726d7eedc2cb3880b47e3f,1841
+5772751dedc2cb3880cd8f44,The Field of Wheat,the-field-of-wheat-1878,ivan-shishkin,Ivan Shishkin,57726d85edc2cb3880b48e91,1878
+57726e37edc2cb3880b627ee,Amor Victorious,amor-victorious-1602,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1602
+577272a3edc2cb3880c5f18f,The Finding of Moses,the-finding-of-moses-1904,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1904
+577275f1edc2cb3880cff545,Portrait of the Artist,portrait-of-the-artist-1879,william-adolphe-bouguereau,William-Adolphe Bouguereau,57726d86edc2cb3880b49101,1879
+57727e08edc2cb3880e9a721,Autumn Sea VII,autumn-sea-vii,emil-nolde,Emil Nolde,57726d99edc2cb3880b4b636,null
+57726e8dedc2cb3880b76398,Le grand nu (The Great Nude),le-grand-nu-the-great-nude-1917,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1917
+57726e5dedc2cb3880b6bc9a,Gather Ye Rosebuds While Ye May,gather-ye-rosebuds-while-ye-may-1909,john-william-waterhouse,John William Waterhouse,57726d7cedc2cb3880b47bc2,1909
+57726f4eedc2cb3880ba09ad,Portrait of Maria Teresa de Vallabriga on horseback,portrait-of-maria-teresa-de-vallabriga-on-horseback-1783,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1783
+57726ed7edc2cb3880b895a9,The Burial of the Count of Orgaz,the-burial-of-the-count-of-orgaz-1587,el-greco,El Greco,57726d7dedc2cb3880b47da2,1587
+57726f1aedc2cb3880b95c0b,Adoration of the Magi,adoration-of-the-magi-1306,giotto,Giotto,57726d7eedc2cb3880b47ed8,1306
+577278c1edc2cb3880d8ce2e,The Ruins of the old Kreuzkirche+ Dresden,the-ruins-of-the-old-kreuzkirche-dresden-1765,bernardo-bellotto,Bernardo Bellotto,57726d8aedc2cb3880b499bd,1765
+5772780bedc2cb3880d6b6ed,Patience,patience-1943,balthus,Balthus,57726d89edc2cb3880b497dd,1943
+57727631edc2cb3880d0ae32,The Parquet Planers (The Floor Scrapers),the-parquet-planers-1875,gustave-caillebotte,Gustave Caillebotte,57726d86edc2cb3880b4919b,1875
+57726e31edc2cb3880b61ec0,Mill in the evening,mill-in-the-evening-1905,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1905
+57726e5eedc2cb3880b6bd9a,Miranda,miranda-1916,john-william-waterhouse,John William Waterhouse,57726d7cedc2cb3880b47bc2,1916
+57726e0cedc2cb3880b58433,Fire,fire-1566,giuseppe-arcimboldo,Giuseppe Arcimboldo,57726d7bedc2cb3880b47a39,1566
+57726ea2edc2cb3880b7e35c,Abduction of the Sabine Women,rape-of-the-sabine-women-1638-1,nicolas-poussin,Nicolas Poussin,57726d7dedc2cb3880b47d0a,1638
+577275ccedc2cb3880cf623e,City Night,city-night,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1926
+57726e43edc2cb3880b694c1,Parable of the Blind,parable-of-the-blind-1568,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1568
+5772752eedc2cb3880cd9f38,The Surrender of Breda,the-surrender-of-breda-1635,diego-velazquez,Diego Velazquez,57726d85edc2cb3880b48ec1,1635
+577279c8edc2cb3880dc7760,Basic Calculus,basic-calculus-1928,el-lissitzky,El Lissitzky,57726d8dedc2cb3880b49f14,1928
+57727103edc2cb3880c02a0f,Development II,development-ii,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1939
+57727476edc2cb3880cc237b,Mount of five treasures (Two worlds),mount-of-five-treasures-two-worlds-1933,nicholas-roerich,Nicholas Roerich,57726d85edc2cb3880b48cef,1933
+57727071edc2cb3880be3213,Self-Portrait,self-portrait-1498,albrecht-durer,Albrecht Durer,57726d81edc2cb3880b48431,1498
+57726e7eedc2cb3880b74b0a,Odalisque,odalisque,francois-boucher,Francois Boucher,57726d7dedc2cb3880b47c98,1749
+577271fdedc2cb3880c3837a,The Three Graces,the-three-graces-1505,raphael,Raphael,57726d83edc2cb3880b487fe,1505
+57726f11edc2cb3880b94d96,The Raft of the Medusa,the-raft-of-the-medusa-1819,theodore-gericault,Théodore Géricault,57726d7eedc2cb3880b47ec0,1819
+57726fcfedc2cb3880bbcb85,View of Tiflis,view-of-tiflis-1868,ivan-aivazovsky,Ivan Aivazovsky,57726d80edc2cb3880b48261,1868
+5772752eedc2cb3880cd9f28,The Rokeby Venus,the-rokeby-venus-1648,diego-velazquez,Diego Velazquez,57726d85edc2cb3880b48ec1,1648
+57727518edc2cb3880cd86c4,Oak Grove,oak-grove-1887,ivan-shishkin,Ivan Shishkin,57726d85edc2cb3880b48e91,1887
+57726e5bedc2cb3880b6b868,The Women of Algiers in their Apartment,the-women-of-algiers-in-their-apartment-1834-1,eugene-delacroix,Eugene Delacroix,57726d7cedc2cb3880b47baa,1834
+57726e77edc2cb3880b740b6,The Ecstasy of St. Teresa (within the Cornaro Chapel),the-ecstasy-of-st-teresa-1652,gian-lorenzo-bernini,Gian Lorenzo Bernini,57726d7cedc2cb3880b47c70,1652
+5772714fedc2cb3880c1056a,Prisoners Exercising (Prisoners Round),prisoners-exercising-prisoners-round-1890,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1890
+57727742edc2cb3880d4448b,Boyarynya Morozova,boyarynya-morozova-1887,vasily-surikov,Vasily Surikov,57726d88edc2cb3880b495db,1887
+5772702bedc2cb3880bd0ccc,The Virgin of the Rosary,madonna-of-the-rosary,bartolome-esteban-murillo,Bartolome Esteban Murillo,57726d81edc2cb3880b483a0,1650
+57727297edc2cb3880c58367,A Favourite Custom,a-favourite-custom-1909,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1909
+57726e77edc2cb3880b73fb3,The Rape of Proserpina,rape-of-proserpine-1622,gian-lorenzo-bernini,Gian Lorenzo Bernini,57726d7cedc2cb3880b47c70,1622
+57726f92edc2cb3880bb1e7b,Christ in the Wilderness,christ-in-the-wilderness-1872,ivan-kramskoy,Ivan Kramskoy,57726d80edc2cb3880b48228,1872
+5772759bedc2cb3880cebd8a,The Medical Inspection,the-medical-inspection,henri-de-toulouse-lautrec,Henri de Toulouse-Lautrec,57726d86edc2cb3880b48f5d,1894
+57726ff3edc2cb3880bc56a7,The Consecration of the Emperor Napoleon and the Coronation of the Empress Josephine by Pope Pius VII+ 2nd December 1804,the-consecration-of-the-emperor-napoleon-and-the-coronation-of-the-empress-josephine-by-pope-1807,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1807
+57727702edc2cb3880d33f97,Rain Steam and Speed+ The Great Western Railway,rain-steam-and-speed-the-great-western-railway,william-turner,J.M.W. Turner,57726d88edc2cb3880b49573,null
+577275cfedc2cb3880cf671e,Music Pink and Blue,music-pink-and-blue-ii,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1918
+57726f73edc2cb3880ba9e63,Ascent of the Blessed,ascent-of-the-blessed-1504,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1504
+57727600edc2cb3880d00d1a,The Artist's Sister+ Melanie,the-artist-s-sister-melanie-1908,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1908
+57727255edc2cb3880c4c42a,Water Lilies,water-lilies-1919-9,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1919
+57726e44edc2cb3880b695eb,The "Little" Tower of Babel,the-little-tower-of-babel-1563,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1563
+57726eeaedc2cb3880b8b54b,The Liver is the Cock's Comb,the-liver-is-the-cock-s-comb,arshile-gorky,Arshile Gorky,57726d7bedc2cb3880b479df,1944
+57726eceedc2cb3880b885df,The Spirit of the Dead Watches,spirit-of-the-dead-watching-1892-1,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1892
+57727030edc2cb3880bd13f6,Adam and Eve banished from Paradise,adam-and-eve-banished-from-paradise,masaccio,Masaccio,57726d81edc2cb3880b483bc,1427
+57726f03edc2cb3880b938a6,The Fifer,the-fifer-1866,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1866
+577275ccedc2cb3880cf61fe,Calla Lily on Grey,calla-lily-on-grey,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1928
+57727672edc2cb3880d164af,Hotel Lobby,hotel-lobby,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1943
+57726e65edc2cb3880b6c7c6,Set Design for Scheherazade,set-design-for-scheherazade-1910-1,leon-bakst,Leon Bakst,57726d7cedc2cb3880b47bda,1910
+57727103edc2cb3880c02a6f,Double Planetoid,double-planetoid,m-c-escher,M.C. Escher,57726d82edc2cb3880b48668,1949
+57727894edc2cb3880d82e28,Veterinarian,veterinarian,norman-rockwell,Norman Rockwell,57726d8aedc2cb3880b498e3,1952
+57727637edc2cb3880d0b682,Eiffel Tower,eiffel-tower-1911,robert-delaunay,Robert Delaunay,57726d87edc2cb3880b491d5,1911
+57726f38edc2cb3880b9e77f,Portrait of Napoléon on the Imperial Throne,portrait-of-napoleon-on-the-imperial-throne-1806,jean-auguste-dominique-ingres,Jean Auguste Dominique Ingres,57726d7fedc2cb3880b48098,1806
+577272a2edc2cb3880c5f05f,Silver Favourites,silver-favourites-1903,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1903
+577275d1edc2cb3880cf68d4,Oriental Poppies,oriental-poppies,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1928
+577272a4edc2cb3880c5f31f,Unconscious Rivals,unconscious-rivals-1893,sir-lawrence-alma-tadema,Sir Lawrence Alma-Tadema,57726d84edc2cb3880b48a2b,1893
+57726ee0edc2cb3880b8a3e5,Self Portrait from L'ile Saint Louis,self-portrait-from-l-ile-saint-louis-1890,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1890
+57727359edc2cb3880c88027,Belshazzar's Feast,belshazzar-s-feast-1635,rembrandt,Rembrandt,57726d84edc2cb3880b48b73,1635
+57727269edc2cb3880c4e313,Little Dancer+ Fourteen Year Old,fourteen-year-old-little-dancer,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1881
+5772780cedc2cb3880d6b85d,The Cat in the Mirror,the-cat-in-the-mirror-2,balthus,Balthus,57726d89edc2cb3880b497dd,1990
+57726eabedc2cb3880b7f189,Children Playing On The Beach,children-playing-on-the-beach-1884,mary-cassatt,Mary Cassatt,57726d7dedc2cb3880b47d5e,1884
+57726e2fedc2cb3880b61b3c,Victory Boogie Woogie,victory-boogie-woogie-1944,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1944
+577273f8edc2cb3880ca554f,The Dragon of Smoke Escaping from Mount Fuji,the-dragon-of-smoke-escaping-from-mount-fuji,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,null
+577272c7edc2cb3880c627db,Bibemus Quarry,bibemus-quarry,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1900
+57726ec3edc2cb3880b81863,Self Portrait with Halo and Snake,self-portrait-with-halo-1889,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1889
+57726e90edc2cb3880b76a32,Portrait of Diego Rivera,portrait-of-diego-rivera-1914-1,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1914
+57727008edc2cb3880bc78b2,La Grande Jatte,la-grande-jatte-1884,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1884
+577271eeedc2cb3880c36c30,March,march-1895,isaac-levitan,Isaac Levitan,57726d83edc2cb3880b487e0,1895
+577273f8edc2cb3880ca552f,Fishing by Torchlight in Kai Province+ from Oceans of Wisdom,fishing-by-torchlight-in-kai-province-from-oceans-of-wisdom-1833,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,1833
+57726ed7edc2cb3880b895bb,The Disrobing of Christ,the-disrobing-of-christ-1579,el-greco,El Greco,57726d7dedc2cb3880b47da2,1579
+577271fcedc2cb3880c381da,The Madonna Conestabile,the-madonna-conestabile-1502,raphael,Raphael,57726d83edc2cb3880b487fe,1502
+57726ef9edc2cb3880b9275b,The Meeting (Bonjour Monsieur Courbet),the-meeting-bonjour-monsieur-courbet-1854,gustave-courbet,Gustave Courbet,57726d7eedc2cb3880b47e3f,1854
+57727601edc2cb3880d00ef4,Two Girls Lying Entwined,two-girls-lying-entwined-1915,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1915
+5772708fedc2cb3880be5ff5,Richard I the Lionheart in battle at Arsuf in 1191,richard-i-the-lionheart-in-battle-at-arsuf-in-1191-1877,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,1877
+57727658edc2cb3880d142e5,Mr. and Mrs. Andrews,mr-and-mrs-andrews-1749,thomas-gainsborough,Thomas Gainsborough,57726d87edc2cb3880b4924d,1750
+57726ed0edc2cb3880b88aa1,Yellow Christ,yellow-christ-1889,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1889
+577279cfedc2cb3880dc81bf,Blue Horse I,blue-horse-i-1911,franz-marc,Franz Marc,57726d8dedc2cb3880b49f66,1911
+57727942edc2cb3880daa15f,Apple Butter Making,apple-butter-making-1947,grandma-moses,Grandma Moses,57726d8bedc2cb3880b49ba8,1947
+577273c5edc2cb3880c9c26b,Struck from the List,struck-from-the-list-1933,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1933
+57727688edc2cb3880d1ddec,The Survivors,not_detected_235978,kathe-kollwitz,Kathe Kollwitz,57726d87edc2cb3880b49398,1923
+57727ad2edc2cb3880dfbdce,States of Mind I: The Farewells,states-of-mind-i-the-farewells-1911,umberto-boccioni,Umberto Boccioni,57726d8fedc2cb3880b4a3f3,1911
+57727602edc2cb3880d01060,Woman in Black Stockings,woman-in-black-stockings-1913,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1913
+57726eb6edc2cb3880b803f3,Are You Jealous?,are-you-jealous-1892,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1892
+57727944edc2cb3880daa38c,The Quilting Bee,the-quilting-bee,grandma-moses,Grandma Moses,57726d8bedc2cb3880b49ba8,1950
+57726e39edc2cb3880b62ba7,The Lute Player,the-lute-player-1,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1596
+57727893edc2cb3880d82c92,The Golden Rule,the-golden-rule,norman-rockwell,Norman Rockwell,57726d8aedc2cb3880b498e3,1961
+57726edcedc2cb3880b89f02,Seascape Study with Rain Cloud,seascape-study-with-rain-cloud-1,john-constable,John Constable,57726d7dedc2cb3880b47dd6,1827
+57726f03edc2cb3880b93768,The Balcony,the-balcony-1869,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1869
+57726e33edc2cb3880b62280,Danae,danae-1531,correggio,Correggio,57726d7bedc2cb3880b47aec,1531
+57727604edc2cb3880d013e2,Feast in the House of Levi (Last Supper),feast-in-the-house-of-levi-1573,paolo-veronese,Paolo Veronese,57726d86edc2cb3880b49131,1573
+577276cdedc2cb3880d298db,A Knight At the Crossroads,a-knight-at-the-crossroads-1878,viktor-vasnetsov,Viktor Vasnetsov,57726d88edc2cb3880b494dd,1878
+57726f3aedc2cb3880b9ea62,The Apotheosis of Homer,the-apotheosis-of-homer-1827,jean-auguste-dominique-ingres,Jean Auguste Dominique Ingres,57726d7fedc2cb3880b48098,1827
+57727263edc2cb3880c4d9a3,Ballet Dancers in the Wings,ballet-dancers-in-the-wings-1900,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1900
+577275cdedc2cb3880cf63ee,From the Lake,from-the-lake,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1924
+577278a9edc2cb3880d8a836,The Crying Spider,the-crying-spider-1881,odilon-redon,Odilon Redon,57726d8aedc2cb3880b498fb,1881
+577270a5edc2cb3880bedf2d,Miraculous Landing,miraculous-landing-1920,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1920
+57726ff3edc2cb3880bc574a,The Oath of Horatii,the-oath-of-horatii-1784,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1784
+577272d4edc2cb3880c69724,Large Bathers,large-bathers-1900,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1900
+577275ceedc2cb3880cf64be,Grey Line With Black+ Blue And Yellow,grey-line-with-black-blue-and-yellow,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1923
+57726f71edc2cb3880ba9b81,Portrait of M.I.Lopukhina,portrait-of-m-i-lopukhina-1797,vladimir-borovikovsky,Vladimir Borovikovsky,57726d7fedc2cb3880b481ad,1797
+57726e30edc2cb3880b61d10,Geinrust Farm+ Compositional Study,geinrust-farm-compositional-study-1906,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1906
+57726e34edc2cb3880b62424,The Assumption of the Virgin,the-assumption-of-the-virgin-1530,correggio,Correggio,57726d7bedc2cb3880b47aec,1530
+57726ff3edc2cb3880bc56ca,The Death of Marat,the-death-of-marat-1793,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1793
+57726ed3edc2cb3880b88f75,Dormition of the Virgin,dormition-of-the-virgin-1566,el-greco,El Greco,57726d7dedc2cb3880b47da2,1566
+577279cbedc2cb3880dc7b63,Proun 19D,proun-19d-1922,el-lissitzky,El Lissitzky,57726d8dedc2cb3880b49f14,1922
+577279e0edc2cb3880dc9dad,Violet Ice (Kama Sutra),violet-ice-kama-sutra,jeff-koons,Jeff Koons,57726d8dedc2cb3880b49fac,1991
+57727043edc2cb3880bd8d6a,Souvenir of Mortefontaine,souvenir-of-mortefontaine-1864,camille-corot,Camille Corot,57726d81edc2cb3880b483d2,1864
+5772759fedc2cb3880cec41c,The Procuress,the-procuress-1656,johannes-vermeer,Johannes Vermeer,57726d86edc2cb3880b48f87,1656
+57727594edc2cb3880ceb3d5,La Goulue Arriving at the Moulin Rouge with Two Women,la-goulue-arriving-at-the-moulin-rouge-with-two-women-1892,henri-de-toulouse-lautrec,Henri de Toulouse-Lautrec,57726d86edc2cb3880b48f5d,1892
+57726f13edc2cb3880b9507f,630A  It Hurts to Wait With Love if Love Is Somewhere Else,it-hurts-to-wait-with-love-if-love-is-somewhere-else,friedensreich-hundertwasser,Friedensreich Hundertwasser,57726d7bedc2cb3880b479f1,1971
+57726f19edc2cb3880b95a6b,The Crucifixion,the-crucifixion-1325-1,giotto,Giotto,57726d7eedc2cb3880b47ed8,1325
+57726f73edc2cb3880ba9ed3,Christ Crowned with Thorns,christ-crowned-with-thorns-1510,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1510
+57727529edc2cb3880cd9bf8,Portrait of Pope Innocent X,portrait-of-pope-innocent-x-1650,diego-velazquez,Diego Velazquez,57726d85edc2cb3880b48ec1,1650
+57727706edc2cb3880d345f7,Wreckers Coast of Northumberland,wreckers-coast-of-northumberland,william-turner,J.M.W. Turner,57726d88edc2cb3880b49573,1834
+577270a2edc2cb3880bedabd,Black Knight,black-knight-1927,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1927
+57726ea0edc2cb3880b7e04c,Et in Arcadia ego,et-in-arcadia-ego-1639-1,nicolas-poussin,Nicolas Poussin,57726d7dedc2cb3880b47d0a,1638
+57727ee6edc2cb3880ec4dac,Separation in the Evening,separation-in-the-evening-1922,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1922
+57727509edc2cb3880cd6f63,Seated Demon,seated-demon-1890,mikhail-vrubel,Mikhail Vrubel,57726d85edc2cb3880b48e71,1890
+5772759fedc2cb3880cec38c,The Concert,the-concert,johannes-vermeer,Johannes Vermeer,57726d86edc2cb3880b48f87,1664
+57726e6eedc2cb3880b7314a,The Feast of the Gods,the-feast-of-the-gods-1514,giovanni-bellini,Giovanni Bellini,57726d7cedc2cb3880b47c1e,1516
+57726f8eedc2cb3880bb1b69,The Republic,the-republic-1848,honore-daumier,Honore Daumier,57726d7fedc2cb3880b481f6,1848
+577276b0edc2cb3880d27165,Adam and Eve,adam-and-eve,francis-picabia,Francis Picabia,57726d88edc2cb3880b49497,1931
+5772773eedc2cb3880d43ddf,The Dining Room,breakfast-the-dining-room,paul-signac,Paul Signac,57726d88edc2cb3880b495bf,1887
+5772724fedc2cb3880c4ba7a,Three Trees in Grey Weather,three-trees-in-grey-weather,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1891
+57726e60edc2cb3880b6c0ba,Tristram and Isolde,tristram-and-isolde-1916,john-william-waterhouse,John William Waterhouse,57726d7cedc2cb3880b47bc2,1916
+577271daedc2cb3880c2f126,Madonna and Child. Left Panel of Diptych de Melun,madonna-and-child-left-panel-of-diptych-de-melun,jean-fouquet,Jean Fouquet,57726d83edc2cb3880b487c4,1450
+57727191edc2cb3880c2286f,Avenue de l'Opera+ Place du Theatre Francais. Misty,avenue-de-l-opera-place-du-theatre-francais-misty,camille-pissarro,Camille Pissarro,57726d82edc2cb3880b48740,1898
+57727268edc2cb3880c4e163,Dancers tying shoes,dancers-tying-shoes-1883,edgar-degas,Edgar Degas,57726d83edc2cb3880b489b9,1883
+57726e32edc2cb3880b620d6,Stammer Mill with Streaked Sky,stammer-mill-with-streaked-sky-1906,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1906
+5772714dedc2cb3880c102f2,Portrait of Doctor Gachet,portrait-of-doctor-gachet-1890,vincent-van-gogh,Vincent van Gogh,57726d82edc2cb3880b486a0,1890
+5772769fedc2cb3880d2001d,Man of Fire,man-of-fire-1939,jose-clemente-orozco,Jose Clemente Orozco,57726d88edc2cb3880b4947f,1939
+5772769dedc2cb3880d1fd7d,The Blind Girl,the-blind-girl-1856,john-everett-millais,John Everett Millais,57726d87edc2cb3880b49447,1856
+577275cbedc2cb3880cf5fee,Bella Donna,bella-donna,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1939
+57727079edc2cb3880be3e83,The Knight+ Death and the Devil,the-knight-death-and-the-devil-1513,albrecht-durer,Albrecht Durer,57726d81edc2cb3880b48431,1513
+57726f2fedc2cb3880b9d92c,The Dying Slave,the-dying-slave-1515,michelangelo,Michelangelo,57726d7fedc2cb3880b4805e,1515
+57726e90edc2cb3880b76956,Portrait of Beatrice Hastings,portrait-of-beatrice-hastings-1915,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1915
+57727944edc2cb3880daa481,Christmas at Home,christmas-at-home,grandma-moses,Grandma Moses,57726d8bedc2cb3880b49ba8,null
+5772711aedc2cb3880c04a2a,Sidonia von Bork,sidonia-von-bork-1849,edward-burne-jones,Edward Burne-Jones,57726d82edc2cb3880b486c8,1860
+5772769fedc2cb3880d1fff5,Panel 17. Gods of the Modern World - The Epic of American Civilization,gods-of-the-modern-world-the-epic-of-american-civilization-1934,jose-clemente-orozco,Jose Clemente Orozco,57726d88edc2cb3880b4947f,1934
+57726f59edc2cb3880ba76b3,The Straw Manikin,the-straw-manikin-1792,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1792
+57726eddedc2cb3880b8a004,Centennial of Independence,centennial-of-independence-1892,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1892
+57727672edc2cb3880d16396,Early Sunday Morning,early-sunday-morning,edward-hopper,Edward Hopper,57726d87edc2cb3880b49321,1930
+57726f3aedc2cb3880b9eb12,The Grande Odalisque,the-grande-odalisque-1814,jean-auguste-dominique-ingres,Jean Auguste Dominique Ingres,57726d7fedc2cb3880b48098,1814
+5772765aedc2cb3880d145d4,The Blue Boy,portrait-of-the-jonathan-buttall-1770,thomas-gainsborough,Thomas Gainsborough,57726d87edc2cb3880b4924d,1770
+57727e0aedc2cb3880e9aa07,The Last Supper,the-last-supper-1909,emil-nolde,Emil Nolde,57726d99edc2cb3880b4b636,1909
+577275f8edc2cb3880cfff36,Fighter,fighter-1913,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1913
+57727c45edc2cb3880e40c8d,Portrait of Pig,portrait-of-pig-1970,jamie-wyeth,Jamie Wyeth,57726d92edc2cb3880b4a815,1970
+57727891edc2cb3880d829f2,Pride Of Parenthood,pride-of-parenthood,norman-rockwell,Norman Rockwell,57726d8aedc2cb3880b498e3,null
+5772731fedc2cb3880c76d34,Pink and Blue,pink-and-blue-1881,pierre-auguste-renoir,Pierre-Auguste Renoir,57726d84edc2cb3880b48b25,1881
+57726f76edc2cb3880baa395,Temptation of St. Anthony (detail),temptation-of-st-anthony-3,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1506
+57726eb7edc2cb3880b805b1,Young Mother Sewing,young-mother-sewing-1900,mary-cassatt,Mary Cassatt,57726d7dedc2cb3880b47d5e,1900
+57726e80edc2cb3880b74d0a,The Fountain of Love,the-fountain-of-love-1748,francois-boucher,Francois Boucher,57726d7dedc2cb3880b47c98,1748
+57726e9fedc2cb3880b7dda0,Autumn (The Spies with the Grapes of the Promised Land),autumn-the-spies-with-the-grapes-of-the-promised-land-1664-1,nicolas-poussin,Nicolas Poussin,57726d7dedc2cb3880b47d0a,1664
+57727501edc2cb3880cd6273,Christ as Saviour,christ-as-saviour,andrei-rublev,Andrei Rublev,57726d85edc2cb3880b48e4d,1410
+57726f76edc2cb3880baa2cf,St. Jerome Praying,st-jerome-praying-1500,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1500
+577271e6edc2cb3880c35d5a,Autumn day+ Sokolniki,autumn-day-sokolniki-1879,isaac-levitan,Isaac Levitan,57726d83edc2cb3880b487e0,1879
+57727601edc2cb3880d00f3e,Two Little Girls,two-little-girls-1911,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1911
+577275d1edc2cb3880cf69e4,Pelvis with the Distance,pelvis-with-the-distance-1943,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1943
+57727a38edc2cb3880ddceec,Triptych,triptych-1996,jacek-yerka,Jacek Yerka,57726d8eedc2cb3880b4a1c5,1996
+57727256edc2cb3880c4c5ba,Water Lily Pond,water-lily-pond-1,claude-monet,Claude Monet,57726d83edc2cb3880b488f1,1917
+57726edfedc2cb3880b8a3a5,Scout Attacked by a Tiger,scout-attacked-by-a-tiger-1904,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1904
+577275d4edc2cb3880cf6e14,Summer Days,summer-days,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1936
+57726ea7edc2cb3880b7e98b,The Sower,the-sower-1850,jean-francois-millet,Jean-Francois Millet,57726d7dedc2cb3880b47d2a,1850
+57727296edc2cb3880c581ce,The Cheat with the Ace of Diamonds,the-cheat-with-the-ace-of-diamonds,georges-de-la-tour,Georges de la Tour,57726d83edc2cb3880b489fa,1635
+57726f0aedc2cb3880b94265,The Flagellation of Christ,the-flagellation-of-christ-1450-1,piero-della-francesca,Piero della Francesca,57726d7eedc2cb3880b47e74,1450
+57727944edc2cb3880daa425,The Burning of Troy in 1862,the-burning-of-troy-in-1862-1943,grandma-moses,Grandma Moses,57726d8bedc2cb3880b49ba8,1943
+577270e0edc2cb3880bf97b5,Illustration for Alexander Pushkin's 'Fairytale of the Tsar Saltan',illustration-for-alexander-pushkin-s-fairytale-of-the-tsar-saltan-1905-3,ivan-bilibin,Ivan Bilibin,57726d81edc2cb3880b48539,1905
+57726ed0edc2cb3880b88a0f,Woman with a Flower,woman-with-a-flower-1891,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1891
+57727082edc2cb3880be49c5,Cinderella,cinderella-1,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,null
+577275d4edc2cb3880cf6e24,Sunrise,sunrise,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1916
+57727ac5edc2cb3880dfa9ef,Sierra Nevada Mountains,sierra-nevada-mountains,albert-bierstadt,Albert Bierstadt,57726d8fedc2cb3880b4a3a7,null
+577272d5edc2cb3880c69912,Woman in a Green Hat (Madame Cezanne),madame-cezanne-with-green-hat-1892,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1895
+57727182edc2cb3880c1b582,Photograph of Violin and Checkerboard,photograph-of-violin-and-checkerboard-1913,juan-gris,Juan Gris,57726d82edc2cb3880b48710,1913
+57727296edc2cb3880c5820e,The Fortune-Teller,the-fortune-teller,georges-de-la-tour,Georges de la Tour,57726d83edc2cb3880b489fa,1635
+57726f07edc2cb3880b93e36,Baptism of Christ,baptism-of-christ-1450,piero-della-francesca,Piero della Francesca,57726d7eedc2cb3880b47e74,1450
+57726f8fedc2cb3880bb1c69,Transnonain Street,transnonain-street-1834,honore-daumier,Honore Daumier,57726d7fedc2cb3880b481f6,1834
+577273c7edc2cb3880c9c50f,Crossbill and Thistle,crossbill-and-thistle,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,1834
+57726f56edc2cb3880ba7233,Summer+ or The Harvest,summer-or-the-harvest-1786,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1786
+57726f16edc2cb3880b954d5,Death and Ascension of St. Francis,death-and-ascension-of-st-francis-1300,giotto,Giotto,57726d7eedc2cb3880b47ed8,1300
+57726e17edc2cb3880b5f298,Pastoral Concert (Fête champêtre),pastoral-concert-fête-champêtre-1509,giorgione,Giorgione,57726d7aedc2cb3880b479c7,1509
+57727192edc2cb3880c22a2f,Boulevard Montmartre Spring Rain,boulevard-montmartre-spring-rain,camille-pissarro,Camille Pissarro,57726d82edc2cb3880b48740,1897
+57726f76edc2cb3880baa425,The Stone Operation / The Extraction of the Stone Madness / The Cure of Folly,the-stone-operation-the-extraction-of-the-stone-madness-the-cure-of-folly-1,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1516
+57726efeedc2cb3880b92f28,Effect of Snow at Petit-Montrouge,effect-of-snow-at-petit-montrouge-1870,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1870
+57726e5cedc2cb3880b6bab8,The Massacre at Chios,scenes-from-the-massacre-of-chios-1822,eugene-delacroix,Eugene Delacroix,57726d7cedc2cb3880b47baa,1824
+577272b2edc2cb3880c607d3,Barge Haulers on the Volga,haulers-on-the-volga-1873,ilya-repin,Ilya Repin,57726d84edc2cb3880b48a43,1873
+57727740edc2cb3880d4401f,Portrait of Felix Feneon,portrait-of-felix-feneon-1890,paul-signac,Paul Signac,57726d88edc2cb3880b495bf,1890
+5772704eedc2cb3880bd9e8c,Paris. Boulevard des Capucines,paris-boulevard-des-capucines-1906,konstantin-korovin,Konstantin Korovin,57726d81edc2cb3880b48413,1906
+577271f2edc2cb3880c37222,Spring. High waters.,spring-high-waters-1897,isaac-levitan,Isaac Levitan,57726d83edc2cb3880b487e0,1897
+57726e62edc2cb3880b6c34c,Elisium,elisium-1906,leon-bakst,Leon Bakst,57726d7cedc2cb3880b47bda,1906
+5772750bedc2cb3880cd7301,A Walk in the Forest,a-walk-in-the-forest-1869,ivan-shishkin,Ivan Shishkin,57726d85edc2cb3880b48e91,1869
+57727637edc2cb3880d0b6b2,Man with a Tulip (also known as Portrait of Jean Metzinger),man-with-a-tulip-also-known-as-portrait-of-jean-metzinger,robert-delaunay,Robert Delaunay,57726d87edc2cb3880b491d5,1906
+57726e65edc2cb3880b6c876,The Supper,the-supper-1902,leon-bakst,Leon Bakst,57726d7cedc2cb3880b47bda,1902
+57726e91edc2cb3880b76b86,Portrait of Jeanne Hebuterne,portrait-of-jeanne-hebuterne-1919-1,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1919
+57726fc1edc2cb3880bbb685,On the storm,on-the-storm-1872,ivan-aivazovsky,Ivan Aivazovsky,57726d80edc2cb3880b48261,1872
+57727018edc2cb3880bcefba,The Ghent Altarpiece. Adoration of the Lamb (detail),the-ghent-altarpiece-1432-1,jan-van-eyck,Jan van Eyck,57726d80edc2cb3880b48323,1432
+57726e38edc2cb3880b6299e,John the Baptist,john-the-baptist-1602,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1602
+577279f4edc2cb3880dd14c3,Letatlin,letatlin-1932,vladimir-tatlin,Vladimir Tatlin,57726d8dedc2cb3880b49ffc,1932
+57726e61edc2cb3880b6c21c,Costume design for the ballet "Cleopatra",costume-design-for-the-ballet-cleopatra-1909-1,leon-bakst,Leon Bakst,57726d7cedc2cb3880b47bda,1909
+577274ffedc2cb3880cd5f09,The Day Dream,the-day-dream-1880,dante-gabriel-rossetti,Dante Gabriel Rossetti,57726d85edc2cb3880b48e32,1880
+577270ffedc2cb3880c0247b,Rider. Portrait of Giovanina and Amacilia Pacini+ the Foster Children of Countess Yu. P. Samoilova,rider-portrait-of-giovanina-and-amacilia-pacini-the-foster-children-of-countess-yu-p-samoilova,karl-bryullov,Karl Bryullov,57726d82edc2cb3880b48649,1832
+57727ad2edc2cb3880dfbda6,Simultaneous Visions,simultaneous-visions-1912,umberto-boccioni,Umberto Boccioni,57726d8fedc2cb3880b4a3f3,1912
+57726e63edc2cb3880b6c5a8,Costume design for The Firebird,costume-design-for-the-firebird-1910-1,leon-bakst,Leon Bakst,57726d7cedc2cb3880b47bda,1910
+57726ee1edc2cb3880b8a5cb,The Snake Charmer,the-snake-charmer-1907,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1907
+57726ff9edc2cb3880bc60a8,Samson and Delilah,samson-and-delilah-1620,anthony-van-dyck,Anthony van Dyck,57726d80edc2cb3880b4827d,1620
+57726fb3edc2cb3880bb45bf,Battle of Chesma,battle-of-chesma-1886,ivan-aivazovsky,Ivan Aivazovsky,57726d80edc2cb3880b48261,1886
+57727181edc2cb3880c1b340,Guitar and Pipe,guitar-and-pipe-1913,juan-gris,Juan Gris,57726d82edc2cb3880b48710,1913
+5772742fedc2cb3880cb00b0,Allegory of Time Governed by Prudence,allegory-of-time-governed-by-prudence,titian,Titian,57726d84edc2cb3880b48c9b,1565
+57727993edc2cb3880dbcd4c,The Blue Room,the-blue-room-1923,suzanne-valadon,Suzanne Valadon,57726d8cedc2cb3880b49dd8,1923
+577270f2edc2cb3880bfb423,The Mocking of Christ,the-mocking-of-christ-1441,fra-angelico,Fra Angelico,57726d82edc2cb3880b48615,1441
+57726e90edc2cb3880b769f6,Portrait of Chaim Soutine,portrait-of-chaim-soutine-1917,amedeo-modigliani,Amedeo Modigliani,57726d7dedc2cb3880b47cd4,1917
+57727aacedc2cb3880df304b,Night,night-1918,max-beckmann,Max Beckmann,57726d8fedc2cb3880b4a36f,1918
+57727655edc2cb3880d13e75,A Woman in Blue (Portrait of the Duchess of Beaufort),a-woman-in-blue-portrait-of-the-duchess-of-beaufort,thomas-gainsborough,Thomas Gainsborough,57726d87edc2cb3880b4924d,null
+577274f6edc2cb3880ccf873,Self-Portrait,self-portrait-1847,dante-gabriel-rossetti,Dante Gabriel Rossetti,57726d85edc2cb3880b48e32,1847
+57726f79edc2cb3880baa845,Here is a Man (Ecce Homo),this-is-a-human-ecce-homo,hieronymus-bosch,Hieronymus Bosch,57726d7fedc2cb3880b481c6,1480
+577275fcedc2cb3880d00626,Portrait of Valerie Neuzil,portrait-of-valerie-neuzil-1912,egon-schiele,Egon Schiele,57726d86edc2cb3880b49119,1912
+5772701dedc2cb3880bcf52e,The Battle of San Romano,the-battle-of-san-romano-1440,paolo-uccello,Paolo Uccello,57726d80edc2cb3880b48351,1440
+577270a4edc2cb3880bede8d,Insula Dulcamara,insula-dulcamara-1921,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1938
+577275d2edc2cb3880cf6b94,Red Canna,red-canna-3,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1923
+5772730bedc2cb3880c74c1a,By the Seashore,by-the-seashore-1883,pierre-auguste-renoir,Pierre-Auguste Renoir,57726d84edc2cb3880b48b25,1883
+57726e44edc2cb3880b696e1,The Magpie on the Gallows,the-magpie-on-the-gallows-1568,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1568
+57726ff1edc2cb3880bc541b,Napoleon Bonaparte in his Study at the Tuileries,napoleon-bonaparte-in-his-study-at-the-tuileries-1812,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1812
+577276c4edc2cb3880d28cc9,Girl with Peaches,girl-with-peaches-1887,valentin-serov,Valentin Serov,57726d88edc2cb3880b494cd,1887
+57727031edc2cb3880bd15a8,The Holy Trinity,the-trinity-1428,masaccio,Masaccio,57726d81edc2cb3880b483bc,1428
+57726f11edc2cb3880b94df9,The Wounded Cuirassier,the-wounded-cuirassier-1814,theodore-gericault,Théodore Géricault,57726d7eedc2cb3880b47ec0,1814
+577279d0edc2cb3880dc839f,Horse in a landscape,horse-in-a-landscape-1910,franz-marc,Franz Marc,57726d8dedc2cb3880b49f66,1910
+57727688edc2cb3880d1dd06,Misery,not_detected_235963,kathe-kollwitz,Kathe Kollwitz,57726d87edc2cb3880b49398,1897
+57727018edc2cb3880bcf00a,The Lucca Madonna,the-lucca-madonna-1436,jan-van-eyck,Jan van Eyck,57726d80edc2cb3880b48323,1436
+57727e80edc2cb3880eb0926,Mars and Venus,mars-and-venus,agostino-carracci,Agostino Carracci,57726d9bedc2cb3880b4b844,null
+57726f02edc2cb3880b935ca,Self Portrait with a Palette,self-portrait-with-a-palette-1879,edouard-manet,Edouard Manet,57726d7eedc2cb3880b47e5b,1879
+577273c8edc2cb3880c9c73f,Hodogaya on the Tokaido,hodogaya-on-the-tokaido,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,null
+577275cfedc2cb3880cf669e,Manhattan,manhattan,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1932
+5772702bedc2cb3880bd0c0c,The Aranjuez Immaculate Conception,immaculate-conception-of-the-escorial,bartolome-esteban-murillo,Bartolome Esteban Murillo,57726d81edc2cb3880b483a0,1678
+577270a7edc2cb3880bee159,Puppet theater,puppet-theater-1923,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1923
+57727036edc2cb3880bd1d1a,Hagar in the Wilderness,hagar-in-the-wilderness,camille-corot,Camille Corot,57726d81edc2cb3880b483d2,1835
+57727466edc2cb3880cbb003,Krishna (Spring in Kulu),krishna-spring-in-kulu-1930,nicholas-roerich,Nicholas Roerich,57726d85edc2cb3880b48cef,1930
+57726e2aedc2cb3880b6132a,Kiki de Montparnasse in a red jumper and a blue scarf,kiki-de-montparnasse-in-a-red-jumper-and-a-blue-scarf-1925,moise-kisling,Moise Kisling,57726d7bedc2cb3880b47ab4,1925
+57726ff2edc2cb3880bc5477,Patroclus,patrocles,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1780
+57726f17edc2cb3880b95715,Madonna in Maest (Ognissanti Madonna),madonna-in-maest-ognissanti-madonna-1310-1,giotto,Giotto,57726d7eedc2cb3880b47ed8,1310
+5772769aedc2cb3880d1f8de,A Souvenir of Velazquez,a-souvenir-of-velazquez,john-everett-millais,John Everett Millais,57726d87edc2cb3880b49447,null
+57727430edc2cb3880cb0120,The Bacchanal of the Andrians,bacchanal-1524,titian,Titian,57726d84edc2cb3880b48c9b,1524
+5772758cedc2cb3880cea84c,Tsar Nicholas II,tsar-nicholas-ii-1915,boris-kustodiev,Boris Kustodiev,57726d85edc2cb3880b48f21,1915
+57727349edc2cb3880c80bbc,Self-Portrait,self-portrait-1910,kazimir-malevich,Kazimir Malevich,57726d84edc2cb3880b48b4f,1910
+57726f0cedc2cb3880b945e5,The Fountain of Love,the-fountain-of-love-1785-1,jean-honore-fragonard,Jean-Honore Fragonard,57726d7eedc2cb3880b47e9c,1785
+577275ccedc2cb3880cf618e,Blue-02,blue-02,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1916
+577273c4edc2cb3880c9c0d5,View from the Artist's Studio+ Le Cannet,view-from-the-artist-s-studio-le-cannet-1945,pierre-bonnard,Pierre Bonnard,57726d84edc2cb3880b48bdd,1945
+5772701bedc2cb3880bcf469,St. George and the Dragon,st-george-and-the-dragon,paolo-uccello,Paolo Uccello,57726d80edc2cb3880b48351,1470
+577270efedc2cb3880bfaf63,Last Judgment,last-judgment,fra-angelico,Fra Angelico,57726d82edc2cb3880b48615,1431
+57727560edc2cb3880ce11a2,The Lesson of Love,the-lesson-of-love-1716,antoine-watteau,Antoine Watteau,57726d85edc2cb3880b48ef1,1716
+57727d90edc2cb3880e7f36d,Birthday Boy,birthday-boy,eric-fischl,Eric Fischl,57726d97edc2cb3880b4b2ad,1983
+577270a0edc2cb3880bed74b,The-Deluge,the-deluge,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,null
+577273b5edc2cb3880c95032,Dining Room on the Garden,dining-room-on-the-garden,pierre-bonnard,Pierre Bonnard,57726d84edc2cb3880b48bdd,null
+577271a8edc2cb3880c24d65,The Harvest of Hay in Eragny,the-harvest-of-hay-in-eragny-1887,camille-pissarro,Camille Pissarro,57726d82edc2cb3880b48740,1887
+57727044edc2cb3880bd8e4a,Breton Women at the Well near Batz,the-augustan-bridge-at-narni-1826,camille-corot,Camille Corot,57726d81edc2cb3880b483d2,1844
+57727638edc2cb3880d0b742,Simultaneous Windows (2nd Motif+ 1st Part),simultaneous-windows-2nd-motif-1st-part,robert-delaunay,Robert Delaunay,57726d87edc2cb3880b491d5,1912
+57726fc2edc2cb3880bbb785,Portrait of Loris-Melikov,portrait-of-loris-melikov-1888,ivan-aivazovsky,Ivan Aivazovsky,57726d80edc2cb3880b48261,1888
+57726f83edc2cb3880bb116d,Don Quixote and Sancho Pansa,don-quixote-and-sancho-pansa-1870,honore-daumier,Honore Daumier,57726d7fedc2cb3880b481f6,1870
+57727e81edc2cb3880eb0a06,Satyr Mason,satyr-mason,agostino-carracci,Agostino Carracci,57726d9bedc2cb3880b4b844,null
+577276e4edc2cb3880d31345,The Apotheosis of War,the-apotheosis-of-war-1871,vasily-vereshchagin,Vasily Vereshchagin,57726d88edc2cb3880b494f5,1871
+577276a5edc2cb3880d206ad,Promethée,prometheus-1868,gustave-moreau,Gustave Moreau,57726d88edc2cb3880b49467,1868
+57726e16edc2cb3880b5f1f5,The Three Philosophers,the-three-philosophers-1509,giorgione,Giorgione,57726d7aedc2cb3880b479c7,1509
+5772789eedc2cb3880d89870,Christ,christ,odilon-redon,Odilon Redon,57726d8aedc2cb3880b498fb,null
+57726e35edc2cb3880b624c8,Jupiter and Io,jupiter-and-io-1532,correggio,Correggio,57726d7bedc2cb3880b47aec,1532
+577272c1edc2cb3880c61e13,Sadko,sadko-1876,ilya-repin,Ilya Repin,57726d84edc2cb3880b48a43,1876
+5772785aedc2cb3880d78401,Last Supper (Coburg Panel),last-supper-coburg-panel-1500,matthias-grunewald,Matthias Grünewald,57726d8aedc2cb3880b49857,1500
+5772736aedc2cb3880c89a35,Self-Portrait with Saskia in the Parable of the Prodigal Son,self-portrait-with-saskia-in-the-parable-of-the-prodigal-son,rembrandt,Rembrandt,57726d84edc2cb3880b48b73,1635
+57726e31edc2cb3880b61de0,Mill of Heeswijk Sun,mill-of-heeswijk-sun,piet-mondrian,Piet Mondrian,57726d7bedc2cb3880b47ad4,1904
+57726eebedc2cb3880b8b60b,Water of the Flowery Mill,water-of-the-flowery-mill,arshile-gorky,Arshile Gorky,57726d7bedc2cb3880b479df,1944
+577270a3edc2cb3880bedced,Flowers in Stone,flowers-in-stone-1939,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1939
+57726eeaedc2cb3880b8b4eb,The Artist and His Mother,the-artist-with-his-mother-1936,arshile-gorky,Arshile Gorky,57726d7bedc2cb3880b479df,1936
+57726ed5edc2cb3880b89229,Portrait of the-Artist's son Jorge Manuel Theotokopoulos,portrait-of-the-artist-s-son-jorge-manuel-theotokopoulos,el-greco,El Greco,57726d7dedc2cb3880b47da2,1603
+577273c5edc2cb3880c9c245,Young Girl Sitting with a Rabbit,young-girl-sitting-with-a-rabbit-1891,pierre-bonnard,Pierre Bonnard,57726d84edc2cb3880b48bdd,1891
+57726f1eedc2cb3880b961b5,The Body of Abel Found by Adam & Eve,the-body-of-abel-found-by-adam-eve,william-blake,William Blake,57726d7eedc2cb3880b47f24,1825
+5772748aedc2cb3880cc4047,Star of the Hero,star-of-the-hero-1936,nicholas-roerich,Nicholas Roerich,57726d85edc2cb3880b48cef,1936
+577270a4edc2cb3880bede3d,Hoffmanneske scene,hoffmanneske-scene-1940,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1940
+57727ad3edc2cb3880dfc037,Unique Forms of Continuity in Space,unique-forms-of-continuity-in-space-1913,umberto-boccioni,Umberto Boccioni,57726d8fedc2cb3880b4a3f3,1913
+57726e40edc2cb3880b690dd,Saint Jerome Writing,saint-jerome-writing,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1605
+5772769fedc2cb3880d1ffe1,Father Hidalgo,father-hidalgo-1949,jose-clemente-orozco,Jose Clemente Orozco,57726d88edc2cb3880b4947f,1949
+57726ea7edc2cb3880b7ea8b,The Flight into Egypt,the-flight-into-egypt-1657,nicolas-poussin,Nicolas Poussin,57726d7dedc2cb3880b47d0a,1657
+57727019edc2cb3880bcf01a,The Madonna in the Church,the-madonna-in-the-church-1439,jan-van-eyck,Jan van Eyck,57726d80edc2cb3880b48323,1439
+57726f28edc2cb3880b9cd1d,58 (52) Sudden Shower over Shin-Ōhashi bridge and Atake,sudden-shower-over-shin-ohashi-bridge-at-atake-from-one-hundred-views-of-edo-1856-colour-1856,hiroshige,Hiroshige,57726d7eedc2cb3880b47fec,1857
+5772708fedc2cb3880be6035,Saladin,saladin,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,null
+577273c7edc2cb3880c9c48f,Carp leaping up a cascade,carp-leaping-up-a-cascade,katsushika-hokusai,Katsushika Hokusai,57726d84edc2cb3880b48c21,null
+57726f58edc2cb3880ba7503,The Madhouse,the-madhouse-1814,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1814
+57726f1eedc2cb3880b961f5,The Ghost of a Flea,the-ghost-of-a-flea-1820,william-blake,William Blake,57726d7eedc2cb3880b47f24,1820
+57726ea1edc2cb3880b7e17c,Spring (The Earthly Paradise),spring-the-earthly-paradise-1664-1,nicolas-poussin,Nicolas Poussin,57726d7dedc2cb3880b47d0a,1664
+577279e0edc2cb3880dc9c78,Acrobat,acrobat,jeff-koons,Jeff Koons,57726d8dedc2cb3880b49fac,null
+57727346edc2cb3880c8067c,Morning in the Village after Snowstorm,morning-after-snowstorm-1913,kazimir-malevich,Kazimir Malevich,57726d84edc2cb3880b48b4f,1913
+5772769fedc2cb3880d20009,La Conquete,la-conquete,jose-clemente-orozco,Jose Clemente Orozco,57726d88edc2cb3880b4947f,null
+57726f15edc2cb3880b95485,Confirmation of the Rule,confirmation-of-the-rule-1299,giotto,Giotto,57726d7eedc2cb3880b47ed8,1299
+57727be8edc2cb3880e2e108,Head of a Capri Girl,head-of-a-capri-girl-1878,john-singer-sargent,John Singer Sargent,57726d91edc2cb3880b4a744,1878
+577276b9edc2cb3880d27bba,Villica safe,villica-safe,francis-picabia,Francis Picabia,57726d88edc2cb3880b49497,1929
+577271ffedc2cb3880c386fc,Madonna and Child Enthroned with Two Angels,madonna-and-child-enthroned-with-two-angels-1480,hans-memling,Hans Memling,57726d83edc2cb3880b48822,1480
+57726eccedc2cb3880b883f5,The King's Wife,the-king-s-wife-1896,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1896
+5772762eedc2cb3880d0a8e6,Paris Street+ Rainy Day,paris-a-rainy-day-1877,gustave-caillebotte,Gustave Caillebotte,57726d86edc2cb3880b4919b,1877
+57727ab7edc2cb3880df987a,Sinking of the Titanic,sinking-of-the-titanic-1912,max-beckmann,Max Beckmann,57726d8fedc2cb3880b4a36f,1912
+57726ffaedc2cb3880bc60d8,Self portrait with a Sunflower,self-portrait-with-a-sunflower-1632,anthony-van-dyck,Anthony van Dyck,57726d80edc2cb3880b4827d,1632
+577272c7edc2cb3880c62957,Chateau Noir,chateau-noir,paul-cezanne,Paul Cezanne,57726d84edc2cb3880b48a5b,1904
+57727504edc2cb3880cd65dd,The Virgin of Vladimir,the-virgin-of-vladimir,andrei-rublev,Andrei Rublev,57726d85edc2cb3880b48e4d,1400
+57727092edc2cb3880be6615,The Creation of Light,the-creation-of-light,gustave-dore,Gustave Dore,57726d81edc2cb3880b48481,null
+57726ecfedc2cb3880b8890f,What's New?,what-s-new-1892,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1892
+577279c6edc2cb3880dc73b1,The Course of Empire: Desolation,the-course-of-empire-desolation-1836,thomas-cole,Thomas Cole,57726d8cedc2cb3880b49ed2,1836
+57726f2fedc2cb3880b9d8f4,The Conversion of Saul,the-conversion-of-saul-1545,michelangelo,Michelangelo,57726d7fedc2cb3880b4805e,1545
+57726e50edc2cb3880b6a820,Portrait of a Young Woman in a Pinned Hat,portrait-of-a-young-woman-in-a-pinned-hat-1435,rogier-van-der-weyden,Rogier van der Weyden,57726d7cedc2cb3880b47b68,1435
+577273bcedc2cb3880c95a8f,The Port of Cannes,the-port-in-cannes-1926,pierre-bonnard,Pierre Bonnard,57726d84edc2cb3880b48bdd,1927
+57727584edc2cb3880ce4316,The Merchant's Wife at Tea,the-merchant-s-wife-at-tea-1918,boris-kustodiev,Boris Kustodiev,57726d85edc2cb3880b48f21,1918
+57727053edc2cb3880bda78c,Paris Boulevard,paris-boulevard-1939,konstantin-korovin,Konstantin Korovin,57726d81edc2cb3880b48413,1939
+5772700cedc2cb3880bc7f67,The Models,the-models-1888,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1888
+577275c6edc2cb3880cf5994,Leda and the Swan,leda-and-the-swan,cy-twombly,Cy Twombly,57726d86edc2cb3880b48ffd,1962
+577275d0edc2cb3880cf6894,Nude Series VIII,nude-series-viii,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1917
+5772769fedc2cb3880d20043,Panel 19. Modern Migration of the Spirit - The Epic of American Civilization,modern-migration-of-the-spirit-the-epic-of-american-civilization-1934,jose-clemente-orozco,Jose Clemente Orozco,57726d88edc2cb3880b4947f,1934
+577279aaedc2cb3880dbef5f,Flamenco dancer,flamenco-dancer,sonia-delaunay,Sonia Delaunay,57726d8cedc2cb3880b49e66,1916
+57727800edc2cb3880d64dbd,The battle of Issus,the-battle-of-issus-1529,albrecht-altdorfer,Albrecht Altdorfer,57726d89edc2cb3880b497c1,1529
+5772793cedc2cb3880da984a,Girl with flowers,girl-with-flowers,joaqu-n-sorolla,Joaquín Sorolla,57726d8bedc2cb3880b49b78,null
+57726edbedc2cb3880b89c18,Stonehenge,stonehenge-1835,john-constable,John Constable,57726d7dedc2cb3880b47dd6,1835
+57726f47edc2cb3880b9ffaf,Bad night,bad-night-1799,francisco-goya,Francisco Goya,57726d7fedc2cb3880b480ca,1799
+577278a8edc2cb3880d8a6f6,The Birth of Venus,the-birth-of-venus-1912-1,odilon-redon,Odilon Redon,57726d8aedc2cb3880b498fb,1912
+5772774fedc2cb3880d4580b,Apollo and Diana,apollo-and-diana-1757,giovanni-battista-tiepolo,Giovanni Battista Tiepolo,57726d88edc2cb3880b495fb,1757
+57726e64edc2cb3880b6c696,Portrait of Alexandre Benois,portrait-of-alexandre-benois-1898-1,leon-bakst,Leon Bakst,57726d7cedc2cb3880b47bda,1898
+57726ed3edc2cb3880b88f3f,Coronation of the Virgin,coronation-of-the-virgin-1591-1,el-greco,El Greco,57726d7dedc2cb3880b47da2,1591
+57727ee6edc2cb3880ec4dff,Tall Portuguese Woman,tall-portuguese-woman-1916,robert-delaunay,Robert Delaunay,57726d87edc2cb3880b491d5,1916
+5772719fedc2cb3880c23e65,Place du Theatre Francais,place-du-theatre-francais-1898,camille-pissarro,Camille Pissarro,57726d82edc2cb3880b48740,1898
+57726e9eedc2cb3880b7dd0e,Madonna Enthroned with the Child+ St. Francis and Four Angels,madonna-enthroned-with-the-child-st-francis-and-four-angels-1280,cimabue,Cimabue,57726d7dedc2cb3880b47cf2,1280
+57726e6fedc2cb3880b73373,Naked young woman in front of the mirror,naked-young-woman-in-front-of-the-mirror-1515-1,giovanni-bellini,Giovanni Bellini,57726d7cedc2cb3880b47c1e,1515
+57726e34edc2cb3880b62380,Adoration of the Child,adoration-of-the-child-1520,correggio,Correggio,57726d7bedc2cb3880b47aec,1520
+57727931edc2cb3880da869c,Children at the beach,children-at-the-beach-1899,joaqu-n-sorolla,Joaquín Sorolla,57726d8bedc2cb3880b49b78,1899
+57726ff1edc2cb3880bc543b,Napoleon Crossing the Alps at the St Bernard Pass+ 20th May 1800,napoleoncrossing-the-alps-at-the-st-bernard-pass-20th-may-1800-1801,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1801
+57726ea7edc2cb3880b7ea7b,Oedipus Taken Down from the Tree,oedipus-taken-down-from-the-tree-1847,jean-francois-millet,Jean-Francois Millet,57726d7dedc2cb3880b47d2a,1847
+577275ceedc2cb3880cf64fe,Horse’s Skull with Pink Rose,horse-s-skull-with-pink-rose,georgia-o-keeffe,Georgia O'Keeffe,57726d86edc2cb3880b49037,1931
+577276feedc2cb3880d33a71,Childe Harold,childe-harold,william-turner,J.M.W. Turner,57726d88edc2cb3880b49573,1823
+5772711aedc2cb3880c04b4a,The Beguiling of Merlin (Merlin and Vivien),the-beguiling-of-merlin-merlin-and-vivien-1874,edward-burne-jones,Edward Burne-Jones,57726d82edc2cb3880b486c8,1874
+57726f83edc2cb3880bb115d,Don Quixote and Sancho Pansa,don-quixote-and-sancho-pansa-0,honore-daumier,Honore Daumier,57726d7fedc2cb3880b481f6,null
+57726f0aedc2cb3880b942c5,The Resurrection,the-resurrection,piero-della-francesca,Piero della Francesca,57726d7eedc2cb3880b47e74,1460
+577270a4edc2cb3880beddfd,Heroic Roses,heroic-roses-1938,paul-klee,Paul Klee,57726d81edc2cb3880b483ee,1938
+57726e43edc2cb3880b69511,Portrait of an Old Woman,portrait-of-an-old-woman-1563,pieter-bruegel-the-elder,Pieter Bruegel the Elder,57726d7cedc2cb3880b47b32,1563
+57726e6dedc2cb3880b7301a,Pieta,pieta,giovanni-bellini,Giovanni Bellini,57726d7cedc2cb3880b47c1e,1505
+57726e17edc2cb3880b5f2ab,Madonna and Child with Saints Liberale and Francis (The Castelfranco Madonna),madonna-and-child-with-saints-liberale-and-francis-the-castelfranco-madonna-1505,giorgione,Giorgione,57726d7aedc2cb3880b479c7,1505
+57726e37edc2cb3880b6291e,Ecce Homo,ecce-homo,caravaggio,Caravaggio,57726d7cedc2cb3880b47b1a,1605
+577275e3edc2cb3880cf86a7,St. Joseph,st-joseph-1,guido-reni,Guido Reni,57726d86edc2cb3880b490e9,1642
+57726e6dedc2cb3880b730da,St Francis in Ecstasy,st-francis-in-ecstasy-1485,giovanni-bellini,Giovanni Bellini,57726d7cedc2cb3880b47c1e,1485
+5772702eedc2cb3880bd1076,The Assumption of the Virgin,the-assumption-of-the-virgin-1670,bartolome-esteban-murillo,Bartolome Esteban Murillo,57726d81edc2cb3880b483a0,1670
+57727017edc2cb3880bcee2a,Portrait of Giovanni Arnolfini,portrait-of-giovanni-arnolfini-1435,jan-van-eyck,Jan van Eyck,57726d80edc2cb3880b48323,1435
+57726ed4edc2cb3880b89173,Portrait of an old man (presumed self-portrait of El Greco),portrait-of-an-old-man-presumed-self-portrait-of-el-greco,el-greco,El Greco,57726d7dedc2cb3880b47da2,1600
+57726ebfedc2cb3880b81217,Nevermore,nevermore-1897,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1897
+5772701bedc2cb3880bcf499,St.George and the Dragon,st-george-and-the-dragon-1,paolo-uccello,Paolo Uccello,57726d80edc2cb3880b48351,1460
+57726ed9edc2cb3880b899a8,Flatford Mill from a Lock on the Stour,flatford-mill-from-a-lock-on-the-stour-1811,john-constable,John Constable,57726d7dedc2cb3880b47dd6,1811
+57726ff3edc2cb3880bc56b7,The Death of Bara,the-death-of-bara-1794,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1794
+57726f3bedc2cb3880b9ebb5,The Turkish Bath,the-turkish-bath-1862,jean-auguste-dominique-ingres,Jean Auguste Dominique Ingres,57726d7fedc2cb3880b48098,1862
+5772702fedc2cb3880bd1306,The Young Beggar,the-young-beggar,bartolome-esteban-murillo,Bartolome Esteban Murillo,57726d81edc2cb3880b483a0,1650
+5772766dedc2cb3880d15d92,The Marriage Contract,the-marriage-contract,william-hogarth,William Hogarth,57726d87edc2cb3880b492dd,1745
+57726eb6edc2cb3880b80399,And the Gold of Their Bodies,and-the-gold-of-their-bodies-1901,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1901
+57727944edc2cb3880daa4a7,The Thunderstorm,the-thunderstorm-1948,grandma-moses,Grandma Moses,57726d8bedc2cb3880b49ba8,1948
+57726e52edc2cb3880b6ab28,St. Luke Drawing a Portrait of the Virgin Mary,st-luke-drawing-a-portrait-of-the-virgin-mary-1440,rogier-van-der-weyden,Rogier van der Weyden,57726d7cedc2cb3880b47b68,1440
+57727869edc2cb3880d7f3d9,Arrangement in Grey and Black No.1+ Portrait of the Artist's Mother,arrangement-in-grey-and-black-no-1-portrait-of-the-artist-s-mother-1871,james-mcneill-whistler,James McNeill Whistler,57726d8aedc2cb3880b4986f,1871
+57727007edc2cb3880bc7714,Chahut,chahut-1890,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1890
+5772700bedc2cb3880bc7ea3,The Circus,the-circus-1891,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1891
+5772786cedc2cb3880d7f8e9,Nocturne in Black and Gold – the Falling Rocket,nocturne-in-black-and-gold-the-falling-rocket,james-mcneill-whistler,James McNeill Whistler,57726d8aedc2cb3880b4986f,1875
+57727202edc2cb3880c38c4c,The Passion,the-passion-1471,hans-memling,Hans Memling,57726d83edc2cb3880b48822,1471
+5772756dedc2cb3880ce1fd6,Arriving for Shrovetide,arriving-for-shrovetide-1916,boris-kustodiev,Boris Kustodiev,57726d85edc2cb3880b48f21,1916
+577270f0edc2cb3880bfb0b3,Noli Me Tangere,noli-me-tangere-1442,fra-angelico,Fra Angelico,57726d82edc2cb3880b48615,1442
+57727831edc2cb3880d6ecd9,The Slippers of Cinderella,the-slippers-of-cinderella-1894,aubrey-beardsley,Aubrey Beardsley,57726d89edc2cb3880b49827,1894
+577277fdedc2cb3880d64925,The Poppy Field,the-poppy-field,willard-metcalf,Willard Metcalf,57726d89edc2cb3880b497a9,null
+57726edcedc2cb3880b89df1,View of Salisbury Cathedral from the Bishop's Grounds,view-of-salisbury-cathedral-from-the-bishop-s-grounds,john-constable,John Constable,57726d7dedc2cb3880b47dd6,1823
+57726e33edc2cb3880b6225c,Adoration of the Shepherds (The Holy Night),adoration-of-the-shepherds-the-holy-night-1522,correggio,Correggio,57726d7bedc2cb3880b47aec,1530
+57726ea4edc2cb3880b7e4ee,Death and the woodcutter,death-and-the-woodcutter,jean-francois-millet,Jean-Francois Millet,57726d7dedc2cb3880b47d2a,1859
+57726ea4edc2cb3880b7e54e,Harvesters Resting,harvesters-resting-1853,jean-francois-millet,Jean-Francois Millet,57726d7dedc2cb3880b47d2a,1853
+57727066edc2cb3880bdc50d,Paumgartner Altarpiece (center panel - The Nativity+ wings - St. George+ St. Eustace),paumgartner-altar,albrecht-durer,Albrecht Durer,57726d81edc2cb3880b48431,1503
+57727638edc2cb3880d0b802,Windows Open Simultaneously 1st Part+ 3rd Motif,windows-open-simultaneously-1st-part-3rd-motif,robert-delaunay,Robert Delaunay,57726d87edc2cb3880b491d5,1912
+5772702eedc2cb3880bd11c6,The Little Fruit-Seller,the-little-fruit-seller-1675,bartolome-esteban-murillo,Bartolome Esteban Murillo,57726d81edc2cb3880b483a0,1675
+5772759fedc2cb3880cec3dc,The Love Letter,the-love-letter,johannes-vermeer,Johannes Vermeer,57726d86edc2cb3880b48f87,1669
+57726e55edc2cb3880b6af52,Christ on the Sea of Galilee,christ-on-the-sea-of-galilee-1854,eugene-delacroix,Eugene Delacroix,57726d7cedc2cb3880b47baa,1854
+57726f0bedc2cb3880b94427,Coresus at Callirhoe,coresus-at-callirhoe-1765-1,jean-honore-fragonard,Jean-Honore Fragonard,57726d7eedc2cb3880b47e9c,1765
+57726e9eedc2cb3880b7dbfc,Crucifix,crucifix-1288,cimabue,Cimabue,57726d7dedc2cb3880b47cf2,1288
+57727921edc2cb3880da12b8,Contra-Composition of Dissonances+ XVI,contra-composition-of-dissonances-xvi-1925,theo-van-doesburg,Theo van Doesburg,57726d8bedc2cb3880b49b60,1925
+57727435edc2cb3880cb0859,Portrait of Ariosto,portrait-of-ariosto-1510,titian,Titian,57726d84edc2cb3880b48c9b,1510
+57727ab6edc2cb3880df967a,Paris Society,party-in-paris-1947,max-beckmann,Max Beckmann,57726d8fedc2cb3880b4a36f,1947
+57727700edc2cb3880d33cc1,Ivy Bridge+ Devonshire,ivy-bridge-devonshire,william-turner,J.M.W. Turner,57726d88edc2cb3880b49573,null
+57726e74edc2cb3880b73b7b,Samuel Adams,samuel-adams,john-singleton-copley,John Singleton Copley,57726d7cedc2cb3880b47c54,1772
+577270e7edc2cb3880bfa1e3,Stepan Razin,stepan-razin-1935,ivan-bilibin,Ivan Bilibin,57726d81edc2cb3880b48539,1935
+57726ed6edc2cb3880b8943d,St. Louis King of France with a Page,st-louis-king-of-france-with-a-page,el-greco,El Greco,57726d7dedc2cb3880b47da2,1590
+57726f38edc2cb3880b9e70f,Portrait of Monsieur Rivière,portrait-of-monsieur-rivière-1805,jean-auguste-dominique-ingres,Jean Auguste Dominique Ingres,57726d7fedc2cb3880b48098,1805
+5772769bedc2cb3880d1fa2e,Ferdinand Lured by Ariel,ferdinand-lured-by-ariel-1850,john-everett-millais,John Everett Millais,57726d87edc2cb3880b49447,1850
+57727703edc2cb3880d34187,Snow Storm - Steamboat off a Harbour's Mouth,snow-storm-steam-boat-off-a-harbours-mouth-1842,william-turner,J.M.W. Turner,57726d88edc2cb3880b49573,1842
+57727aadedc2cb3880df311c,Self-Portrait as a Nurse,not-detected-259775,max-beckmann,Max Beckmann,57726d8fedc2cb3880b4a36f,1915
+577273bbedc2cb3880c9585f,The almond tree in blossom,the-almond-tree-in-blossom,pierre-bonnard,Pierre Bonnard,57726d84edc2cb3880b48bdd,null
+57727529edc2cb3880cd9c48,Portrait of the Infanta Margarita,portrait-of-the-infanta-margarita,diego-velazquez,Diego Velazquez,57726d85edc2cb3880b48ec1,1660
+577271f0edc2cb3880c36f9a,Quiet cloister,quiet-cloister-1890-3,isaac-levitan,Isaac Levitan,57726d83edc2cb3880b487e0,1890
+5772700eedc2cb3880bc8237,Young Woman Powdering Herself,young-woman-powdering-herself-1890,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1890
+57726f0cedc2cb3880b94525,Psyche showing her sisters her gifts from Cupid,psyche-showing-her-sisters-her-gifts-from-cupid-1753,jean-honore-fragonard,Jean-Honore Fragonard,57726d7eedc2cb3880b47e9c,1753
+5772751bedc2cb3880cd8b84,Promenading in the Forest,promenading-in-the-forest-1869,ivan-shishkin,Ivan Shishkin,57726d85edc2cb3880b48e91,1869
+57727e12edc2cb3880e9b23f,Green Hillside,green-hillside-1970,eyvind-earle,Eyvind Earle,57726d99edc2cb3880b4b650,1970
+5772765dedc2cb3880d149d1,Calvary Triptych,calvary-triptych-1468,hugo-van-der-goes,Hugo van der Goes,57726d87edc2cb3880b49271,1468
+57727192edc2cb3880c229ff,Boulevard Montmartre Morning+ Grey Weather,boulevard-montmartre-morning-grey-weather-1897,camille-pissarro,Camille Pissarro,57726d82edc2cb3880b48740,1897
+57727522edc2cb3880cd9646,Self Portrait with Beard,self-portrait-with-beard,chaim-soutine,Chaim Soutine,57726d85edc2cb3880b48ea9,1917
+57726e74edc2cb3880b73aab,Paul Revere,paul-revere-1770-1,john-singleton-copley,John Singleton Copley,57726d7cedc2cb3880b47c54,1770
+57727704edc2cb3880d34297,The Burning of the Houses of Parliament,the-burning-of-the-houses-of-parliament-1,william-turner,J.M.W. Turner,57726d88edc2cb3880b49573,1834
+57726eacedc2cb3880b7f349,In the Box,in-the-box,mary-cassatt,Mary Cassatt,57726d7dedc2cb3880b47d5e,1879
+57726eb3edc2cb3880b7fdf2,The Bath,the-bath-1891,mary-cassatt,Mary Cassatt,57726d7dedc2cb3880b47d5e,1891
+57727991edc2cb3880dbca40,After the bath,after-the-bath-1908,suzanne-valadon,Suzanne Valadon,57726d8cedc2cb3880b49dd8,1908
+57726ec2edc2cb3880b8184f,Self Portrait in a Hat,self-portrait-in-a-hat,paul-gauguin,Paul Gauguin,57726d7dedc2cb3880b47d76,1893
+57726ffdedc2cb3880bc662c,Adam and Eve,adam-and-eve-1528,lucas-cranach-the-elder,Lucas Cranach the Elder,57726d80edc2cb3880b482bd,1528
+577279ceedc2cb3880dc81af,Blue-Black Fox,blue-fox-1911,franz-marc,Franz Marc,57726d8dedc2cb3880b49f66,1911
+57727436edc2cb3880cb0ac9,Sacred and Profane Love,sacred-and-profane-love-1514,titian,Titian,57726d84edc2cb3880b48c9b,1514
+57726e77edc2cb3880b740a6,The Ecstasy of St. Teresa,the-ecstasy-of-st-teresa,gian-lorenzo-bernini,Gian Lorenzo Bernini,57726d7cedc2cb3880b47c70,1640
+57726f20edc2cb3880b964a7,107. Fukagawa Susaki and Jūmantsubo,eagle-over-100-000-acre-plain-at-susaki-fukagawa-juman-tsubo,hiroshige,Hiroshige,57726d7eedc2cb3880b47fec,1857
+57726e6eedc2cb3880b73190,San Giobbe Altarpiece - detail of Music Making Angels,the-san-giobbe-altarpiece-detail-of-music-making-angels-1480,giovanni-bellini,Giovanni Bellini,57726d7cedc2cb3880b47c1e,1480
+57727043edc2cb3880bd8dfa,View of Pincio+ Italy,temple-of-minerva-medica-1826,camille-corot,Camille Corot,57726d81edc2cb3880b483d2,1843
+5772768eedc2cb3880d1e62a,Moonlight Night on the Dnieper,moonlight-night-on-the-dnieper-1880,arkhip-kuindzhi,Arkhyp Kuindzhi,57726d87edc2cb3880b493d7,1880
+57726f71edc2cb3880ba9ab1,Portrait of Elena Alexandrovna Naryshkina,portrait-of-elena-alexandrovna-naryshkina-1799,vladimir-borovikovsky,Vladimir Borovikovsky,57726d7fedc2cb3880b481ad,1799
+57726ed9edc2cb3880b89998,Flatford Mill,flatford-mill-1817,john-constable,John Constable,57726d7dedc2cb3880b47dd6,1817
+5772762dedc2cb3880d0a77e,Le Pont de L'Europe,le-pont-de-l-europe,gustave-caillebotte,Gustave Caillebotte,57726d86edc2cb3880b4919b,1882
+57726ee0edc2cb3880b8a505,The Mill,the-mill,henri-rousseau,Henri Rousseau,57726d7eedc2cb3880b47df9,1896
+5772749bedc2cb3880cc55e9,Visitors from over the sea,visitors-from-over-the-sea-1901,nicholas-roerich,Nicholas Roerich,57726d85edc2cb3880b48cef,1901
+57727007edc2cb3880bc764e,Alfalfa+ St. Denis,alfalfa-st-denis-1886,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1886
+57726f17edc2cb3880b9578b,Pentecost,pentecost-1,giotto,Giotto,57726d7eedc2cb3880b47ed8,1306
+57727d8fedc2cb3880e7f2ed,Bad Boy,bad-boy,eric-fischl,Eric Fischl,57726d97edc2cb3880b4b2ad,1981
+5772755eedc2cb3880ce0e72,Diana at her Bath,diana-at-her-bath-1716,antoine-watteau,Antoine Watteau,57726d85edc2cb3880b48ef1,1716
+57726f5eedc2cb3880ba7f5e,Funeral Symphony (V),funeral-symphony-v-1903,mikalojus-ciurlionis,Mikalojus Konstantinas Ciurlionis,57726d7eedc2cb3880b47f72,1903
+57726ff1edc2cb3880bc53ab,Lictors Bearing to Brutus the Bodies of his Sons,lictors-bearing-to-brutus-the-bodies-of-his-sons-1789,jacques-louis-david,Jacques-Louis David,57726d80edc2cb3880b482a5,1789
+57726e2aedc2cb3880b612d6,Portrait of Jean Cocteau,portrait-of-jean-cocteau-1916,moise-kisling,Moise Kisling,57726d7bedc2cb3880b47ab4,1916
+57727007edc2cb3880bc7726,Circus Sideshow,circus-sideshow-1888,georges-seurat,Georges Seurat,57726d80edc2cb3880b482e1,1888
+57726eb3edc2cb3880b7fe52,The Child's Bath,the-child-s-bath-1893-1,mary-cassatt,Mary Cassatt,57726d7dedc2cb3880b47d5e,1893
+57727af1edc2cb3880e0421f,227  A Raindrop Which Falls into the City,227-a-raindrop-which-falls-into-the-city-1955,friedensreich-hundertwasser,Friedensreich Hundertwasser,57726d7bedc2cb3880b479f1,1955
+57726e4eedc2cb3880b6a59b,Braque Family Triptych,braque-family-triptych-1450,rogier-van-der-weyden,Rogier van der Weyden,57726d7cedc2cb3880b47b68,1450
+577272c3edc2cb3880c62163,The Reply of the Zaporozhian Cossacks to Sultan Mehmed IV,the-reply-of-the-zaporozhian-cossacks-to-sultan-mahmoud-iv-1896,ilya-repin,Ilya Repin,57726d84edc2cb3880b48a43,1896
+5772760bedc2cb3880d01e1a,Flowers Of Edo,flowers-of-edo,kitagawa-utamaro,Kitagawa Utamaro,57726d86edc2cb3880b49149,null
+57727780edc2cb3880d4df97,The Flowered Dress,the-flowered-dress,edouard-vuillard,Edouard Vuillard,57726d88edc2cb3880b49647,1891
+577270f3edc2cb3880bfb543,Transfiguration,transfiguration-1442,fra-angelico,Fra Angelico,57726d82edc2cb3880b48615,1442
+57727c45edc2cb3880e40cc1,Pumpkinhead - Self-Portrait,pumpkinhead-self-portrait-1972,jamie-wyeth,Jamie Wyeth,57726d92edc2cb3880b4a815,1972
+577271e4edc2cb3880c35a9c,Above the eternal tranquility,above-the-eternal-tranquility-1894,isaac-levitan,Isaac Levitan,57726d83edc2cb3880b487e0,1894
+5772765eedc2cb3880d14aa1,Portinari Triptych,portinari-triptych-1478,hugo-van-der-goes,Hugo van der Goes,57726d87edc2cb3880b49271,1475
+577279c9edc2cb3880dc7823,Composition,composition,el-lissitzky,El Lissitzky,57726d8dedc2cb3880b49f14,1920
+577278a6edc2cb3880d8a486,Sacred Heart,sacred-heart-1910,odilon-redon,Odilon Redon,57726d8aedc2cb3880b498fb,1910
+57727688edc2cb3880d1dd9c,Memorial for Karl Liebknecht,not_detected_235973,kathe-kollwitz,Kathe Kollwitz,57726d87edc2cb3880b49398,1919
+577275a3edc2cb3880cecaee,Portrait of Henry VIII+ King of England,portrait-of-henry-viii-king-of-england,hans-holbein-the-younger,Hans Holbein the Younger,57726d86edc2cb3880b48f9f,1535
+577272e5edc2cb3880c6b6dc,Giraffe,giraffe,niko-pirosmani,Niko Pirosmani,57726d84edc2cb3880b48a87,1905
+5772734cedc2cb3880c80ffc,Suprematist Composition,suprematist-composition-1915,kazimir-malevich,Kazimir Malevich,57726d84edc2cb3880b48b4f,1916
+57727592edc2cb3880ceb105,Gabrielle the Dancer,gabrielle-the-dancer-1890,henri-de-toulouse-lautrec,Henri de Toulouse-Lautrec,57726d86edc2cb3880b48f5d,1890
