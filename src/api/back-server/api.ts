@@ -5,6 +5,7 @@ import { Artist, Painting } from "../wikiArt/interfaces";
 import { time } from "console";
 import { title } from "process";
 import { window } from "rxjs";
+import { CustomError } from "../../utils/error";
 
 const BACK_SERVER_URL = "http://localhost:3000";
 const RouteMap = {
@@ -12,30 +13,68 @@ const RouteMap = {
 };
 
 export interface IResult<T> {
-  data: T[];
-  pagination?: number;
-  isMore?: boolean;
+  data: T;
 }
 
-export interface IArtist {
+export interface WikiArtPainting {
+  wikiArtId: string;
+  title: string;
+  url: string;
+  artistName: string;
+  artistUrl: string;
+
+  //   @ManyToOne(() => wikiArtArtist, (artist) => artist.works)
+  //   artist: wikiArtArtist;
+  image: string;
+  width: number;
+  height: number;
+  completitionYear: number | null; // painting completition year, default: null
+  location: string; // location (country + city), default: ""
+  //period: ArtistDictionaryJson | null; // artist’s period of work, default: null
+  //serie: ArtistDictionaryJson | null; // artist’s paintings series, default: null
+  genres: string[]; // array of genres names, default: [""]
+  styles: string[]; // array of styles names, default: [""]
+  media: string[]; // array of media names, default: [""]
+  galleries: string[]; // array of galleries names, default: [""]
+  tags: string[]; // array of tags names, default: [""]
+  sizeX: number | null; // original painting dimension X, default: null
+  sizeY: number | null; // original painting dimension Y, default: null
+  diameter: number | null; // original painting diameter, default: null
+  description: string; // painting description, default: ""
+}
+
+export interface IPainting {
   id: string;
   title: string;
+  wikiArtPainting: WikiArtPainting;
 }
 
-export async function getArtistFromBD(title: string, id?: string) {
-  try {
-    const url = `${BACK_SERVER_URL}/${RouteMap.painting}?title=${title}&id=${id}`;
+export interface getPaintingDTO {
+  wikiArtID: string;
+  id?: string;
+}
 
-    const response = await axios.get<IResult<IArtist>>(url);
-    Logger.debug("Get Result");
+export async function getPaintingFromDB(
+  dto: getPaintingDTO
+): Promise<IResult<IPainting>> {
+  const wikiArtID = dto.wikiArtID;
+  const id = dto.id;
+  try {
+    const url = `${BACK_SERVER_URL}/${
+      RouteMap.painting
+    }?wikiArtID=${wikiArtID}&id=${id ? id : ""}`;
+
+    const response = await axios.get<IResult<IPainting>>(url);
     checkResponseHeader(response);
     //Logger.info(`[getArtistFromBD] ${JSON.stringify(response, null, 2)}`);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "No updated artists found", status: 404 };
-    }
-    throw new Error(`[getArtistFromBD]: ${error.message}`);
+    const status = error.response?.status || "response undefined";
+    throw new CustomError(
+      getPaintingFromDB.name,
+      "REST_API",
+      `status ${status}: ${error.message}`
+    );
   }
 }
 
@@ -59,13 +98,10 @@ export async function createArtistToDB(dto: CreateArtistDTO) {
     return response.data;
   } catch (error: any) {
     const status = error.response?.status || "response undefined";
-    if (error.response && status === 404) {
-      return { message: "No updated artists found", status: 404 };
-    }
-    throw new Error(
-      `Failed to fetch createPainting. status ${status}: ${
-        error.message
-      } and response : ${JSON.stringify(error.response.message, null, 2)}`
+    throw new CustomError(
+      createArtistToDB.name,
+      "REST_API",
+      `status ${status}: ${error.message}`
     );
   }
 }
@@ -104,11 +140,10 @@ export async function updateWikiArtistPaintingToDB(
     return response.data;
   } catch (error: any) {
     const status = error.response?.status || "response undefined";
-    if (error.response && status === 404) {
-      return { message: "No updated artists found", status: 404 };
-    }
-    throw new Error(
-      `Failed to fetch updateWikiArtistPaintingToDB. status ${status}: ${error.message}`
+    throw new CustomError(
+      updateWikiArtistPaintingToDB.name,
+      "REST_API",
+      `status ${status}: ${error.message}`
     );
   }
 }
