@@ -11,21 +11,47 @@ import { checkEncoding } from "./validation";
 import { Logger } from "./logger";
 import { catchError, concatMap, delay, map, of, tap } from "rxjs";
 
-export async function transformCSVFileToObject<T>(fileName: string) {
+export async function transformCSVFileToObjectList<T>(
+  fileName: string,
+  validKeys: (keyof T)[]
+) {
   const buffer: T[] = [];
   const p = new Promise<T[]>((res, rej) => {
-    readFile("./" + fileName, "utf-8", (err, data) => {
+    readFile(fileName, "utf-8", (err, data) => {
+      Logger.debug("[transformCSVFileToObject] start");
       const rowToData = data.split("\n");
-      const dataKeys = rowToData[0].split(",");
+      const csvColumns = rowToData[0].split(",");
       const rowList = rowToData.slice(1, rowToData.length - 1);
 
+      //validate validKeys
+      const isValid = validKeys.every((key) =>
+        csvColumns.includes(key.toString())
+      );
+
+      if (!isValid) {
+        throw new Error(
+          "[transformCSVFileToObject] validKeys is invalid." +
+            `validKeys : ${JSON.stringify(validKeys, null, 2)}\n` +
+            `csvColumns : ${JSON.stringify(csvColumns, null, 2)}\n`
+        );
+      }
+
       rowList.forEach((row, i) => {
-        const obj = row.split(",").reduce((object, val, idx) => {
-          object[dataKeys[idx]] = val;
-          return object;
+        const eleList = row.split(",");
+
+        const result = validKeys.reduce((obj, key) => {
+          const idxOfColumns = csvColumns.indexOf(key.toString());
+          obj[key] = eleList[idxOfColumns];
+
+          return obj;
         }, {} as any);
-        buffer.push(obj);
+        Logger.debug(
+          "[transformCSVFileToObject] result : " + JSON.stringify(result)
+        );
+
+        buffer.push(result);
       });
+      Logger.debug("[transformCSVFileToObject] end");
       res(buffer);
     });
   });
@@ -89,83 +115,35 @@ export function initFileWrite(
   initValue: string,
   options: WriteFileOptions
 ) {
-  let name = outputFile;
-  if (existsSync(outputFile)) {
-    name = getFileNumber(name);
-  }
+  const name = createFileName(outputFile);
 
   Logger.debug(name);
   writeFileSync(name, initValue, options);
-
-  function getFileNumber(fileName: string, num: number = 2) {
-    const ret = fileName + "-" + num;
-
-    if (existsSync(ret)) return getFileNumber(fileName, ++num);
-
-    return ret;
-  }
 
   Logger.info("init end. file name is " + name);
 
   return name;
 }
 
-namespace json {
-  /*************  ✨ Codeium Command ⭐  *************/
-  /**
-   * saveDatatoJSONFile - Save data to JSON file with restart functionality.
-   * @param outputFile - The name of the output file.
-   * @param sessionKey - The session key of the API.
-   * @param breakPoint - The point to restart from.
-   * @param apiMethod - The API method to call.
-   * @param apiParams - The parameters of the API.
-   * @param processMethod - The method to process the API result.
-   * @returns The path of the output file.
-   */
-  /******  961d98dd-3634-444f-a3f1-a87285f13622  *******/
-  function saveDatatoJSONFile(
-    outputFile: string,
-    sessionKey: string,
-    breakPoint: any,
-    apiMethod: (sessionKey: string, ...params: any[]) => any[],
-    apiParams: any[],
-    processMethod: (apiValue: any) => any
-  ) {
-    const startJson = "[",
-      endJSON = "]"; // manually do this.
-    const targetPath = initFileWrite(outputFile, startJson, "utf-8");
+function createFileName(fileName: string = "temp.txt") {
+  let ret = fileName;
+  if (existsSync(ret)) {
+    const idxOfExtension = ret.lastIndexOf(".");
+    const fileName = ret.substring(0, idxOfExtension);
+    const extension = ret.substring(idxOfExtension);
+    ret = nameFile(fileName, extension);
+    return createFileName(ret);
+  }
 
-    const idx = apiParams.indexOf(breakPoint);
-    const NOT_FOUND = -1;
-    const list = apiParams.slice(idx !== NOT_FOUND ? idx : 0);
-    Logger.debug(
-      "[saveDatatoJSONFile] : total lenth is " +
-        list.length +
-        ". restart lenth is " +
-        apiParams.length
-    );
+  return ret;
 
-    const apiResults$ = of(...list).pipe(
-      tap((v) => Logger.debug("Painting Short Info : " + JSON.stringify(v))),
-      delay(1000),
-      concatMap((info) => apiMethod(sessionKey, ...info)),
-      map((v) => processMethod(v)),
-      catchError((err) => {
-        Logger.warn("getPaintingDetails stop." + JSON.stringify(err, null, 2));
-        throw err;
-      })
-    );
+  function nameFile(name: string, extension: string, num: number = 2) {
+    const newName = name + num + extension;
 
-    apiResults$.subscribe((result) =>
-      promises
-        .appendFile(targetPath, JSON.stringify(result, null, 2) + ",", "utf-8")
-        .catch((e) => {
-          Logger.warn("appendFile stop." + JSON.stringify(result, null, 2)) +
-            ",";
-          Logger.error(e);
-        })
-    );
+    if (existsSync(newName)) {
+      return nameFile(name, extension, num++);
+    }
 
-    return targetPath;
+    return ret;
   }
 }
