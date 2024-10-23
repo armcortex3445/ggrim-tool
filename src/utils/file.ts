@@ -19,11 +19,14 @@ export function initFileWrite(
 function createFileName(fileName: string = "temp.txt") {
   let ret = fileName;
   if (existsSync(ret)) {
+    Logger.debug("[createFileName] fileName exist : " + ret);
     const idxOfExtension = ret.lastIndexOf(".");
     const fileName = ret.substring(0, idxOfExtension);
     const extension = ret.substring(idxOfExtension);
     ret = nameFile(fileName, extension);
-    return createFileName(ret);
+
+    Logger.debug("[createFileName] new : " + ret);
+    return ret;
   }
 
   return ret;
@@ -32,9 +35,9 @@ function createFileName(fileName: string = "temp.txt") {
     const newName = name + num + extension;
 
     if (existsSync(newName)) {
-      return nameFile(name, extension, num++);
+      return nameFile(name, extension, ++num);
     }
 
-    return ret;
+    return newName;
   }
 }
