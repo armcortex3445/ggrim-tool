@@ -1,7 +1,7 @@
 import { catchError, concatMap, delay, map, of, tap } from "rxjs";
-import { initFileWrite } from "../utils/csvUtils";
 import { Logger } from "../utils/logger";
 import { promises } from "fs";
+import { initFileWrite } from "../utils/file";
 
 function saveDatatoJSONFile(
   outputFile: string,
