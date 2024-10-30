@@ -9,6 +9,23 @@ export function loadObjectFromJSON<T>(inputJSON: string) {
   return objs;
 }
 
+export function loadListFromJSON<T>(intputJSON: string, breakPoint?: T) {
+  const list: T[] = loadObjectFromJSON<T[]>(intputJSON);
+  const NOT_FOUND = -1;
+  const idx = breakPoint ? list.indexOf(breakPoint) : NOT_FOUND;
+
+  const sublist = list.slice(idx !== NOT_FOUND ? idx : 0);
+
+  Logger.debug(
+    "[saveDatatoJSONFile] : total lenth is " +
+      list.length +
+      ". restart lenth is " +
+      sublist.length
+  );
+
+  return sublist;
+}
+
 //This function is for reorder to format [ {}, {} ,{}] from unproper format {}{}{}
 async function reorderJSON(readJSONFile: string) {
   const arr: any[] = [];
