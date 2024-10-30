@@ -4,3 +4,8 @@ logs/
 /.env
 
 *.js
+
+
+## csvData file
+
+csvData/
