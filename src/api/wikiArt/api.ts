@@ -52,7 +52,7 @@ export async function getSessionId() {
 export async function getUpdatedArtists(
   fromDate?: string,
   paginationToken?: string
-): Promise<ListWithPagination<Artist> | Error404> {
+): Promise<ListWithPagination<Artist>> {
   try {
     const url = `${API_BASE_URL}/UpdatedArtists?fromDate=${
       fromDate || ""
@@ -61,10 +61,12 @@ export async function getUpdatedArtists(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "No updated artists found", status: 404 };
-    }
-    throw new Error(`Failed to fetch updated artists: ${error.message}`);
+    Logger.error(
+      `[getUpdatedArtists] Failed to fetch updated artist: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch updated artist: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -72,7 +74,7 @@ export async function getUpdatedArtists(
 export async function getDeletedArtists(
   fromDate?: string,
   paginationToken?: string
-): Promise<ListWithPagination<string> | Error404> {
+): Promise<ListWithPagination<string>> {
   try {
     const url = `${API_BASE_URL}/DeletedArtists?fromDate=${
       fromDate || ""
@@ -81,10 +83,12 @@ export async function getDeletedArtists(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "No deleted artists found", status: 404 };
-    }
-    throw new Error(`Failed to fetch deleted artists: ${error.message}`);
+    Logger.error(
+      `[getDeletedArtists] Failed to fetch deleted artist: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch deleted artist: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -94,7 +98,7 @@ export async function getArtistsByDictionary(
   dictUrl: string,
   fromDate?: string,
   paginationToken?: string
-): Promise<ListWithPagination<Artist> | Error404> {
+): Promise<ListWithPagination<Artist>> {
   try {
     const url = `${API_BASE_URL}/ArtistsByDictionary?group=${group}&dictUrl=${dictUrl}&fromDate=${
       fromDate || ""
@@ -103,10 +107,12 @@ export async function getArtistsByDictionary(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "Dictionary not found", status: 404 };
-    }
-    throw new Error(`Failed to fetch artists by dictionary: ${error.message}`);
+    Logger.error(
+      `[getArtistsByDictionary] Failed to fetch artist by dictionary: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch artist by dictionary: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -115,7 +121,7 @@ export async function getUpdatedDictionaries(
   group: number,
   fromDate?: string,
   paginationToken?: string
-): Promise<ListWithPagination<DictionaryJson> | Error404> {
+): Promise<ListWithPagination<DictionaryJson>> {
   try {
     const url = `${API_BASE_URL}/UpdatedDictionaries?group=${group}&fromDate=${
       fromDate || ""
@@ -124,10 +130,12 @@ export async function getUpdatedDictionaries(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "No updated dictionaries found", status: 404 };
-    }
-    throw new Error(`Failed to fetch updated dictionaries: ${error.message}`);
+    Logger.error(
+      `[getUpdatedDictionaries] Failed to fetch updated dictionaries: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch updated dictionaries: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -135,7 +143,7 @@ export async function getUpdatedDictionaries(
 export async function getDeletedDictionaries(
   fromDate?: string,
   paginationToken?: string
-): Promise<ListWithPagination<string> | Error404> {
+): Promise<ListWithPagination<string>> {
   try {
     const url = `${API_BASE_URL}/DeletedDictionaries?fromDate=${
       fromDate || ""
@@ -144,10 +152,12 @@ export async function getDeletedDictionaries(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "No deleted dictionaries found", status: 404 };
-    }
-    throw new Error(`Failed to fetch deleted dictionaries: ${error.message}`);
+    Logger.error(
+      `[getDeletedDictionaries] Failed to fetch deleted dictionaries: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch deleted dictionaries: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -155,7 +165,7 @@ export async function getDeletedDictionaries(
 export async function getDictionariesByGroup(
   group: number,
   paginationToken?: string
-): Promise<ListWithPagination<DictionaryJson> | Error404> {
+): Promise<ListWithPagination<DictionaryJson>> {
   try {
     const url = `${API_BASE_URL}/DictionariesByGroup?group=${group}&paginationToken=${
       paginationToken || ""
@@ -164,10 +174,12 @@ export async function getDictionariesByGroup(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "Dictionaries group not found", status: 404 };
-    }
-    throw new Error(`Failed to fetch dictionaries by group: ${error.message}`);
+    Logger.error(
+      `[getDictionariesByGroup] Failed to fetch dictionaries by group: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch dictionaries by group: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -176,7 +188,7 @@ export async function paintingSearch(
   term: string,
   paginationToken?: string,
   imageFormat: string = "Large"
-): Promise<ListWithPagination<PaintingShortJson> | Error404> {
+): Promise<ListWithPagination<PaintingShortJson>> {
   try {
     const url = `${API_BASE_URL}/PaintingSearch?term=${term}&paginationToken=${
       paginationToken || ""
@@ -187,33 +199,38 @@ export async function paintingSearch(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "No paintings found for this term", status: 404 };
-    }
-    throw new Error(`Failed to search paintings: ${error.message}`);
+    Logger.error(
+      `[paintingSearch] Failed to fetch painting: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch painting: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
 // 8. Paintings by Artist
 export async function getPaintingsByArtist(
   artistId: string,
+  sessionKey: string,
   paginationToken?: string,
   imageFormat: string = "Large"
-): Promise<ListWithPagination<PaintingShortJson> | Error404> {
+): Promise<ListWithPagination<PaintingShortJson>> {
   try {
     const url = `${API_BASE_URL}/PaintingsByArtist?id=${artistId}&paginationToken=${
       paginationToken || ""
-    }&imageFormat=${imageFormat}`;
+    }&imageFormat=${imageFormat}&authSessionKey=${sessionKey}`;
     const response = await axios.get<ListWithPagination<PaintingShortJson>>(
       url
     );
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "Artist not found", status: 404 };
-    }
-    throw new Error(`Failed to fetch paintings by artist: ${error.message}`);
+    Logger.error(
+      `[getPaintingsByArtist] Failed to fetch paintings by artist: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch paintings by artist: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -222,7 +239,7 @@ export async function getMostViewedPaintings(
   sessionKey: string,
   paginationToken?: string,
   imageFormat: string = "Large"
-): Promise<ListWithPagination<PaintingShortJson> | Error404> {
+): Promise<ListWithPagination<PaintingShortJson>> {
   try {
     const url = `${API_BASE_URL}/MostViewedPaintings?paginationToken=${
       paginationToken || ""
@@ -233,10 +250,12 @@ export async function getMostViewedPaintings(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "No most viewed paintings found", status: 404 };
-    }
-    throw new Error(`Failed to fetch most viewed paintings: ${error.message}`);
+    Logger.error(
+      `[getMostViewedPaintings] Failed to fetch most viewed painting: ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
 
@@ -245,16 +264,18 @@ export async function getPaintingDetails(
   sessionKey: string,
   paintingId: string,
   imageFormat: string = "Large"
-): Promise<Painting | Error404> {
+): Promise<Painting> {
   try {
     const url = `${API_BASE_URL}/Painting?id=${paintingId}&imageFormat=${imageFormat}&authSessionKey=${sessionKey}`;
     const response = await axios.get<Painting>(url);
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.status === 404) {
-      return { message: "Painting not found", status: 404 };
-    }
-    throw new Error(`Failed to fetch painting details: ${error.message}`);
+    Logger.error(
+      `[getPaintingDetails] Failed to fetch detailed painting : ${error.message}. status : ${error.response.statsu}`
+    );
+    throw new Error(
+      `Failed to fetch fetch detailed painting: ${error.message}. status : ${error.response.statsu}`
+    );
   }
 }
