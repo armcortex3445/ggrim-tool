@@ -3,7 +3,7 @@ import { Painting, PaintingShortJson } from "../api/wikiArt/interfaces";
 import { initFileWrite } from "../utils/file";
 import { loadListFromJSON } from "../utils/jsonUtils";
 import { Logger } from "../utils/logger";
-import { createTaskObeservable } from "./task.api";
+import { getTaskObeservable } from "./task.api";
 
 export async function runGetPaintingsByArtist() {
   Logger.info("app start");
@@ -13,7 +13,7 @@ export async function runGetPaintingsByArtist() {
   const paintings = await loadListFromJSON<Painting>(readFile);
   const sessionKey = `b1fae2b5bd0c`;
 
-  const task = createTaskObeservable<PaintingShortJson[], Painting>(
+  const task = getTaskObeservable<PaintingShortJson[], Painting>(
     paintings,
     getArtistPaintings
   );

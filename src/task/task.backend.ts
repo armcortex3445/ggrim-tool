@@ -7,7 +7,10 @@ import {
 } from "../api/back-server/api";
 import { Painting } from "../api/wikiArt/interfaces";
 import { Logger } from "../utils/logger";
-import { ITestResult, runGetMethod, testGetAPI } from "./task.backend.template";
+import {
+  getTaskForRestAPITest$,
+  getTaskForValidateRestAPI$,
+} from "./task.test.api";
 
 export function testGetPaintingAPI(paintings: Painting[]) {
   Logger.info("[testGetPaintingAPI] start");
@@ -17,13 +20,20 @@ export function testGetPaintingAPI(paintings: Painting[]) {
   // task
 
   const identifier: keyof Painting = "id";
-  const task$ = runGetMethod<Painting, IResult<IPainting>>(
+  const task$ = getTaskForRestAPITest$<Painting, IResult<IPainting>>(
     paintings,
     identifier,
     getPainting
   );
 
-  testGetAPI<Painting, IResult<IPainting>>(task$, identifier, validatePainting);
+  const taskWithTest$ = getTaskForValidateRestAPI$<
+    Painting,
+    IResult<IPainting>
+  >(task$, identifier, validatePainting);
+
+  taskWithTest$.subscribe((result) =>
+    Logger.debug(`${result.local[identifier]} is done`)
+  );
 
   ///////////////////////////////////////////
   async function getPainting(painting: Painting) {

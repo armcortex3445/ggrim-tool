@@ -4,7 +4,7 @@ import { promises } from "fs";
 import { initFileWrite } from "../utils/file";
 import { loadObjectFromJSON } from "../utils/jsonUtils";
 
-export function createTaskObeservable<T, R>(
+export function getTaskObeservable<T, R>(
   inputList: R[],
   apiMethod: (list: R, ...params: any[]) => Promise<T>,
   optionalParams?: any[]
