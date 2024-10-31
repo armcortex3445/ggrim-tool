@@ -1,4 +1,4 @@
-import { Observable, concatMap, map, of, tap } from "rxjs";
+import { Observable, concatMap, delay, map, of, tap } from "rxjs";
 import { Logger } from "../utils/logger";
 import { initFileWrite } from "../utils/file";
 import { CustomError } from "../utils/error";
@@ -13,6 +13,7 @@ export function getTaskForRestAPITest$<T, R>(
   localDataList: T[],
   identifierKey: keyof T,
   restAPI: (local: T, ...args: any[]) => Promise<R>,
+  delayMiliSecond: number = 1000,
   optionalArgs?: any[]
 ) {
   Logger.info("[getTaskForRestAPITest] start");
@@ -27,6 +28,7 @@ export function getTaskForRestAPITest$<T, R>(
 
       return ctx;
     }),
+    delay(delayMiliSecond),
     concatMap(async (ctx) => {
       Logger.debug(`id : ${ctx.local[identifierKey]}`);
       const result = restAPI(ctx.local, optionalArgs);
