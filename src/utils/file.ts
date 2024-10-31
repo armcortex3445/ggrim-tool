@@ -41,3 +41,10 @@ function createFileName(fileName: string = "temp.txt") {
     return newName;
   }
 }
+
+export function getFileName(filePath: string, pathDelimiter: string = "/") {
+  const pathList = filePath.split(pathDelimiter);
+  const fileName = pathList[pathList.length - 1];
+
+  return fileName;
+}
