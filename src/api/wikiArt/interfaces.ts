@@ -62,6 +62,9 @@ export interface PaintingShortJson {
   artistName: string; // artist Name + Surname
   artistId: string; // unique artist identifier
   completitionYear: number | null; // painting completition year, default: null
+  image: string;
+  width: number; // original image width
+  height: number; // original image height
 }
 
 // DictionaryJson Interface
