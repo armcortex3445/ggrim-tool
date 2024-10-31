@@ -1,5 +1,6 @@
 import { createReadStream, readFileSync } from "fs";
 import { Logger } from "./logger";
+import { IIDentifier } from "./interface/interface";
 
 export function loadObjectFromJSON<T>(inputJSON: string) {
   const readfilePath = inputJSON;
@@ -9,14 +10,29 @@ export function loadObjectFromJSON<T>(inputJSON: string) {
   return objs;
 }
 
-export function loadListFromJSON<T>(intputJSON: string, breakPoint?: T) {
+export function loadListFromJSON<T>(
+  intputJSON: string,
+  breakPoint?: IIDentifier<T>
+) {
   const list: T[] = loadObjectFromJSON<T[]>(intputJSON);
   const NOT_FOUND = -1;
-  const idx = breakPoint ? list.indexOf(breakPoint) : NOT_FOUND;
+  const idx =
+    breakPoint != undefined
+      ? list.findIndex(
+          (val) => val[breakPoint.identifierKey] === breakPoint.identifier
+        )
+      : NOT_FOUND;
+  Logger.debug(
+    `[${loadListFromJSON.name}] breakPoint : ${JSON.stringify(
+      breakPoint,
+      null,
+      2
+    )}\nidx is : ${idx}`
+  );
 
   const sublist = list.slice(idx !== NOT_FOUND ? idx : 0);
 
-  Logger.debug(
+  Logger.info(
     "[saveDatatoJSONFile] : total lenth is " +
       list.length +
       ". restart lenth is " +
