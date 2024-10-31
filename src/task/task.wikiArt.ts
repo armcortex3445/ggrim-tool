@@ -1,9 +1,16 @@
-import { getPaintingsByArtist } from "../api/wikiArt/api";
+import { appendFileSync } from "fs";
+import { getPaintingDetails, getPaintingsByArtist } from "../api/wikiArt/api";
 import { Painting, PaintingShortJson } from "../api/wikiArt/interfaces";
-import { initFileWrite } from "../utils/file";
+import { getFileName, initFileWrite } from "../utils/file";
 import { loadListFromJSON } from "../utils/jsonUtils";
 import { Logger } from "../utils/logger";
-import { getTaskObeservable } from "./task.api";
+import { getTaskObeservable$ } from "./task.api";
+import {
+  getTaskForRestAPITest$,
+  getTaskForValidateRestAPI$,
+} from "./task.test.api";
+import { CustomError } from "../utils/error";
+import { IIDentifier } from "../utils/interface/interface";
 
 export async function runGetPaintingsByArtist() {
   Logger.info("app start");
@@ -11,9 +18,9 @@ export async function runGetPaintingsByArtist() {
   // task
   const readFile = "./sample.json";
   const paintings = await loadListFromJSON<Painting>(readFile);
-  const sessionKey = `b1fae2b5bd0c`;
+  const sessionKey = `50a5ca88e351`;
 
-  const task = getTaskObeservable<PaintingShortJson[], Painting>(
+  const task = getTaskObeservable$<Painting, PaintingShortJson[]>(
     paintings,
     getArtistPaintings
   );
@@ -21,7 +28,7 @@ export async function runGetPaintingsByArtist() {
   task.subscribe((result) => {
     const artistName = result[0].artistName;
 
-    const output = `./${artistName}-paintings.json`;
+    const output = `./csvData/artist/${artistName}-paintings.json`;
     initFileWrite(output, JSON.stringify(result), "utf-8");
   });
 
@@ -45,5 +52,128 @@ export async function runGetPaintingsByArtist() {
     }
 
     return paintingShortJsonList;
+  }
+}
+
+export async function runGetDetailedPainting(
+  readJSONFile: string,
+  sessionKey: string,
+  delayMs: number = 2000,
+  breakPoint?: IIDentifier<PaintingShortJson>
+) {
+  Logger.info("runGetDetailedPainting start");
+
+  // task
+
+  const shortPaintings = await loadListFromJSON<PaintingShortJson>(
+    readJSONFile,
+    breakPoint
+  );
+
+  const outPutFileName = getFileName(readJSONFile);
+  const outputPath = `./csvData/painting/${outPutFileName}.json`;
+
+  const outputFile = initFileWrite(outputPath, "[" + "\n", "utf-8");
+
+  const task$ = getTaskObeservable$<PaintingShortJson, Painting>(
+    shortPaintings,
+    getPaintings,
+    delayMs
+  );
+
+  task$.subscribe((painting) => {
+    appendFileSync(outputFile, JSON.stringify(painting) + ",", "utf-8");
+  });
+
+  async function getPaintings(shortPaintings: PaintingShortJson) {
+    return getPaintingDetails(sessionKey, shortPaintings.id);
+  }
+}
+
+export async function runGetDetailedPaintingWithTest(
+  readFile: string,
+  sessionKey: string,
+  delayMs: number = 2000,
+  breakPoint?: IIDentifier<PaintingShortJson>
+) {
+  Logger.info("runGetDetailedPaintingWithTest start");
+
+  const shortPaintings = await loadListFromJSON<PaintingShortJson>(
+    readFile,
+    breakPoint
+  );
+
+  const outPutFileName = getFileName(readFile);
+
+  const outputPath = `./csvData/painting/otherPaintingByArtist/${outPutFileName}.json`;
+
+  const outputFile = initFileWrite(outputPath, "[" + "\n", "utf-8");
+  const testResultFile = outputFile + ".tsv";
+
+  const task$ = getTaskForRestAPITest$<PaintingShortJson, Painting>(
+    shortPaintings,
+    "id",
+    getPaintings,
+    delayMs
+  );
+
+  const taskWithTest$ = getTaskForValidateRestAPI$(
+    task$,
+    "id",
+    checkPaintingMatch,
+    testResultFile
+  );
+
+  taskWithTest$.subscribe((result) => {
+    appendFileSync(outputFile, JSON.stringify(result.apiResult) + ",", "utf-8");
+  });
+
+  async function getPaintings(shortPaintings: PaintingShortJson) {
+    try {
+      return getPaintingDetails(sessionKey, shortPaintings.id);
+    } catch (err) {
+      Logger.error(
+        `[getPaintings] need to check short Painting.\n` +
+          `id : ${shortPaintings.id}\n` +
+          `url : ${shortPaintings.url}`
+      );
+      return {} as Painting;
+    }
+  }
+
+  function checkPaintingMatch(
+    shortPainting: PaintingShortJson,
+    painting: Painting
+  ) {
+    const keys: (keyof PaintingShortJson)[] = [
+      "id",
+      "artistId",
+      "title",
+      "image",
+    ];
+    let result = "";
+
+    for (const key of keys) {
+      if (!(key in painting)) {
+        result += `${key} is not included boths. please check`;
+        continue;
+      }
+
+      let val1 = shortPainting[key];
+      let val2 = painting[key];
+
+      if (typeof val1 === "string" && typeof val2 === "string") {
+        val1 = val1.toLowerCase();
+        val2 = val2.toLocaleString();
+      }
+
+      if (
+        JSON.stringify(shortPainting[key]) !== JSON.stringify(painting[key])
+      ) {
+        result += `${key} is not equal.`;
+      }
+    }
+
+    return result;
   }
 }
