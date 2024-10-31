@@ -10,6 +10,7 @@ import {
 import { Logger } from "../../utils/logger";
 import { error } from "console";
 import { checkResponseHeader } from "../../utils/validation";
+import { CustomError } from "../../utils/error";
 
 const API_BASE_URL = "https://www.wikiart.org/en/api/2";
 
@@ -62,10 +63,12 @@ export async function getUpdatedArtists(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getUpdatedArtists] Failed to fetch updated artist: ${error.message}. status : ${error.response.statsu}`
+      `[${getUpdatedArtists.name}] Failed to fetch detailed painting.\n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch updated artist: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getUpdatedArtists.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -84,10 +87,12 @@ export async function getDeletedArtists(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getDeletedArtists] Failed to fetch deleted artist: ${error.message}. status : ${error.response.statsu}`
+      `[${getDeletedArtists.name}] Failed to fetch detailed painting.\n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch deleted artist: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getDeletedArtists.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -108,10 +113,12 @@ export async function getArtistsByDictionary(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getArtistsByDictionary] Failed to fetch artist by dictionary: ${error.message}. status : ${error.response.statsu}`
+      `[${getArtistsByDictionary.name}] Failed to fetch detailed painting.\ngroup : ${group}\ndictUrl : ${dictUrl} \n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch artist by dictionary: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getArtistsByDictionary.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -131,10 +138,12 @@ export async function getUpdatedDictionaries(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getUpdatedDictionaries] Failed to fetch updated dictionaries: ${error.message}. status : ${error.response.statsu}`
+      `[${getUpdatedDictionaries.name}] Failed to fetch detailed painting.\ngroup : ${group}\n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch updated dictionaries: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getUpdatedDictionaries.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -153,10 +162,12 @@ export async function getDeletedDictionaries(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getDeletedDictionaries] Failed to fetch deleted dictionaries: ${error.message}. status : ${error.response.statsu}`
+      `[${getDeletedDictionaries.name}] Failed to fetch detailed painting.\n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch deleted dictionaries: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getDeletedDictionaries.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -175,10 +186,12 @@ export async function getDictionariesByGroup(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getDictionariesByGroup] Failed to fetch dictionaries by group: ${error.message}. status : ${error.response.statsu}`
+      `[${getDictionariesByGroup.name}] Failed to fetch detailed painting.\n group : ${group} \n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch dictionaries by group: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getDictionariesByGroup.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -200,10 +213,12 @@ export async function paintingSearch(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[paintingSearch] Failed to fetch painting: ${error.message}. status : ${error.response.statsu}`
+      `[${paintingSearch.name}] Failed to fetch detailed painting.\n term : ${term} \n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch painting: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      paintingSearch.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -226,10 +241,12 @@ export async function getPaintingsByArtist(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getPaintingsByArtist] Failed to fetch paintings by artist: ${error.message}. status : ${error.response.statsu}`
+      `[${getPaintingsByArtist.name}] Failed to fetch detailed painting.\n artistId : ${artistId} \n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch paintings by artist: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getPaintingsByArtist.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -251,10 +268,12 @@ export async function getMostViewedPaintings(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getMostViewedPaintings] Failed to fetch most viewed painting: ${error.message}. status : ${error.response.statsu}`
+      `[${getMostViewedPaintings.name}] Failed to fetch detailed painting.\n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getMostViewedPaintings.name,
+      "REST_API",
+      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
@@ -272,10 +291,12 @@ export async function getPaintingDetails(
     return response.data;
   } catch (error: any) {
     Logger.error(
-      `[getPaintingDetails] Failed to fetch detailed painting : ${error.message}. status : ${error.response.statsu}`
+      `[getPaintingDetails] Failed to fetch detailed painting.\npaintingId : ${paintingId} \n${error.message}\n status : ${error.response.status}`
     );
-    throw new Error(
-      `Failed to fetch fetch detailed painting: ${error.message}. status : ${error.response.statsu}`
+    throw new CustomError(
+      getPaintingDetails.name,
+      "REST_API",
+      `Failed to fetch fetch detailed painting: ${error.message}. status : ${error.response.status}`
     );
   }
 }
