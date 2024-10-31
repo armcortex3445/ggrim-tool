@@ -1,5 +1,6 @@
 import { AxiosResponse } from "axios";
 import { Logger } from "./logger";
+import { CustomError } from "./error";
 
 const validation = "validat.csv";
 
@@ -37,7 +38,10 @@ export function checkEncoding(src: string, encoding: string = "utf-8") {
 
 export function checkResponseHeader(res: AxiosResponse) {
   const header = res.headers;
-  console.log(JSON.stringify(header, null, 2));
+  console.log(
+    `[${checkResponseHeader.name}] check header.\n` +
+      JSON.stringify(header, null, 2)
+  );
   const contentType = header["content-type"] as string;
   const charset = contentType.toString().split("charset=")[1];
 
@@ -45,6 +49,10 @@ export function checkResponseHeader(res: AxiosResponse) {
     Logger.error(
       `[checkHeader] invalid encoding. ${JSON.stringify(res, null, 2)} `
     );
-    throw new Error("invalid encoding");
+    throw new CustomError(
+      checkResponseHeader.name,
+      "REST_API",
+      "invalid encoding"
+    );
   }
 }
