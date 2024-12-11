@@ -24,3 +24,13 @@ export interface SearchPaintingDTO {
   tags?: string[];
   styles?: string[];
 }
+
+export interface CreateTagDTO {
+  name: string;
+  info_url?: string;
+}
+
+export interface CreateStyleDTO {
+  name: string;
+  info_url?: string;
+}

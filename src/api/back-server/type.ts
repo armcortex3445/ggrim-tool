@@ -71,3 +71,18 @@ export interface ExtendedBackendPainting extends BackendPainting {
 
   styles?: BackendStyle[];
 }
+
+export interface BackendPagination<T> {
+  data: T[];
+  count: number;
+  total: number;
+  page: number;
+  pageCount: number;
+}
+
+export interface IPaginationResult<T> {
+  data: T[];
+  count: number;
+  pagination: number;
+  isMore?: boolean;
+}
