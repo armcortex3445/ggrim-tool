@@ -52,6 +52,10 @@ export async function runGetPaintingsByArtist() {
       paintingShortJsonList.push(...result.data);
     }
 
+    const second = 2;
+
+    wait(second);
+
     return paintingShortJsonList;
   }
 }

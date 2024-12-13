@@ -1,8 +1,9 @@
-import { Observable, concatMap, delay, map, of, tap } from "rxjs";
+import { Observable, concatMap, delay, map, of, tap, timer } from "rxjs";
 import { Logger } from "../utils/logger";
 import { initFileWrite } from "../utils/file";
 import { CustomError } from "../utils/error";
 import { appendFileSync, existsSync } from "fs";
+import { wait } from "../utils/execution";
 
 export interface IRestAPITest<T, R> {
   local: T;
@@ -13,12 +14,19 @@ export function getTaskForRestAPITest$<T, R>(
   localDataList: T[],
   identifierKey: keyof T,
   restAPI: (local: T, ...args: any[]) => Promise<R>,
-  delayMiliSecond: number = 1000,
+  delayMilliSecond: number = 1000,
   optionalArgs?: any[]
 ) {
   Logger.info("[getTaskForRestAPITest] start");
+  const API_INTERVAL_SECOND = 4;
 
   const task$ = of(...localDataList).pipe(
+    concatMap((value) =>
+      timer(delayMilliSecond).pipe(
+        // timer가 끝난 후 실제 데이터를 반환
+        concatMap(() => of(value))
+      )
+    ),
     map((localData, index) => {
       Logger.debug("start test");
 
@@ -28,11 +36,11 @@ export function getTaskForRestAPITest$<T, R>(
 
       return ctx;
     }),
-    delay(delayMiliSecond),
     concatMap(async (ctx) => {
       Logger.debug(`id : ${ctx.local[identifierKey]}`);
       const result = restAPI(ctx.local, optionalArgs);
       ctx.apiResult = await result;
+      wait(API_INTERVAL_SECOND);
       return ctx;
     }),
     tap((ctx) =>
