@@ -1,6 +1,6 @@
 import { createReadStream, readFileSync } from "fs";
 import { Logger } from "./logger";
-import { IIDentifier } from "./interface/interface";
+import { IdentifierInterface } from "./interface/interface";
 
 export function loadObjectFromJSON<T>(inputJSON: string) {
   const readfilePath = inputJSON;
@@ -12,7 +12,7 @@ export function loadObjectFromJSON<T>(inputJSON: string) {
 
 export function loadListFromJSON<T>(
   intputJSON: string,
-  breakPoint?: IIDentifier<T>
+  breakPoint?: IdentifierInterface<T>
 ) {
   const list: T[] = loadObjectFromJSON<T[]>(intputJSON);
   const NOT_FOUND = -1;

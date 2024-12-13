@@ -10,7 +10,8 @@ import {
   getTaskForValidateRestAPI$,
 } from "./task.test.api";
 import { CustomError } from "../utils/error";
-import { IIDentifier } from "../utils/interface/interface";
+import { IdentifierInterface } from "../utils/interface/interface";
+import { wait } from "../utils/execution";
 
 export async function runGetPaintingsByArtist() {
   Logger.info("app start");
@@ -59,7 +60,7 @@ export async function runGetDetailedPainting(
   readJSONFile: string,
   sessionKey: string,
   delayMs: number = 2000,
-  breakPoint?: IIDentifier<PaintingShortJson>
+  breakPoint?: IdentifierInterface<PaintingShortJson>
 ) {
   Logger.info("runGetDetailedPainting start");
 
@@ -94,7 +95,7 @@ export async function runGetDetailedPaintingWithTest(
   readFile: string,
   sessionKey: string,
   delayMs: number = 2000,
-  breakPoint?: IIDentifier<PaintingShortJson>
+  breakPoint?: IdentifierInterface<PaintingShortJson>
 ) {
   Logger.info("runGetDetailedPaintingWithTest start");
 
