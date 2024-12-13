@@ -11,8 +11,11 @@ import { Logger } from "../../utils/logger";
 import { error } from "console";
 import { checkResponseHeader } from "../../utils/validation";
 import { CustomError } from "../../utils/error";
+import { Scriptor } from "../../utils/scripter";
 
 const API_BASE_URL = "https://www.wikiart.org/en/api/2";
+
+const _scriptor = new Scriptor();
 
 interface IAuthInfo {
   SessionKey: string;
@@ -218,7 +221,28 @@ export async function paintingSearch(
     throw new CustomError(
       paintingSearch.name,
       "REST_API",
-      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
+      `Failed to fetch fetch painting: ${error.message}. status : ${error.response.status}`
+    );
+  }
+}
+
+function checkWhetherException(data: any) {
+  if (data.Exception || data.status) {
+    /* check below exception from wikiArt Api
+    {
+  Exception: {
+    Message: "API limit of 400 operations per hour exceeded",
+    Stacktrace: null,
+    InnerException: null,
+  },
+  Status: 500,
+  RequestTime: "/Date(1734004589345)/",
+} */
+    Logger.error(`${JSON.stringify(data, null, 2)}`);
+    throw new CustomError(
+      checkWhetherException.name,
+      "REST_API",
+      JSON.stringify(data, null, 2)
     );
   }
 }
@@ -234,19 +258,22 @@ export async function getPaintingsByArtist(
     const url = `${API_BASE_URL}/PaintingsByArtist?id=${artistId}&paginationToken=${
       paginationToken || ""
     }&imageFormat=${imageFormat}&authSessionKey=${sessionKey}`;
-    const response = await axios.get<ListWithPagination<PaintingShortJson>>(
-      url
-    );
-    checkResponseHeader(response);
-    return response.data;
+    const data = (await _scriptor.getDataBypassAntiBot(
+      url,
+      _scriptor.getBrowserInnerText
+    )) as string;
+
+    checkWhetherException(data);
+
+    return JSON.parse(data) as ListWithPagination<PaintingShortJson>;
   } catch (error: any) {
     Logger.error(
-      `[${getPaintingsByArtist.name}] Failed to fetch detailed painting.\n artistId : ${artistId} \n${error.message}\n status : ${error.response.status}`
+      `[${getPaintingsByArtist.name}] Failed to fetch detailed painting.\n artistId : ${artistId}`
     );
     throw new CustomError(
       getPaintingsByArtist.name,
       "REST_API",
-      `Failed to fetch fetch most viewed painting: ${error.message}. status : ${error.response.status}`
+      `Failed to fetch fetch most paintings by artist: ${JSON.stringify(error)}`
     );
   }
 }
@@ -286,17 +313,23 @@ export async function getPaintingDetails(
 ): Promise<Painting> {
   try {
     const url = `${API_BASE_URL}/Painting?id=${paintingId}&imageFormat=${imageFormat}&authSessionKey=${sessionKey}`;
-    const response = await axios.get<Painting>(url);
-    checkResponseHeader(response);
-    return response.data;
+    const data = (await _scriptor.getDataBypassAntiBot(
+      url,
+      _scriptor.getBrowserInnerText
+    )) as string;
+
+    checkWhetherException(data);
+
+    const detailPainting: Painting = JSON.parse(data) as Painting;
+    return detailPainting;
   } catch (error: any) {
     Logger.error(
-      `[getPaintingDetails] Failed to fetch detailed painting.\npaintingId : ${paintingId} \n${error.message}\n status : ${error.response.status}`
+      `[getPaintingDetails] Failed to fetch detailed painting.\npaintingId : ${paintingId} \n${error.message}`
     );
     throw new CustomError(
       getPaintingDetails.name,
       "REST_API",
-      `Failed to fetch fetch detailed painting: ${error.message}. status : ${error.response.status}`
+      `Failed to fetch fetch detailed painting: ${error.message}. status : ${error.response}`
     );
   }
 }

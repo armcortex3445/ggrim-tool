@@ -3,19 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node ./src/main.ts",
+    "start:debug": "ts-node ./src/main.ts --debug",
     "test": "run dev"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@dataui/crud-request": "^5.3.4",
     "@types/node": "^22.7.2",
     "axios": "^1.7.7",
     "csv-writer": "^1.6.0",
+    "puppeteer-chromium-resolver": "^23.0.0",
+    "puppeteer-core": "^23.10.3",
+    "puppeteer-real-browser": "^1.3.20",
     "rxjs": "^7.8.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
     "winston": "^3.14.2",
     "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium": "^131.0.1"
   }
 }
