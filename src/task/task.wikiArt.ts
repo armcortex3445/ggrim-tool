@@ -108,7 +108,7 @@ export async function runGetDetailedPainting(
 export async function runGetDetailedPaintingWithTest(
   readFile: string,
   sessionKey: string,
-  delayMs: number = 2000,
+  delayMs: number,
   breakPoint?: IdentifierInterface<PaintingShortJson>
 ) {
   Logger.info("runGetDetailedPaintingWithTest start");
@@ -170,7 +170,7 @@ export async function runGetDetailedPaintingWithTest(
 
     for (const key of keys) {
       if (!(key in painting)) {
-        result += `${key} is not included boths. please check`;
+        result += `${key} is not included boths.`;
         continue;
       }
 
