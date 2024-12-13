@@ -13,13 +13,14 @@ import { CustomError } from "../utils/error";
 import { IdentifierInterface } from "../utils/interface/interface";
 import { wait } from "../utils/execution";
 
-export async function runGetPaintingsByArtist() {
+export async function runGetPaintingsByArtist(
+  readFile: string,
+  sessionKey: string
+) {
   Logger.info("app start");
 
   // task
-  const readFile = "./sample.json";
   const paintings = await loadListFromJSON<Painting>(readFile);
-  const sessionKey = `50a5ca88e351`;
 
   const task = getTaskObeservable$<Painting, PaintingShortJson[]>(
     paintings,
