@@ -49,6 +49,16 @@ export async function runGetPaintingsByArtist() {
         paginationToken = result.paginationToken;
       }
       hasMore = result.hasMore;
+
+      if (!result.data) {
+        console.log(
+          `${painting.artistName} has problem.\n` +
+            `${JSON.stringify({
+              paginationToken,
+              artistId: painting.artistId,
+            })}`
+        );
+      }
       paintingShortJsonList.push(...result.data);
     }
 
