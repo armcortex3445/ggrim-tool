@@ -11,7 +11,7 @@ import { Logger } from "../../utils/logger";
 import { error } from "console";
 import { checkResponseHeader } from "../../utils/validation";
 import { CustomError } from "../../utils/error";
-import { Scriptor } from "../../utils/scripter";
+import { Scriptor } from "../../utils/scriptor";
 
 const API_BASE_URL = "https://www.wikiart.org/en/api/2";
 
