@@ -8,6 +8,7 @@ import { window } from "rxjs";
 import { CustomError } from "../../utils/error";
 import {
   BackendPagination,
+BackendPainting,
   BackendStyle,
   BackendTag,
   ExtendedBackendPainting,
@@ -79,11 +80,27 @@ export async function isPaintingExist(
   return paintings.some((painting) => painting.image_url === imageUrl);
 }
 
-export async function createArtistToDB(dto: CreatePaintingDTO) {
+export async function createPaintingToDB(
+  dto: CreatePaintingDTO
+): Promise<BackendPainting> {
   try {
     const url = `${BACK_SERVER_URL}/${RouteMap.painting}/`;
 
-    const response = await axios.post<CreatePaintingDTO>(url, dto);
+    const response = await axios.post<BackendPainting>(url, dto);
+    checkResponseHeader(response);
+    Logger.debug(
+      `[createPaintingToDB] ${JSON.stringify(response.data, null, 2)}`
+    );
+    return response.data;
+  } catch (error: any) {
+    const status = error.response?.status || "response undefined";
+    throw new CustomError(
+      createPaintingToDB.name,
+      "REST_API",
+      `status ${status}: ${error.message}`
+    );
+  }
+}
     checkResponseHeader(response);
     Logger.debug(
       `[createArtistToDB] ${JSON.stringify(response.data, null, 2)}`
