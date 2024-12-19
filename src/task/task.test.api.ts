@@ -18,7 +18,7 @@ export function getTaskForRestAPITest$<T, R>(
   optionalArgs?: any[]
 ) {
   Logger.info("[getTaskForRestAPITest] start");
-  const API_INTERVAL_SECOND = 4;
+  const SECOND_PER_MS = 1000;
 
   const task$ = of(...localDataList).pipe(
     concatMap((value) =>
@@ -40,7 +40,7 @@ export function getTaskForRestAPITest$<T, R>(
       Logger.debug(`id : ${ctx.local[identifierKey]}`);
       const result = restAPI(ctx.local, optionalArgs);
       ctx.apiResult = await result;
-      wait(API_INTERVAL_SECOND);
+      wait(Math.round(delayMilliSecond / SECOND_PER_MS));
       return ctx;
     }),
     tap((ctx) =>
