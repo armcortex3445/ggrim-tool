@@ -34,3 +34,11 @@ export interface CreateStyleDTO {
   name: string;
   info_url?: string;
 }
+
+export interface CreateArtistDTO {
+  name: string;
+  image_url?: string;
+  info_url?: string;
+  birth_date?: Date;
+  death_date?: Date;
+}
