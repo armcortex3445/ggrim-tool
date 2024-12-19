@@ -66,10 +66,10 @@ export interface BackendPainting {
 }
 
 export interface ExtendedBackendPainting extends BackendPainting {
-  artist?: BackendArtist;
-  tags?: BackendTag[];
+  artist: BackendArtist;
+  tags: BackendTag[];
 
-  styles?: BackendStyle[];
+  styles: BackendStyle[];
 }
 
 export interface BackendPagination<T> {
