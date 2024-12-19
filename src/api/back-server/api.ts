@@ -7,6 +7,7 @@ import { title } from "process";
 import { window } from "rxjs";
 import { CustomError } from "../../utils/error";
 import {
+BackendArtist,
   BackendPagination,
 BackendPainting,
   BackendStyle,
@@ -15,6 +16,7 @@ BackendPainting,
   IPaginationResult,
 } from "./type";
 import {
+CreateArtistDTO,
   CreatePaintingDTO,
   CreateStyleDTO,
   CreateTagDTO,
@@ -101,6 +103,14 @@ export async function createPaintingToDB(
     );
   }
 }
+
+export async function createArtistToDB(
+  dto: CreateArtistDTO
+): Promise<BackendArtist> {
+  try {
+    const url = `${BACK_SERVER_URL}/${RouteMap.artist}/`;
+
+    const response = await axios.post<BackendArtist>(url, dto);
     checkResponseHeader(response);
     Logger.debug(
       `[createArtistToDB] ${JSON.stringify(response.data, null, 2)}`
