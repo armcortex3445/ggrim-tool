@@ -5,12 +5,22 @@ import {
   getPaintingDTO,
   getPaintingFromDB,
 } from "../api/back-server/api";
+import {
+  SearchPaintingDTO,
+} from "../api/back-server/dto";
+import {
+  BackendArtist,
+  BackendPainting,
+  ExtendedBackendPainting,
+  IPaginationResult,
+} from "../api/back-server/type";
 import { Painting } from "../api/wikiArt/interfaces";
 import { Logger } from "../utils/logger";
 import {
   getTaskForRestAPITest$,
   getTaskForValidateRestAPI$,
 } from "./task.test.api";
+import { validatePaintingFromDB } from "./backend/validation";
 
 export function testGetPaintingAPI(paintings: Painting[]) {
   Logger.info("[testGetPaintingAPI] start");
@@ -18,75 +28,42 @@ export function testGetPaintingAPI(paintings: Painting[]) {
   //하나의 데이터 api 전송해서 실패 / 성공 반환 타입 확인하기
 
   // task
+  const outputFile = `[task]TestGetPaintingAPI.txt`;
 
   const identifier: keyof Painting = "id";
-  const task$ = getTaskForRestAPITest$<Painting, IResult<IPainting>>(
-    paintings,
-    identifier,
-    getPainting
-  );
+  const task$ = getTaskForRestAPITest$<
+    Painting,
+    IPaginationResult<ExtendedBackendPainting>
+  >(paintings, identifier, getExtendedBackendPaintingByPainting, 100);
 
   const taskWithTest$ = getTaskForValidateRestAPI$<
     Painting,
-    IResult<IPainting>
-  >(task$, identifier, validatePainting);
+    IPaginationResult<ExtendedBackendPainting>
+  >(task$, identifier, validatePaintingFromDB, outputFile);
 
   taskWithTest$.subscribe((result) =>
     Logger.debug(`${result.local[identifier]} is done`)
   );
 
   ///////////////////////////////////////////
-  async function getPainting(painting: Painting) {
+}
+
+async function getExtendedBackendPaintingByPainting(
+  painting: Painting
+): Promise<IPaginationResult<ExtendedBackendPainting>> {
     const dto = transformDTO(painting);
     const result = await getPaintingFromDB(dto);
 
     return result;
+}
 
     function transformDTO(painting: Painting) {
-      const dto: getPaintingDTO = {
-        wikiArtID: painting.id,
+  const dto: SearchPaintingDTO = {
+    title: painting.title,
+    artistName: painting.artistName,
+    tags: painting.tags,
+    styles: painting.styles,
       };
 
       return dto;
-    }
-  }
-
-  function validatePainting(local: Painting, serverResult: IResult<IPainting>) {
-    let validateResult = "";
-
-    const keys = Object.keys(local);
-    let checkList = null;
-
-    try {
-      checkList = keys.reduce((list, key) => {
-        if (Object.keys(serverResult.data.wikiArtPainting).includes(key)) {
-          list.push(key);
-        }
-        return list;
-      }, [] as string[]);
-    } catch (e) {
-      Logger.error(`${serverResult.data.id} has problem`);
-      throw e;
-    }
-
-    Logger.debug(`[validatePainting] checkList : ${JSON.stringify(checkList)}`);
-
-    checkList.forEach((key) => {
-      const value1 = JSON.stringify(local[key as keyof Painting]);
-      const value2 = JSON.stringify(
-        serverResult.data.wikiArtPainting[key as keyof WikiArtPainting]
-      );
-      const isValid = value1 === value2 ? "O" : "X";
-
-      if (isValid === "X") {
-        Logger.debug(
-          `[validatePainting] id ${local.id}\nvalue1 : ${value1}\nvalue2 : ${value2}`
-        );
-        validateResult += key + " : " + isValid;
-        validateResult += ",";
-      }
-    });
-
-    return validateResult;
-  }
 }
