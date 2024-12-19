@@ -38,10 +38,6 @@ export function checkEncoding(src: string, encoding: string = "utf-8") {
 
 export function checkResponseHeader(res: AxiosResponse) {
   const header = res.headers;
-  console.log(
-    `[${checkResponseHeader.name}] check header.\n` +
-      JSON.stringify(header, null, 2)
-  );
   const contentType = header["content-type"] as string;
   const charset = contentType.toString().split("charset=")[1];
 
