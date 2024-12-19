@@ -233,3 +233,40 @@ export async function createStyleToDB(
     );
   }
 }
+
+export async function getArtistFromDB(
+  requestQueryBuilder: RequestQueryBuilder
+): Promise<BackendPagination<BackendArtist>> {
+  const query = requestQueryBuilder.query();
+  Logger.debug(query);
+  try {
+    const url = `${BACK_SERVER_URL}/${RouteMap.artist}?${query}`;
+
+    const response = await axios.get<BackendPagination<BackendArtist>>(url);
+    checkResponseHeader(response);
+    return response.data;
+  } catch (error: any) {
+    const status = error.response?.status || "response undefined";
+    throw new CustomError(
+      getStyleFromDB.name,
+      "REST_API",
+      `status ${status}: ${error.message}`
+    );
+  }
+}
+
+export async function isArtistExist(artistName: string): Promise<boolean> {
+  const qb = RequestQueryBuilder.create().setFilter({
+    field: "name",
+    operator: "$eq",
+    value: artistName,
+  });
+
+  const data: BackendPagination<BackendArtist> = await getArtistFromDB(qb);
+
+  if (data.data.length === 1) {
+    return true;
+  }
+
+  return false;
+}
