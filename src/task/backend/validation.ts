@@ -59,6 +59,10 @@ export function validatePaintingFromDB(
       validateResult += "completitionYear : X" + delimiter;
     }
 
+    if (JSON.stringify(origin.image) !== JSON.stringify(server.image_url)) {
+      validateResult += "image : X" + delimiter;
+    }
+
     if (!isCorrectStyle(origin, server)) {
       validateResult += "styles : X" + delimiter;
     }
