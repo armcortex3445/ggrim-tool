@@ -7,7 +7,7 @@ import {
   isStyleExist,
   isTagExist,
 } from "./api/back-server/api";
-import { PaintingShortJson } from "./api/wikiArt/interfaces";
+import { Painting, PaintingShortJson } from "./api/wikiArt/interfaces";
 import {
   runGetDetailedPainting,
   runGetDetailedPaintingWithTest,
@@ -18,41 +18,69 @@ import { loadListFromJSON } from "./utils/jsonUtils";
 import puppeteer, { executablePath } from "puppeteer-core";
 import { connect } from "puppeteer-real-browser";
 import { getPaintingDetails } from "./api/wikiArt/api";
+import {
+  runInsertPaintingStepByStep,
+  testGetPaintingAPI,
+} from "./task/task.backend";
 
+const sessionKey: string = "3a68d7ac6a1d";
 async function main() {
-  runDetailPainting();
+  await runPaintingInsertToDB();
 }
 
 main();
-
 async function runDetailPainting() {
-  const readFile: string = "./sample.json"; //"./csvData/artist/0.selected_paintings_A.json";
-  const breakString: string = `  {
-    "id": "577272d5edc2cb3880c69a2f",
-    "title": "Mercury after Pigalle",
-    "url": "mercury-after-pigalle-1891",
-    "artistUrl": "paul-cezanne",
-    "artistName": "Paul Cezanne",
-    "artistId": "57726d84edc2cb3880b48a5b",
-    "completitionYear": 1891,
-    "width": 454,
-    "image": "https://uploads1.wikiart.org/images/paul-cezanne/mercury-after-pigalle-1891.jpg!Large.jpg",
-    "height": 600
+  /*TODO
+  - 여러개의 파일을 입력받아서, 여러번 task를 실행하도록 자동화하기.
+  - 하나의 파일은 약 1시간 동안 400개 이하 api 발생시키도록 수정하기.
+    - 작업 종료시, session key 갱신하기
+  */
+  const readFile: string = "./csvData/artist/4.selected_paintings_D.json"; //"./sample.json";
+  const breakString: string = ` {
+    "id": "5772780dedc2cb3880d6b9ed",
+    "title": "Three sisters",
+    "url": "three-sisters-1954",
+    "artistUrl": "balthus",
+    "artistName": "Balthus",
+    "artistId": "57726d89edc2cb3880b497dd",
+    "completitionYear": 1954,
+    "width": 750,
+    "image": "https://uploads6.wikiart.org/images/balthus/three-sisters-1954.jpg!Large.jpg",
+    "height": 375
   }`;
   const breakObject: PaintingShortJson = JSON.parse(
     breakString
   ) as PaintingShortJson;
   const delayMs = 4000;
-  const sessionKey = "2322464a2df1";
   const breakPoint: IdentifierInterface<PaintingShortJson> = {
     identifierKey: "id",
     identifier: breakObject.id,
   };
-  runGetDetailedPaintingWithTest(readFile, sessionKey, delayMs, undefined);
+  await runGetDetailedPaintingWithTest(
+    readFile,
+    sessionKey,
+    delayMs,
+    undefined
+  );
 }
 
 async function runPaintingByArtist() {
   const readFile: string = "./artist-painting2.json";
-  const sessionKey: string = "35d94f222422";
-  runGetPaintingsByArtist(readFile, sessionKey);
+
+  await runGetPaintingsByArtist(readFile, sessionKey);
+}
+
+async function runValidationPaintingFromDB() {
+  const readFile: string = "./sample.json";
+
+  const paintings: Painting[] = loadListFromJSON<Painting>(readFile, undefined);
+
+  await testGetPaintingAPI(paintings);
+}
+
+async function runPaintingInsertToDB() {
+  const readFile: string =
+    "./csvData/painting/otherPaintingByArtist/2.selected-paintings.json.json";
+
+  await runInsertPaintingStepByStep(readFile);
 }
