@@ -7,16 +7,16 @@ import { title } from "process";
 import { window } from "rxjs";
 import { CustomError } from "../../utils/error";
 import {
-BackendArtist,
+  BackendArtist,
   BackendPagination,
-BackendPainting,
+  BackendPainting,
   BackendStyle,
   BackendTag,
   ExtendedBackendPainting,
   IPaginationResult,
 } from "./type";
 import {
-CreateArtistDTO,
+  CreateArtistDTO,
   CreatePaintingDTO,
   CreateStyleDTO,
   CreateTagDTO,
@@ -50,9 +50,11 @@ export async function getPaintingFromDB(
       IPaginationResult<ExtendedBackendPainting>
     >(url);
     checkResponseHeader(response);
-    //Logger.info(`[getArtistFromBD] ${JSON.stringify(response, null, 2)}`);
     return response.data;
   } catch (error: any) {
+    if (error.response && error.response.data) {
+      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
+    }
     const status = error.response?.status || "response undefined";
     throw new CustomError(
       getPaintingFromDB.name,
@@ -96,6 +98,9 @@ export async function createPaintingToDB(
     return response.data;
   } catch (error: any) {
     const status = error.response?.status || "response undefined";
+    if (error.response && error.response.data) {
+      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
+    }
     throw new CustomError(
       createPaintingToDB.name,
       "REST_API",
@@ -118,6 +123,9 @@ export async function createArtistToDB(
     return response.data;
   } catch (error: any) {
     const status = error.response?.status || "response undefined";
+    if (error.response && error.response.data) {
+      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
+    }
     throw new CustomError(
       createArtistToDB.name,
       "REST_API",
@@ -171,6 +179,10 @@ export async function createTagToDB(dto: CreateTagDTO): Promise<BackendTag> {
     return response.data;
   } catch (error: any) {
     const status = error.response?.status || "response undefined";
+    Logger.error(`[createTagToDB] fail.\n${JSON.stringify(dto)} `);
+    if (error.response && error.response.data) {
+      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
+    }
     throw new CustomError(
       createTagToDB.name,
       "REST_API",
@@ -226,6 +238,9 @@ export async function createStyleToDB(
     return response.data;
   } catch (error: any) {
     const status = error.response?.status || "response undefined";
+    if (error.response && error.response.data) {
+      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
+    }
     throw new CustomError(
       createStyleToDB.name,
       "REST_API",
