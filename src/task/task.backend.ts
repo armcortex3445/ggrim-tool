@@ -47,23 +47,3 @@ export function testGetPaintingAPI(paintings: Painting[]) {
 
   ///////////////////////////////////////////
 }
-
-async function getExtendedBackendPaintingByPainting(
-  painting: Painting
-): Promise<IPaginationResult<ExtendedBackendPainting>> {
-    const dto = transformDTO(painting);
-    const result = await getPaintingFromDB(dto);
-
-    return result;
-}
-
-    function transformDTO(painting: Painting) {
-  const dto: SearchPaintingDTO = {
-    title: painting.title,
-    artistName: painting.artistName,
-    tags: painting.tags,
-    styles: painting.styles,
-      };
-
-      return dto;
-}
