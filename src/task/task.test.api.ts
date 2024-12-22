@@ -40,7 +40,7 @@ export function getTaskForRestAPITest$<T, R>(
       Logger.debug(`id : ${ctx.local[identifierKey]}`);
       const result = restAPI(ctx.local, optionalArgs);
       ctx.apiResult = await result;
-      wait(Math.round(delayMilliSecond / SECOND_PER_MS));
+      wait(delayMilliSecond);
       return ctx;
     }),
     tap((ctx) =>

@@ -63,9 +63,9 @@ export async function runGetPaintingsByArtist(
       paintingShortJsonList.push(...result.data);
     }
 
-    const second = 2;
+    const WAIT_MS = 2000;
 
-    wait(second);
+    wait(WAIT_MS);
 
     return paintingShortJsonList;
   }

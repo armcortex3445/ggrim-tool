@@ -1,8 +1,7 @@
-export function wait(second: number) {
+export function wait(ms: number) {
   let start: number = Date.now();
   let now: number = start;
-  const SECOND = 1000;
-  while (now - start < second * SECOND) {
+  while (now - start < ms) {
     now = Date.now();
   }
 }

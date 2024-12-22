@@ -21,7 +21,7 @@ export function getTaskObeservable$<T, R>(
   optionalParams?: any[]
 ) {
   Logger.debug("[getTaskObeservable] : total lenth is " + inputList.length);
-  const API_INTERVAL_SECOND = 4;
+  const API_INTERVAL_MS = 4000;
 
   const task$: Observable<R> = of(...inputList).pipe(
     concatMap((value) =>
@@ -33,7 +33,7 @@ export function getTaskObeservable$<T, R>(
     //tap((input) => Logger.info("[input] : " + JSON.stringify(input, null, 2))),
     concatMap(async (input) => {
       const result = await apiMethod(input, optionalParams);
-      wait(API_INTERVAL_SECOND);
+      wait(API_INTERVAL_MS);
       return result;
     }),
     catchError((err) => {
