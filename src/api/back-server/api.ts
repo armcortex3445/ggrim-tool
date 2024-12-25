@@ -84,9 +84,6 @@ export async function createPaintingToDB(
 
     const response = await axios.post<BackendPainting>(url, dto);
     checkResponseHeader(response);
-    Logger.debug(
-      `[createPaintingToDB] ${JSON.stringify(response.data, null, 2)}`
-    );
     return response.data;
   } catch (error: any) {
     handleApiError(createPaintingToDB.name, [dto], error);
@@ -101,9 +98,6 @@ export async function createArtistToDB(
 
     const response = await axios.post<BackendArtist>(url, dto);
     checkResponseHeader(response);
-    Logger.debug(
-      `[createArtistToDB] ${JSON.stringify(response.data, null, 2)}`
-    );
     return response.data;
   } catch (error: any) {
     handleApiError(createArtistToDB.name, [dto], error);
@@ -135,11 +129,7 @@ export async function isTagExist(tagName: string): Promise<boolean> {
 
   const data: BackendPagination<BackendTag> = await getTagFromDB(qb);
 
-  if (data.data.length === 1) {
-    return true;
-  }
-
-  return false;
+  return data.data.length > 0;
 }
 
 export async function createTagToDB(dto: CreateTagDTO): Promise<BackendTag> {
@@ -178,11 +168,7 @@ export async function isStyleExist(styleName: string): Promise<boolean> {
 
   const data: BackendPagination<BackendStyle> = await getStyleFromDB(qb);
 
-  if (data.data.length === 1) {
-    return true;
-  }
-
-  return false;
+  return data.data.length > 0;
 }
 
 export async function createStyleToDB(
@@ -222,12 +208,10 @@ export async function isArtistExist(artistName: string): Promise<boolean> {
   });
 
   const data: BackendPagination<BackendArtist> = await getArtistFromDB(qb);
-  if (data.data.length === 1) {
-    return true;
-  }
 
-  return false;
+  return data.data.length > 0;
 }
+
 function handleApiError(apiName: string, parameters: any[], error: any): never {
   Logger.error(
     `[${apiName}] api fail\n` +
