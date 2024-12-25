@@ -1,4 +1,4 @@
-import { Observable, concatMap, every, of } from "rxjs";
+import { Observable, Observer, concatMap, every, of, tap } from "rxjs";
 import {
   ExtendedBackendPainting,
   IPaginationResult,
@@ -22,7 +22,19 @@ import {
   insertTagWhenNotExist,
 } from "./backend/api";
 
-export function runInsertPaintingStepByStep(paintingFile: string) {
+export function runInsertPaintingStepByStep(
+  paintingFile: string
+): Promise<void> {
+  return new Promise((resolve, reject) =>
+    insertPaintingStepByStep(paintingFile, resolve, reject)
+  );
+}
+
+export function insertPaintingStepByStep(
+  paintingFile: string,
+  resolve: (value: void | PromiseLike<void>) => void,
+  reject: (reason?: any) => void
+) {
   /*로직 설계
   1. [x]작가 존재확인 및 삽입
   2. [x]태그 존재 확인 및 삽입
@@ -66,6 +78,7 @@ export function runInsertPaintingStepByStep(paintingFile: string) {
   ).pipe(
     concatMap(async (restAPITest) => {
       const painting = restAPITest.local;
+Logger.debug(`process painting. id : ${painting.id}`);
       const result: string = await insertArtistWhenNotExisted(
         painting.artistName
       );
@@ -114,7 +127,7 @@ export function runInsertPaintingStepByStep(paintingFile: string) {
     })
   );
 
-  task$.subscribe(async (restAPITest) => {
+  const subscriber = async (restAPITest: IRestAPITest<Painting, string>) => {
     const painting = restAPITest.local;
     appendFileSync(
       taskLogFileName,
@@ -126,7 +139,26 @@ export function runInsertPaintingStepByStep(paintingFile: string) {
 
     const taskResult = validatePaintingFromDB(painting, createdData);
     appendFileSync(taskResultFileName, `${painting.id}${taskResult}\n`);
-  });
+  };
+
+  const observer: Observer<IRestAPITest<Painting, string>> = {
+    next: subscriber,
+    error: (err: any) => {
+      Logger.error(
+        `[runInsertPaintingStepByStep] Error happen. inputFile : ${paintingFile}` +
+          JSON.stringify(err)
+      );
+      reject(err);
+    },
+    complete: () => {
+      Logger.debug(
+        `[runInsertPaintingStepByStep] complete. inputFile : ${paintingFile}`
+      );
+      resolve();
+    },
+  };
+
+  task$.subscribe(observer);
 }
 
 export function testGetPaintingAPI(paintings: Painting[]) {
@@ -151,6 +183,4 @@ export function testGetPaintingAPI(paintings: Painting[]) {
   taskWithTest$.subscribe((result) =>
     Logger.debug(`${result.local[identifier]} is done`)
   );
-
-  ///////////////////////////////////////////
 }
