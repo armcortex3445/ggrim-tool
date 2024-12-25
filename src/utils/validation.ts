@@ -1,6 +1,7 @@
 import { AxiosResponse } from "axios";
 import { Logger } from "./logger";
 import { CustomError } from "./error";
+import { wait } from "./execution";
 
 const validation = "validat.csv";
 
@@ -38,10 +39,6 @@ export function checkEncoding(src: string, encoding: string = "utf-8") {
 
 export function checkResponseHeader(res: AxiosResponse) {
   const header = res.headers;
-  console.log(
-    `[${checkResponseHeader.name}] check header.\n` +
-      JSON.stringify(header, null, 2)
-  );
   const contentType = header["content-type"] as string;
   const charset = contentType.toString().split("charset=")[1];
 
@@ -55,4 +52,27 @@ export function checkResponseHeader(res: AxiosResponse) {
       "invalid encoding"
     );
   }
+}
+
+export async function checkCompletion(
+  loopCount: number,
+  waitTimeMS: number,
+  checkFunc: () => Promise<boolean>
+): Promise<number> {
+  let loop = 0;
+  let isCreated = false;
+  while (!isCreated) {
+    loop++;
+    if (loop == loopCount) {
+      throw new CustomError(
+        checkCompletion.name,
+        "REST_API",
+        `loop is over max`
+      );
+    }
+    isCreated = await checkFunc();
+    wait(waitTimeMS);
+  }
+
+  return loop;
 }

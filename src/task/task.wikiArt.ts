@@ -10,15 +10,17 @@ import {
   getTaskForValidateRestAPI$,
 } from "./task.test.api";
 import { CustomError } from "../utils/error";
-import { IIDentifier } from "../utils/interface/interface";
+import { IdentifierInterface } from "../utils/interface/interface";
+import { wait } from "../utils/execution";
 
-export async function runGetPaintingsByArtist() {
+export async function runGetPaintingsByArtist(
+  readFile: string,
+  sessionKey: string
+) {
   Logger.info("app start");
 
   // task
-  const readFile = "./sample.json";
   const paintings = await loadListFromJSON<Painting>(readFile);
-  const sessionKey = `50a5ca88e351`;
 
   const task = getTaskObeservable$<Painting, PaintingShortJson[]>(
     paintings,
@@ -48,8 +50,22 @@ export async function runGetPaintingsByArtist() {
         paginationToken = result.paginationToken;
       }
       hasMore = result.hasMore;
+
+      if (!result.data) {
+        console.log(
+          `${painting.artistName} has problem.\n` +
+            `${JSON.stringify({
+              paginationToken,
+              artistId: painting.artistId,
+            })}`
+        );
+      }
       paintingShortJsonList.push(...result.data);
     }
+
+    const WAIT_MS = 2000;
+
+    wait(WAIT_MS);
 
     return paintingShortJsonList;
   }
@@ -59,7 +75,7 @@ export async function runGetDetailedPainting(
   readJSONFile: string,
   sessionKey: string,
   delayMs: number = 2000,
-  breakPoint?: IIDentifier<PaintingShortJson>
+  breakPoint?: IdentifierInterface<PaintingShortJson>
 ) {
   Logger.info("runGetDetailedPainting start");
 
@@ -93,8 +109,8 @@ export async function runGetDetailedPainting(
 export async function runGetDetailedPaintingWithTest(
   readFile: string,
   sessionKey: string,
-  delayMs: number = 2000,
-  breakPoint?: IIDentifier<PaintingShortJson>
+  delayMs: number,
+  breakPoint?: IdentifierInterface<PaintingShortJson>
 ) {
   Logger.info("runGetDetailedPaintingWithTest start");
 
@@ -155,7 +171,7 @@ export async function runGetDetailedPaintingWithTest(
 
     for (const key of keys) {
       if (!(key in painting)) {
-        result += `${key} is not included boths. please check`;
+        result += `${key} is not included boths.`;
         continue;
       }
 

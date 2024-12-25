@@ -7,13 +7,16 @@ import { title } from "process";
 import { window } from "rxjs";
 import { CustomError } from "../../utils/error";
 import {
+  BackendArtist,
   BackendPagination,
+  BackendPainting,
   BackendStyle,
   BackendTag,
   ExtendedBackendPainting,
   IPaginationResult,
 } from "./type";
 import {
+  CreateArtistDTO,
   CreatePaintingDTO,
   CreateStyleDTO,
   CreateTagDTO,
@@ -47,15 +50,9 @@ export async function getPaintingFromDB(
       IPaginationResult<ExtendedBackendPainting>
     >(url);
     checkResponseHeader(response);
-    //Logger.info(`[getArtistFromBD] ${JSON.stringify(response, null, 2)}`);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      getPaintingFromDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(getPaintingFromDB.name, [dto], error);
   }
 }
 
@@ -79,23 +76,31 @@ export async function isPaintingExist(
   return paintings.some((painting) => painting.image_url === imageUrl);
 }
 
-export async function createArtistToDB(dto: CreatePaintingDTO) {
+export async function createPaintingToDB(
+  dto: CreatePaintingDTO
+): Promise<BackendPainting> {
   try {
     const url = `${BACK_SERVER_URL}/${RouteMap.painting}/`;
 
-    const response = await axios.post<CreatePaintingDTO>(url, dto);
+    const response = await axios.post<BackendPainting>(url, dto);
     checkResponseHeader(response);
-    Logger.debug(
-      `[createArtistToDB] ${JSON.stringify(response.data, null, 2)}`
-    );
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      createArtistToDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(createPaintingToDB.name, [dto], error);
+  }
+}
+
+export async function createArtistToDB(
+  dto: CreateArtistDTO
+): Promise<BackendArtist> {
+  try {
+    const url = `${BACK_SERVER_URL}/${RouteMap.artist}/`;
+
+    const response = await axios.post<BackendArtist>(url, dto);
+    checkResponseHeader(response);
+    return response.data;
+  } catch (error: any) {
+    handleApiError(createArtistToDB.name, [dto], error);
   }
 }
 
@@ -111,12 +116,7 @@ export async function getTagFromDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      getTagFromDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(getTagFromDB.name, [requestQueryBuilder.query()], error);
   }
 }
 
@@ -129,11 +129,7 @@ export async function isTagExist(tagName: string): Promise<boolean> {
 
   const data: BackendPagination<BackendTag> = await getTagFromDB(qb);
 
-  if (data.data.length === 1) {
-    return true;
-  }
-
-  return false;
+  return data.data.length > 0;
 }
 
 export async function createTagToDB(dto: CreateTagDTO): Promise<BackendTag> {
@@ -143,12 +139,7 @@ export async function createTagToDB(dto: CreateTagDTO): Promise<BackendTag> {
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      createTagToDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(createTagToDB.name, [dto], error);
   }
 }
 
@@ -164,12 +155,7 @@ export async function getStyleFromDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      getStyleFromDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(getStyleFromDB.name, [requestQueryBuilder.query()], error);
   }
 }
 
@@ -182,11 +168,7 @@ export async function isStyleExist(styleName: string): Promise<boolean> {
 
   const data: BackendPagination<BackendStyle> = await getStyleFromDB(qb);
 
-  if (data.data.length === 1) {
-    return true;
-  }
-
-  return false;
+  return data.data.length > 0;
 }
 
 export async function createStyleToDB(
@@ -198,11 +180,50 @@ export async function createStyleToDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      createStyleToDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(createStyleToDB.name, [dto], error);
   }
+}
+
+export async function getArtistFromDB(
+  requestQueryBuilder: RequestQueryBuilder
+): Promise<BackendPagination<BackendArtist>> {
+  const query = requestQueryBuilder.query();
+  Logger.debug(query);
+  try {
+    const url = `${BACK_SERVER_URL}/${RouteMap.artist}?${query}`;
+
+    const response = await axios.get<BackendPagination<BackendArtist>>(url);
+    checkResponseHeader(response);
+    return response.data;
+  } catch (error: any) {
+    handleApiError(getArtistFromDB.name, [requestQueryBuilder.query()], error);
+  }
+}
+
+export async function isArtistExist(artistName: string): Promise<boolean> {
+  const qb = RequestQueryBuilder.create().setFilter({
+    field: "name",
+    operator: "$eq",
+    value: artistName,
+  });
+
+  const data: BackendPagination<BackendArtist> = await getArtistFromDB(qb);
+
+  return data.data.length > 0;
+}
+
+function handleApiError(apiName: string, parameters: any[], error: any): never {
+  Logger.error(
+    `[${apiName}] api fail\n` +
+      `\tparameters : ${JSON.stringify(parameters, null, 2)}`
+  );
+  const status = error.response?.status || "response undefined";
+  if (error.response && error.response.data) {
+    Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
+  }
+  throw new CustomError(
+    apiName,
+    "REST_API",
+    `status ${status}: ${error.message}`
+  );
 }

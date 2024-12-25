@@ -1,4 +1,4 @@
-export interface IIDentifier<T> {
+export interface IdentifierInterface<T> {
   identifierKey: keyof T;
   identifier: T[keyof T];
 }
