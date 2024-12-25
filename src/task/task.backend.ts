@@ -22,6 +22,16 @@ import {
   insertTagWhenNotExist,
 } from "./backend/api";
 
+export function runInsertPaintingParallel(paintingFile: string) {
+  /*TODO
+  - 다음 로직 구현하기
+    - 입력된 그림의 모든 태그를 삽입 후, 모든 작가 삽입 후, 모든 스타일 삽입 후, 모든 그림 삽입하기
+    - 각 각 삽입 단계는 순착적이되, 각 단계의 데이터 삽입은 동시에 처리되도록 하기
+      =>  insertArtistWhenNotExisted() 를 모든 작가에 대해 동시에 실행하라는 의미.
+    - 이후 각 그림에 대해 수행 검증 결과 로직 적용.
+*/
+}
+
 export function runInsertPaintingStepByStep(
   paintingFile: string
 ): Promise<void> {
@@ -78,7 +88,7 @@ export function insertPaintingStepByStep(
   ).pipe(
     concatMap(async (restAPITest) => {
       const painting = restAPITest.local;
-Logger.debug(`process painting. id : ${painting.id}`);
+      Logger.debug(`process painting. id : ${painting.id}`);
       const result: string = await insertArtistWhenNotExisted(
         painting.artistName
       );
