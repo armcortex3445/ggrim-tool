@@ -79,8 +79,29 @@ async function runValidationPaintingFromDB() {
 }
 
 async function runPaintingInsertToDB() {
-  const readFile: string =
-    "./csvData/painting/otherPaintingByArtist/2.selected-paintings.json.json";
-
+  const readFile: string = "./sample.json";
+  //"./csvData/painting/otherPaintingByArtist/insertedToDB/4.selected_paintings_D.json.json";
   await runInsertPaintingStepByStep(readFile);
+}
+
+async function runPaintingInsertToDBMultiple() {
+  const readFiles: string[] = [
+    "1.selected_paintings.json.json",
+    "2.selected_paintings.json.json",
+    "3.selected_paintings.json.json",
+    "4.selected_paintings_A.json.json",
+    "4.selected_paintings_A2.json.json",
+    "4.selected_paintings_B.json.json",
+    "4.selected_paintings_C.json.json",
+    "4.selected_paintings_C2.json.json",
+    "4.selected_paintings_D.json.json",
+  ];
+  const location = "./csvData/painting/otherPaintingByArtist/";
+  for (const readFile of readFiles) {
+    /*TODO
+    - 병렬 실행시, 디버깅이 어렵다
+      - 특정 부분에서 오류가 발생했을 때, 어떤 파일을 실행하다가 오류가 발생했는지 파악이 어려움
+      - 특히, 로그가 뒤죽박죽이라서 어느 부분이 문제가 되는지 확인하기 어렵다. */
+    await runInsertPaintingStepByStep(location + readFile);
+  }
 }
