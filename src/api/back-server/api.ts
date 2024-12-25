@@ -52,15 +52,7 @@ export async function getPaintingFromDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    if (error.response && error.response.data) {
-      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
-    }
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      getPaintingFromDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(getPaintingFromDB.name, [dto], error);
   }
 }
 
@@ -97,15 +89,7 @@ export async function createPaintingToDB(
     );
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    if (error.response && error.response.data) {
-      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
-    }
-    throw new CustomError(
-      createPaintingToDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(createPaintingToDB.name, [dto], error);
   }
 }
 
@@ -122,15 +106,7 @@ export async function createArtistToDB(
     );
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    if (error.response && error.response.data) {
-      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
-    }
-    throw new CustomError(
-      createArtistToDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(createArtistToDB.name, [dto], error);
   }
 }
 
@@ -146,12 +122,7 @@ export async function getTagFromDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      getTagFromDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(getTagFromDB.name, [requestQueryBuilder.query()], error);
   }
 }
 
@@ -178,16 +149,7 @@ export async function createTagToDB(dto: CreateTagDTO): Promise<BackendTag> {
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    Logger.error(`[createTagToDB] fail.\n${JSON.stringify(dto)} `);
-    if (error.response && error.response.data) {
-      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
-    }
-    throw new CustomError(
-      createTagToDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(createTagToDB.name, [dto], error);
   }
 }
 
@@ -203,12 +165,7 @@ export async function getStyleFromDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      getStyleFromDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(getStyleFromDB.name, [requestQueryBuilder.query()], error);
   }
 }
 
@@ -237,15 +194,7 @@ export async function createStyleToDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    if (error.response && error.response.data) {
-      Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
-    }
-    throw new CustomError(
-      createStyleToDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(createStyleToDB.name, [dto], error);
   }
 }
 
@@ -261,12 +210,7 @@ export async function getArtistFromDB(
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    const status = error.response?.status || "response undefined";
-    throw new CustomError(
-      getStyleFromDB.name,
-      "REST_API",
-      `status ${status}: ${error.message}`
-    );
+    handleApiError(getArtistFromDB.name, [requestQueryBuilder.query()], error);
   }
 }
 
@@ -278,10 +222,24 @@ export async function isArtistExist(artistName: string): Promise<boolean> {
   });
 
   const data: BackendPagination<BackendArtist> = await getArtistFromDB(qb);
-
   if (data.data.length === 1) {
     return true;
   }
 
   return false;
+}
+function handleApiError(apiName: string, parameters: any[], error: any): never {
+  Logger.error(
+    `[${apiName}] api fail\n` +
+      `\tparameters : ${JSON.stringify(parameters, null, 2)}`
+  );
+  const status = error.response?.status || "response undefined";
+  if (error.response && error.response.data) {
+    Logger.error(`${JSON.stringify(error.response.data, null, 2)}`);
+  }
+  throw new CustomError(
+    apiName,
+    "REST_API",
+    `status ${status}: ${error.message}`
+  );
 }
