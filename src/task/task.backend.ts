@@ -24,7 +24,10 @@ import {
   getTaskForRestAPITest$,
   getTaskForValidateRestAPI$,
 } from "./task.test.api";
-import { validatePaintingFromDB } from "./backend/validation";
+import {
+  validateInsertedQuiz,
+  validatePaintingFromDB,
+} from "./backend/validation";
 import { initFileWrite } from "../utils/file";
 import { appendFileSync } from "fs";
 import { loadListFromJSON } from "../utils/jsonUtils";
@@ -36,8 +39,8 @@ import {
   insertTagWhenNotExist,
 } from "./backend/api";
 import { PrimitiveQuiz } from "./backend/interface";
-import { CreatePaintingDTO, CreateQuizDTO } from "../api/back-server/dto";
-import { createPaintingToDB, createQuiz } from "../api/back-server/api";
+import { CreateQuizDTO } from "../api/back-server/dto";
+import { createQuiz } from "../api/back-server/api";
 
 export function runInsertPaintingParallel(paintingFile: string) {
   /*TODO
@@ -243,25 +246,27 @@ export function insertQuizToBackend(
     `#inputPath=${primitiveQuizFile}\n`,
     "utf-8"
   );
-  // taskResultFileName = initFileWrite(
-  //   taskResultFileName,
-  //   `#inputPath=${primitiveQuizFile}\n`,
-  //   "utf-8"
-  // );
+  taskResultFileName = initFileWrite(
+    taskResultFileName,
+    `#inputPath=${primitiveQuizFile}\n`,
+    "utf-8"
+  );
 
   const task$ = getInsertQuizToDStream(primitiveQuizzes);
 
-  const subscriber = async (restAPITest: IRestAPITest<Quiz, string>) => {
-    const quiz: Quiz = restAPITest.local;
+  const subscriber = async (restAPITest: IRestAPITest<PrimitiveQuiz, Quiz>) => {
+    const primitiveQuiz: PrimitiveQuiz = restAPITest.local;
+    const quiz: Quiz = restAPITest.apiResult!;
     appendFileSync(
       taskLogFileName,
-      (restAPITest.apiResult || `${quiz.id} has problem`) + "\n"
+      (restAPITest.log || `${quiz.id} has problem`) + "\n"
     );
+    const validation = validateInsertedQuiz(primitiveQuiz, quiz);
 
-    //appendFileSync(taskResultFileName, `${quiz.id}${taskResult}\n`);
+    appendFileSync(taskResultFileName, `${validation}\n`);
   };
 
-  const observer: Observer<IRestAPITest<Quiz, string>> = {
+  const observer: Observer<IRestAPITest<PrimitiveQuiz, Quiz>> = {
     next: subscriber,
     error: (err: any) => {
       Logger.error(
@@ -309,7 +314,9 @@ function getExtendPaintingIDByProcessing(
   );
 }
 
-function getInsertQuizToDStream(primitiveQuizzes: PrimitiveQuiz[]) {
+function getInsertQuizToDStream(
+  primitiveQuizzes: PrimitiveQuiz[]
+): Observable<IRestAPITest<PrimitiveQuiz, Quiz>> {
   /*사양
   1. Primitive 퀴즈 삽입
   2. 각 퀴즈에 대해 다음 동작 진행
@@ -320,20 +327,21 @@ function getInsertQuizToDStream(primitiveQuizzes: PrimitiveQuiz[]) {
 
   */
   const delayMS = 1000;
-  const task$: Observable<IRestAPITest<Quiz, string>> = of(
+  const task$: Observable<IRestAPITest<PrimitiveQuiz, Quiz>> = of(
     ...primitiveQuizzes
   ).pipe(
     concatMap((primitiveQuiz) => {
-      const result: IRestAPITest<PrimitiveQuiz, string> = {
+      const result: IRestAPITest<PrimitiveQuiz, Quiz> = {
         local: primitiveQuiz,
-        apiResult: primitiveQuiz.description,
+        apiResult: undefined,
+        log: primitiveQuiz.description,
       };
       return of(result).pipe(delay(delayMS));
     }),
-    concatMap((input: IRestAPITest<PrimitiveQuiz, string>) => {
+    concatMap((input: IRestAPITest<PrimitiveQuiz, Quiz>) => {
       const primitiveQuiz = input.local;
       Logger.debug(`process${primitiveQuiz.description}`);
-      let log: string = input.apiResult || "";
+      let log: string = input.log || "";
       const answers: Painting[] = [...primitiveQuiz.answer];
       const distractors: Painting[] = [...primitiveQuiz.distractor];
 
@@ -354,23 +362,17 @@ function getInsertQuizToDStream(primitiveQuizzes: PrimitiveQuiz[]) {
             description: primitiveQuiz.description,
             title: primitiveQuiz.description,
           };
-          return {
-            local: createQuizDTO,
-            apiResult: log + `\n\tcreate Quiz DTO`,
-          } as IRestAPITest<CreateQuizDTO, string>;
+          log += `\n\tcreate DTO`;
+          return createQuizDTO;
         }),
-        delay(delayMS)
-      );
-    }),
-    concatMap((input) => {
-      const dto: CreateQuizDTO = input.local;
-
-      return from(createQuiz(dto)).pipe(
+        delay(delayMS),
+        concatMap((dto) => from(createQuiz(dto))),
         map((quiz) => {
           return {
-            local: quiz,
-            apiResult: input.apiResult + `\n\t create quiz ${quiz.id}`,
-          } as IRestAPITest<Quiz, string>;
+            local: primitiveQuiz,
+            apiResult: quiz,
+            log: log + `\n\t create Quiz(${quiz.id}`,
+          } as IRestAPITest<PrimitiveQuiz, Quiz>;
         })
       );
     })
