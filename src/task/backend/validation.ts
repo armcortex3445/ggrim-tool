@@ -1,9 +1,12 @@
 import {
   BackendArtist,
+  BackendPainting,
   ExtendedBackendPainting,
   IPaginationResult,
+  Quiz,
 } from "../../api/back-server/type";
 import { Painting } from "../../api/wikiArt/interfaces";
+import { PrimitiveQuiz } from "./interface";
 
 export function validatePaintingFromDB(
   origin: Painting,
@@ -77,6 +80,119 @@ export function validatePaintingFromDB(
   });
 
   return validateResult;
+}
+export function validateInsertedQuiz(
+  primitiveQuiz: PrimitiveQuiz,
+  quiz: Quiz
+): string {
+  /*사양
+    - 초기
+      - imageURL을 기반으로 string-painting Map 생성
+      - 이름-artist|tag|style Map 생성
+    - 유효성검증
+      - 각 크기가 같은지 비교
+      - 각 요소가 저장되어있는지 비교. 
+  */
+  let result: string = `${primitiveQuiz.description}\n\tquiz ID : ${quiz.id}`;
+
+  const localPaintingMap: Map<string, Painting> = new Map();
+  for (const painting of [
+    ...primitiveQuiz.answer,
+    ...primitiveQuiz.distractor,
+  ]) {
+    const key = painting.image;
+    if (!localPaintingMap.has(key)) {
+      localPaintingMap.set(key, painting);
+    }
+  }
+
+  const serverPaintingMap: Map<string, BackendPainting> = new Map();
+  for (const painting of [
+    ...quiz.answer_paintings,
+    ...quiz.distractor_paintings,
+  ]) {
+    const key = painting.image_url;
+    if (!serverPaintingMap.has(key)) {
+      serverPaintingMap.set(key, painting);
+    }
+  }
+
+  if (localPaintingMap.size !== serverPaintingMap.size) {
+    result += `\n\tPainting count is not matched`;
+    localPaintingMap.forEach((value, key) => {
+      if (!serverPaintingMap.has(key)) {
+        result += `\n\t\tNot contained.${value.title}(${value.id})`;
+      }
+    });
+    serverPaintingMap.forEach((value, key) => {
+      if (!localPaintingMap.has(key)) {
+        result += `\n\t\tUnintended inserted.${value.title}(${value.id})`;
+      }
+    });
+  }
+
+  const localTags: string[] = [];
+  const localStyles: string[] = [];
+  const localArtists: string[] = [];
+  localPaintingMap.forEach((value) => {
+    localArtists.push(value.artistName);
+    localTags.push(...value.tags);
+    localStyles.push(...value.styles);
+  });
+
+  const tabDepth = 1;
+  result +=
+    "\n\tValidate Artist" +
+    compareSet(
+      new Set(localArtists),
+      new Set(quiz.artists.map((artist) => artist.name)),
+      tabDepth
+    );
+
+  result +=
+    "\n\tValidate Tag" +
+    compareSet(
+      new Set(localTags),
+      new Set(quiz.tags.map((tag) => tag.name)),
+      tabDepth
+    );
+  result +=
+    "\n\tValidate Style" +
+    compareSet(
+      new Set(localStyles),
+      new Set(quiz.styles.map((style) => style.name)),
+      tabDepth
+    );
+
+  return result;
+}
+
+export function compareSet(
+  origin: Set<string>,
+  replica: Set<string>,
+  tabDepth: number = 0
+): string {
+  let result: string = "";
+  let tab: string = "";
+  for (let i = 0; i < tabDepth; i++) {
+    tab += "\t";
+  }
+
+  if (origin.size !== replica.size) {
+    result += "\n" + tab + `Size is different`;
+    origin.forEach((e) => {
+      if (!replica.has(e)) {
+        result += `\n\t` + tab + `Not Contained ${e}`;
+      }
+    });
+    replica.forEach((e) => {
+      if (!origin.has(e)) {
+        result += `\n\t` + tab + `Unintended Value ${e}`;
+      }
+    });
+  }
+
+  return result;
 }
 
 function isCorrectTag(

@@ -14,13 +14,16 @@ import {
   BackendTag,
   ExtendedBackendPainting,
   IPaginationResult,
+  Quiz,
 } from "./type";
 import {
   CreateArtistDTO,
   CreatePaintingDTO,
+  CreateQuizDTO,
   CreateStyleDTO,
   CreateTagDTO,
   SearchPaintingDTO,
+  SearchQuizDTO,
 } from "./dto";
 import { RequestQueryBuilder } from "@dataui/crud-request";
 
@@ -30,6 +33,7 @@ const RouteMap = {
   tag: "painting/tag",
   style: "painting/style",
   artist: "artist",
+  quiz: "quiz",
 };
 
 export async function getPaintingFromDB(
@@ -210,6 +214,30 @@ export async function isArtistExist(artistName: string): Promise<boolean> {
   const data: BackendPagination<BackendArtist> = await getArtistFromDB(qb);
 
   return data.data.length > 0;
+}
+
+export async function createQuiz(dto: CreateQuizDTO): Promise<Quiz> {
+  const url = `${BACK_SERVER_URL}/${RouteMap.quiz}`;
+
+  try {
+    const response = await axios.post<Quiz>(url, dto);
+    checkResponseHeader(response);
+    return response.data;
+  } catch (error: any) {
+    handleApiError(createQuiz.name, [dto], error);
+  }
+}
+
+export async function getQuiz(id: string): Promise<Quiz> {
+  const url = `${BACK_SERVER_URL}/${RouteMap.quiz}/${id}`;
+
+  try {
+    const response = await axios.get<Quiz>(url);
+    checkResponseHeader(response);
+    return response.data;
+  } catch (error: any) {
+    handleApiError(createQuiz.name, [id], error);
+  }
 }
 
 function handleApiError(apiName: string, parameters: any[], error: any): never {

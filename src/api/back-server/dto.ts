@@ -42,3 +42,39 @@ export interface CreateArtistDTO {
   birth_date?: Date;
   death_date?: Date;
 }
+
+export interface CreateQuizDTO {
+  answerPaintingIds: string[];
+
+  distractorPaintingIds: string[];
+
+  examplePaintingId?: string;
+
+  title: string;
+
+  timeLimit: number;
+
+  type: "ONE_CHOICE" | "MULTIPLE_CHOICE" | "TRUE_FALSE";
+
+  description: string;
+}
+
+export interface SearchQuizDTO {
+  artist: string;
+
+  /*형식 
+      JSON 문자열 
+        - 예시) url?tags=["1","2"]
+        - 서버쪽에서 파싱 로직을 사용해야함
+      */
+
+  tags: string;
+
+  /*형식 
+      JSON 문자열 
+        - 예시) url?tags=["1","2"]
+        - 서버쪽에서 파싱 로직을 사용해야함
+      */
+
+  styles: string;
+}

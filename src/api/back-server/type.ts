@@ -86,3 +86,31 @@ export interface IPaginationResult<T> {
   pagination: number;
   isMore?: boolean;
 }
+
+export interface Quiz {
+  id: string;
+
+  title: string;
+
+  distractor_paintings: BackendPainting[];
+
+  answer_paintings: BackendPainting[];
+
+  example_painting: BackendPainting | undefined;
+
+  correct_count: number;
+
+  incorrect_count: number;
+
+  time_limit: number;
+
+  description: string;
+
+  type: "ONE_CHOICE" | "MULTIPLE_CHOICE" | "TRUE_FALSE";
+
+  artists: BackendArtist[];
+
+  tags: BackendTag[];
+
+  styles: BackendStyle[];
+}

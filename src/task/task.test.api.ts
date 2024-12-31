@@ -8,6 +8,7 @@ import { wait } from "../utils/execution";
 export interface IRestAPITest<T, R> {
   local: T;
   apiResult?: R;
+  log?: string;
 }
 
 export function getTaskForRestAPITest$<T, R>(
