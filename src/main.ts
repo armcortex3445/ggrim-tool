@@ -20,12 +20,13 @@ import { connect } from "puppeteer-real-browser";
 import { getPaintingDetails } from "./api/wikiArt/api";
 import {
   runInsertPaintingStepByStep,
+  runInsertQuizToBackend,
   testGetPaintingAPI,
 } from "./task/task.backend";
 
 const sessionKey: string = "3a68d7ac6a1d";
 async function main() {
-  await runPaintingInsertToDB();
+  await runQuizInsertToDB();
 }
 
 main();
@@ -104,4 +105,9 @@ async function runPaintingInsertToDBMultiple() {
       - 특히, 로그가 뒤죽박죽이라서 어느 부분이 문제가 되는지 확인하기 어렵다. */
     await runInsertPaintingStepByStep(location + readFile);
   }
+}
+
+async function runQuizInsertToDB() {
+  const primitiveQuizFile: string = `./csvData/quiz/changed_painting_style/0.quiz.json`;
+  await runInsertQuizToBackend(primitiveQuizFile);
 }
