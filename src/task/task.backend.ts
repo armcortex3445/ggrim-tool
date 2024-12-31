@@ -114,19 +114,19 @@ export function insertPaintingStepByStep(
       );
 
       if (result.length !== 0) {
-        restAPITest.apiResult += "\n\t";
-        restAPITest.apiResult += result;
+        restAPITest.log += "\n\t";
+        restAPITest.log += result;
       }
       return restAPITest;
     }),
     concatMap(async (restAPITest) => {
       const painting = restAPITest.local;
-      restAPITest.apiResult += "\n\t#Insert Tag";
+      restAPITest.log += "\n\t#Insert Tag";
       for (const tag of painting.tags) {
         const result: string = await insertTagWhenNotExist(tag);
         if (result.length !== 0) {
-          restAPITest.apiResult += "\n\t\t";
-          restAPITest.apiResult += result;
+          restAPITest.log += "\n\t\t";
+          restAPITest.log += result;
         }
       }
 
@@ -134,12 +134,12 @@ export function insertPaintingStepByStep(
     }),
     concatMap(async (restAPITest) => {
       const painting = restAPITest.local;
-      restAPITest.apiResult += "\n\t#Insert Style";
+      restAPITest.log += "\n\t#Insert Style";
       for (const style of painting.styles) {
         const result: string = await insertStyleWhenNotExist(style);
         if (result.length !== 0) {
-          restAPITest.apiResult += "\n\t\t";
-          restAPITest.apiResult += result;
+          restAPITest.log += "\n\t\t";
+          restAPITest.log += result;
         }
       }
       return restAPITest;
@@ -149,8 +149,8 @@ export function insertPaintingStepByStep(
       const result = await insertPaintingWhenNotExist(painting);
 
       if (result.length !== 0) {
-        restAPITest.apiResult += "\n\t";
-        restAPITest.apiResult += result;
+        restAPITest.log += "\n\t";
+        restAPITest.log += result;
       }
 
       return restAPITest;
@@ -161,7 +161,7 @@ export function insertPaintingStepByStep(
     const painting = restAPITest.local;
     appendFileSync(
       taskLogFileName,
-      (restAPITest.apiResult || `${painting.id} has problem`) + "\n"
+      (restAPITest.log || `${painting.id} has problem`) + "\n"
     );
 
     const createdData: IPaginationResult<ExtendedBackendPainting> =
