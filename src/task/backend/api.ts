@@ -44,6 +44,61 @@ export function createSearchDTO(painting: Painting) {
   return dto;
 }
 
+export async function findCorrectArtistNameOrFail(
+  name: string
+): Promise<string> {
+  const targetNames: string[] = [];
+  const parsed: string[] = name.trim().split(/\s+/);
+  const del = " ";
+
+  switch (parsed.length) {
+    case 1:
+      targetNames.push(parsed[0]);
+      break;
+    case 2:
+      targetNames.push(parsed[1] + del + parsed[0]);
+      break;
+    case 3:
+      // 이름이 단어 3개면, 경우의 수가 2개임
+      targetNames.push(parsed[2] + del + parsed[0] + del + parsed[1]);
+      targetNames.push(parsed[1] + del + parsed[2] + del + parsed[0]);
+      break;
+    default:
+      throw new Error(
+        `[findCorrectArtistName] not implemented case. ${JSON.stringify(
+          parsed,
+          null,
+          2
+        )}`
+      );
+  }
+
+  const correctNames: string[] = [];
+
+  for (const target of targetNames) {
+    const isExist = await isArtistExist(target);
+    if (isExist) {
+      correctNames.push(target);
+    }
+  }
+
+  if (correctNames.length === 0) {
+    throw new Error(
+      `[findCorrectArtistName] No Artist Found. ${JSON.stringify(targetNames)}`
+    );
+  }
+
+  if (correctNames.length > 1) {
+    throw new Error(
+      `[findCorrectArtistName] Impossible case please check DB. ${JSON.stringify(
+        correctNames
+      )}`
+    );
+  }
+
+  return correctNames[0];
+}
+
 export async function insertArtistWhenNotExisted(
   artistName: string
 ): Promise<string> {
