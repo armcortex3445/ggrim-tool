@@ -32,8 +32,8 @@ import { initFileWrite } from "../utils/file";
 import { appendFileSync } from "fs";
 import { loadListFromJSON } from "../utils/jsonUtils";
 import {
+  findCorrectArtistNameOrFail,
   getExtendedBackendPaintingByPainting,
-  insertArtistWhenNotExisted,
   insertPaintingWhenNotExist,
   insertStyleWhenNotExist,
   insertTagWhenNotExist,
@@ -109,14 +109,12 @@ export function insertPaintingStepByStep(
     concatMap(async (restAPITest) => {
       const painting = restAPITest.local;
       Logger.debug(`process painting. id : ${painting.id}`);
-      const result: string = await insertArtistWhenNotExisted(
+      const foundName: string = await findCorrectArtistNameOrFail(
         painting.artistName
       );
+      restAPITest.log += "\n\t" + `found correct artist ${foundName}`;
+      restAPITest.local.artistName = foundName;
 
-      if (result.length !== 0) {
-        restAPITest.log += "\n\t";
-        restAPITest.log += result;
-      }
       return restAPITest;
     }),
     concatMap(async (restAPITest) => {
