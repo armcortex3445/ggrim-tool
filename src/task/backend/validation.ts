@@ -1,5 +1,6 @@
 import {
   BackendArtist,
+  BackendPagination,
   BackendPainting,
   ExtendedBackendPainting,
   IPaginationResult,
@@ -10,7 +11,7 @@ import { PrimitiveQuiz } from "./interface";
 
 export function validatePaintingFromDB(
   origin: Painting,
-  serverResult: IPaginationResult<ExtendedBackendPainting>
+  serverResult: BackendPagination<ExtendedBackendPainting>
 ): string {
   let validateResult = "";
 

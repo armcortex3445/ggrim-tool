@@ -37,21 +37,27 @@ const RouteMap = {
 };
 
 export async function getPaintingFromDB(
-  dto: SearchPaintingDTO
-): Promise<IPaginationResult<ExtendedBackendPainting>> {
-  let tags = "[]";
-  let styles = "[]";
-  if (dto.tags) {
-    tags = JSON.stringify(dto.tags);
+  dto: SearchPaintingDTO,
+  page: number = 0
+): Promise<BackendPagination<ExtendedBackendPainting>> {
+  if (!dto.tags) {
+    dto.tags = [];
   }
-  if (dto.styles) {
-    styles = JSON.stringify(dto.styles);
+  if (!dto.styles) {
+    dto.styles = [];
   }
+  const { title, artistName, tags, styles } = dto;
+
+  const titleParam = `title=${title ?? ""}`;
+  const artistParam = `artistName=${artistName}`;
+  const tagParam = tags.map((t) => `tags[]=${t}`).join("&");
+  const styleParam = styles.map((s) => `styles[]=${s}`).join("&");
+
   try {
-    const url = `${BACK_SERVER_URL}/${RouteMap.painting}?title=${dto.title}&artistName=${dto.artistName}&tags=${tags}&styles=${styles}`;
+    const url = `${BACK_SERVER_URL}/${RouteMap.painting}?${titleParam}&${artistParam}&${tagParam}&${styleParam}&page=${page}`;
 
     const response = await axios.get<
-      IPaginationResult<ExtendedBackendPainting>
+      BackendPagination<ExtendedBackendPainting>
     >(url);
     checkResponseHeader(response);
     return response.data;
@@ -65,7 +71,7 @@ export async function isPaintingExist(
   artistName: string,
   imageUrl: string
 ) {
-  const result: IPaginationResult<ExtendedBackendPainting> =
+  const result: BackendPagination<ExtendedBackendPainting> =
     await getPaintingFromDB({
       title,
       artistName,

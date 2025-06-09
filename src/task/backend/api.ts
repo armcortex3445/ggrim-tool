@@ -17,6 +17,7 @@ import {
   SearchPaintingDTO,
 } from "../../api/back-server/dto";
 import {
+  BackendPagination,
   BackendPainting,
   ExtendedBackendPainting,
   IPaginationResult,
@@ -26,7 +27,7 @@ import { checkCompletion } from "../../utils/validation";
 
 export async function getExtendedBackendPaintingByPainting(
   painting: Painting
-): Promise<IPaginationResult<ExtendedBackendPainting>> {
+): Promise<BackendPagination<ExtendedBackendPainting>> {
   const dto = createSearchDTO(painting);
   const result = await getPaintingFromDB(dto);
 

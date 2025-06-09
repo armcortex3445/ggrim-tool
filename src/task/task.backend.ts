@@ -162,7 +162,7 @@ export function insertPaintingStepByStep(
       (restAPITest.log || `${painting.id} has problem`) + "\n"
     );
 
-    const createdData: IPaginationResult<ExtendedBackendPainting> =
+    const createdData: BackendPagination<ExtendedBackendPainting> =
       await getExtendedBackendPaintingByPainting(painting);
 
     const taskResult = validatePaintingFromDB(painting, createdData);
@@ -200,12 +200,12 @@ export function testGetPaintingAPI(paintings: Painting[]) {
   const identifier: keyof Painting = "id";
   const task$ = getTaskForRestAPITest$<
     Painting,
-    IPaginationResult<ExtendedBackendPainting>
+    BackendPagination<ExtendedBackendPainting>
   >(paintings, identifier, getExtendedBackendPaintingByPainting, 100);
 
   const taskWithTest$ = getTaskForValidateRestAPI$<
     Painting,
-    IPaginationResult<ExtendedBackendPainting>
+    BackendPagination<ExtendedBackendPainting>
   >(task$, identifier, validatePaintingFromDB, outputFile);
 
   taskWithTest$.subscribe((result) =>

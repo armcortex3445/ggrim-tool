@@ -44,11 +44,11 @@ export interface BackendStyle {
 export interface BackendArtist {
   id: string;
   name: string;
-  image_url: string;
-  birth_date: Date;
-  death_date: Date;
-  info_url?: string;
-
+  // image_url: string;
+  birth_date: Date | null;
+  death_date: Date | null;
+  info_url?: string | null;
+  search_name: string;
   paintings?: BackendPainting[];
 }
 
@@ -60,9 +60,9 @@ export interface BackendPainting {
   description: string;
 
   completition_year?: number;
-  width?: number;
+  width: number;
 
-  height?: number;
+  height: number;
 }
 
 export interface ExtendedBackendPainting extends BackendPainting {
