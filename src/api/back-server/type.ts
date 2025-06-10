@@ -61,8 +61,9 @@ export interface BackendPainting {
 
   completition_year?: number;
   width: number;
-
   height: number;
+
+  image_s3_key: string | null;
 }
 
 export interface ExtendedBackendPainting extends BackendPainting {

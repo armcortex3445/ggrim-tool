@@ -40,7 +40,7 @@ const RouteMap = {
 export async function getPaintingFromDB(
   dto: SearchPaintingDTO,
   page: number = 0
-): Promise<BackendPagination<ExtendedBackendPainting>> {
+): Promise<BackendPagination<BackendPainting>> {
   if (!dto.tags) {
     dto.tags = [];
   }
@@ -57,9 +57,7 @@ export async function getPaintingFromDB(
   try {
     const url = `${BACK_SERVER_URL}/${RouteMap.painting}?${titleParam}&${artistParam}&${tagParam}&${styleParam}&page=${page}`;
 
-    const response = await axios.get<
-      BackendPagination<ExtendedBackendPainting>
-    >(url);
+    const response = await axios.get<BackendPagination<BackendPainting>>(url);
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
@@ -72,13 +70,12 @@ export async function isPaintingExist(
   artistName: string,
   imageUrl: string
 ) {
-  const result: BackendPagination<ExtendedBackendPainting> =
-    await getPaintingFromDB({
-      title,
-      artistName,
-    });
+  const result: BackendPagination<BackendPainting> = await getPaintingFromDB({
+    title,
+    artistName,
+  });
 
-  const paintings: ExtendedBackendPainting[] = result.data;
+  const paintings: BackendPainting[] = result.data;
 
   if (paintings.length === 0) {
     return false;
@@ -118,7 +115,7 @@ export async function replacePaintingToDB(
 export async function getOnePainting(id: string) {
   const url = `${BACK_SERVER_URL}/${RouteMap.painting}/${id}`;
   try {
-    const response = await axios.get<BackendPainting>(url);
+    const response = await axios.get<ExtendedBackendPainting>(url);
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
