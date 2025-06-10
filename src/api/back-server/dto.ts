@@ -16,6 +16,30 @@ export interface CreatePaintingDTO {
   tags?: string[];
 
   styles?: string[];
+
+  image_s3_key?: string;
+}
+
+export interface ReplacePaintingDTO {
+  title: string;
+
+  image_url: string;
+
+  description: string;
+
+  artistName?: string;
+
+  width?: number;
+
+  height?: number;
+
+  completition_year?: number;
+
+  tags?: string[];
+
+  styles?: string[];
+
+  image_s3_key?: string;
 }
 
 export interface SearchPaintingDTO {

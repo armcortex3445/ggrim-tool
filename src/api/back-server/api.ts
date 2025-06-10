@@ -22,6 +22,7 @@ import {
   CreateQuizDTO,
   CreateStyleDTO,
   CreateTagDTO,
+  ReplacePaintingDTO,
   SearchPaintingDTO,
   SearchQuizDTO,
 } from "./dto";
@@ -97,6 +98,31 @@ export async function createPaintingToDB(
     return response.data;
   } catch (error: any) {
     handleApiError(createPaintingToDB.name, [dto], error);
+  }
+}
+
+export async function replacePaintingToDB(
+  dto: ReplacePaintingDTO
+): Promise<BackendPainting> {
+  try {
+    const url = `${BACK_SERVER_URL}/${RouteMap.painting}/`;
+
+    const response = await axios.put<BackendPainting>(url, dto);
+    checkResponseHeader(response);
+    return response.data;
+  } catch (error: any) {
+    handleApiError(replacePaintingToDB.name, [dto], error);
+  }
+}
+
+export async function getOnePainting(id: string) {
+  const url = `${BACK_SERVER_URL}/${RouteMap.painting}/${id}`;
+  try {
+    const response = await axios.get<BackendPainting>(url);
+    checkResponseHeader(response);
+    return response.data;
+  } catch (error: any) {
+    handleApiError(getOnePainting.name, [id], error);
   }
 }
 
