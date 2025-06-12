@@ -3,6 +3,7 @@ import {
   createPaintingToDB,
   createStyleToDB,
   createTagToDB,
+  getOnePainting,
   getPaintingFromDB,
   isArtistExist,
   isPaintingExist,
@@ -31,7 +32,17 @@ export async function getExtendedBackendPaintingByPainting(
   const dto = createSearchDTO(painting);
   const result = await getPaintingFromDB(dto);
 
-  return result;
+  const extendedPaintings = await Promise.all(
+    result.data.map((short) => getOnePainting(short.id))
+  );
+
+  return {
+    page: result.page,
+    count: result.count,
+    total: result.total,
+    pageCount: result.pageCount,
+    data: extendedPaintings,
+  };
 }
 
 export function createSearchDTO(painting: Painting) {
