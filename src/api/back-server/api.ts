@@ -99,16 +99,17 @@ export async function createPaintingToDB(
 }
 
 export async function replacePaintingToDB(
+  id: string,
   dto: ReplacePaintingDTO
 ): Promise<BackendPainting> {
   try {
-    const url = `${BACK_SERVER_URL}/${RouteMap.painting}/`;
+    const url = `${BACK_SERVER_URL}/${RouteMap.painting}/${id}`;
 
     const response = await axios.put<BackendPainting>(url, dto);
     checkResponseHeader(response);
     return response.data;
   } catch (error: any) {
-    handleApiError(replacePaintingToDB.name, [dto], error);
+    handleApiError(replacePaintingToDB.name, [id, dto], error);
   }
 }
 
