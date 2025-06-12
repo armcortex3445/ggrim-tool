@@ -11,6 +11,7 @@ import {
   tap,
 } from "rxjs";
 import {
+  BackendArtist,
   BackendPagination,
   BackendPainting,
   ExtendedBackendPainting,
@@ -33,14 +34,20 @@ import { appendFileSync } from "fs";
 import { loadListFromJSON } from "../utils/jsonUtils";
 import {
   findCorrectArtistNameOrFail,
+  getAllPaintings,
   getExtendedBackendPaintingByPainting,
   insertPaintingWhenNotExist,
   insertStyleWhenNotExist,
   insertTagWhenNotExist,
+  uploadImageAndReplaceKey,
 } from "./backend/api";
 import { PrimitiveQuiz } from "./backend/interface";
-import { CreateQuizDTO } from "../api/back-server/dto";
-import { createQuiz } from "../api/back-server/api";
+import { CreateQuizDTO, ReplacePaintingDTO } from "../api/back-server/dto";
+import {
+  createQuiz,
+  getOnePainting,
+  getPaintingFromDB,
+} from "../api/back-server/api";
 
 export function runInsertPaintingParallel(paintingFile: string) {
   /*TODO
@@ -377,4 +384,110 @@ function getInsertQuizToDStream(
   );
 
   return task$;
+}
+
+export async function runUploadImageAndReplaceKeyByArtists(
+  baseImageURl: string,
+  artists: BackendArtist[]
+): Promise<void> {
+  for (const artist of artists) {
+    const paintings = await getAllPaintings(artist.name);
+
+    for (const p of paintings) {
+      const { image_url } = p;
+      const key = image_url.split("/").slice(-2).join("/");
+      const imageDir = baseImageURl + "/" + key;
+      const result = await uploadImageAndReplaceKey(p, key, imageDir);
+    }
+
+    Logger.info(`complete task : ${artist.name}`);
+  }
+}
+
+export async function runUploadImageAndReplaceKey(
+  id: string,
+  imageDir: string,
+  key: string
+) {
+  const p = await getOnePainting(id);
+  const result = await uploadImageAndReplaceKey(p, key, imageDir);
+
+  if (!result) {
+    const info = {
+      imageDir,
+      id: p.id,
+      image_url: p.image_url,
+      artist: p.artist.name,
+      title: p.title,
+    };
+    Logger.error(`[runUploadImageAndReplaceKey] fail task.`);
+    Logger.error(JSON.stringify(info, null, 2));
+  } else {
+    Logger.info(`complete task : ${p.id}`);
+  }
+}
+
+export async function runValidateImageUploadAndReplaceKey(
+  artists: BackendArtist[]
+): Promise<void> {
+  for (const artist of artists) {
+    const temp: BackendPainting[] = [];
+    const invalidPaintings: ExtendedBackendPainting[] = [];
+
+    for (let currentPage = 0; ; ) {
+      const pagination = await getPaintingFromDB(
+        { artistName: artist.name },
+        currentPage
+      );
+
+      temp.push(...pagination.data);
+      const lastPage = pagination.pageCount - 1;
+
+      if (currentPage < lastPage) {
+        currentPage++;
+      } else {
+        break;
+      }
+    }
+
+    const paintings: ExtendedBackendPainting[] = await Promise.all(
+      temp.map((p) => getOnePainting(p.id))
+    );
+
+    for (const p of paintings) {
+      const { image_url, image_s3_key } = p;
+
+      if (!image_s3_key) {
+        invalidPaintings.push(p);
+        Logger.error(`${p.id} has Null image_s3_key`);
+        continue;
+      }
+
+      const key_last = image_url.split("/").slice(-1).join("/");
+      const s3_key_last = image_s3_key.split("/").slice(-1).join("/");
+
+      if (key_last.trim() != s3_key_last.trim()) {
+        invalidPaintings.push(p);
+      }
+    }
+
+    if (invalidPaintings.length > 0) {
+      Logger.error(
+        `${artist.name} has invalid painting.\nimage_url and image_s3_key last part is not  matched`
+      );
+      invalidPaintings.forEach((p) => {
+        const info = {
+          id: p.id,
+          image_url: p.image_url,
+          artist: p.artist.name,
+          title: p.title,
+          image_s3_key: p.image_s3_key,
+        };
+
+        Logger.error(JSON.stringify(info, null, 2));
+      });
+    }
+
+    Logger.info(`complete task : ${artist.name}`);
+  }
 }
