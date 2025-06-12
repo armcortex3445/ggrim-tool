@@ -48,3 +48,7 @@ export function getFileName(filePath: string, pathDelimiter: string = "/") {
 
   return fileName;
 }
+
+export function fileExistsSync(path: string): boolean {
+  return existsSync(path);
+}
