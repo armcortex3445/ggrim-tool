@@ -24,6 +24,9 @@ import {
   testGetPaintingAPI,
 } from "./task/task.backend";
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 const sessionKey: string = "3a68d7ac6a1d";
 async function main() {
   await runQuizInsertToDB();
