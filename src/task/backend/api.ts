@@ -1,3 +1,4 @@
+import { uploadFile } from "../../api/aws/s3";
 import {
   createArtistToDB,
   createPaintingToDB,
@@ -9,12 +10,14 @@ import {
   isPaintingExist,
   isStyleExist,
   isTagExist,
+  replacePaintingToDB,
 } from "../../api/back-server/api";
 import {
   CreateArtistDTO,
   CreatePaintingDTO,
   CreateStyleDTO,
   CreateTagDTO,
+  ReplacePaintingDTO,
   SearchPaintingDTO,
 } from "../../api/back-server/dto";
 import {
@@ -24,6 +27,8 @@ import {
   IPaginationResult,
 } from "../../api/back-server/type";
 import { Painting } from "../../api/wikiArt/interfaces";
+import { fileExistsSync } from "../../utils/file";
+import { Logger } from "../../utils/logger";
 import { checkCompletion } from "../../utils/validation";
 
 export async function getExtendedBackendPaintingByPainting(
@@ -193,4 +198,87 @@ export async function insertPaintingWhenNotExist(
     result += `create Painting(${painting.title}). backendID : ${backendPainting.id}`;
   }
   return result;
+}
+
+export async function getAllPaintings(
+  artistName: string
+): Promise<ExtendedBackendPainting[]> {
+  const paintings: BackendPainting[] = [];
+
+  for (let currentPage = 0; ; ) {
+    const pagination = await getPaintingFromDB({ artistName }, currentPage);
+
+    paintings.push(...pagination.data);
+
+    if (currentPage < pagination.pageCount) {
+      currentPage++;
+    } else {
+      break;
+    }
+  }
+
+  const extendedPaintings: ExtendedBackendPainting[] = await Promise.all(
+    paintings.map((p) => getOnePainting(p.id))
+  );
+
+  return extendedPaintings;
+}
+
+export async function uploadImageAndReplaceKey(
+  painting: ExtendedBackendPainting,
+  key: string,
+  imageDir: string
+) {
+  const info = {
+    imageDir,
+    id: painting.id,
+    image_url: painting.image_url,
+    artist: painting.artist.name,
+    title: painting.title,
+  };
+
+  //업로드할 파일 존재 확인
+
+  if (!fileExistsSync(imageDir)) {
+    Logger.error(`${imageDir} is not existed`);
+    Logger.error(JSON.stringify(info, null, 2));
+
+    return false;
+  }
+
+  // 파일 업로드
+  const isUploaded = await uploadFile(imageDir, key);
+
+  if (!isUploaded) {
+    Logger.error(`${imageDir} upload fail.`);
+    Logger.error(JSON.stringify(info, null, 2));
+    return false;
+  }
+
+  painting.image_s3_key = key;
+
+  const dto: ReplacePaintingDTO = {
+    title: painting.title,
+    image_url: painting.image_url,
+    description: painting.description,
+    width: painting.width,
+    height: painting.height,
+    completition_year: painting.completition_year,
+    image_s3_key: painting.image_s3_key,
+    tags: painting.tags.map((t) => t.name),
+    styles: painting.styles.map((s) => s.name),
+    artistName: painting.artist.name,
+  };
+
+  // painting key 업데이트 수행
+
+  try {
+    await replacePaintingToDB(painting.id, dto);
+
+    return true;
+  } catch (error: unknown) {
+    Logger.error(`${imageDir} replace aws_s3_key fail.`);
+    Logger.error(JSON.stringify(info, null, 2));
+    return false;
+  }
 }
